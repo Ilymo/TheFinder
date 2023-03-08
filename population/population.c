@@ -21,17 +21,17 @@ int main(void)
         end_size = get_int("End Size: ");
 
     }
-     while (n  end_size);
+     while (end_size < n);
 
     // TODO: Calculate number of years until we reach threshold
 
     int years = 0;
-    do
+    while (end_size > n)
     {
         n = n + (n/3) - (n/4);
         years++;
     }
-    while (end_size > n);
+
 
     // TODO: Print number of years
 
