@@ -3,12 +3,19 @@
 
 int main(void)
 {
-    //Ask for height
-    int height;
+    //Ask for height (1 to 8 include)
+    int n;
     do
     {
-        height = get_int("height: ");
+        n = get_int("height: ");
     }
-    while (height > 8 | height < 1);
-    //
+    while (n > 8 | n < 1);
+
+    //print #
+
+    for (int i = 0; i < n, i++)
+    {
+        printf("#");
+    }
+    printf("\n");
 }
