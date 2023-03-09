@@ -17,18 +17,18 @@ int main(void)
     //new row
     while (i < n)
     {
-        int j = 0;
-        int d = 0;
-        if (j <= i)
-        {
-            printf("#");
-            j++;
-        }
-        else
+             //dot
+        for ( int d = 0; d < n; d++)
         {
             printf(".");
-            j++;
         }
+
+        //colone
+        for ( int j = 0; j <= i; j++)
+        {
+            printf("#");
+        }
+
     printf("\n");
     i++;
     }
