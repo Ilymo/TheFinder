@@ -17,7 +17,7 @@ int main(void)
     //new row
     while (i < n)
     {
-             //dot
+        //dot
         for ( int d = 0; d < n; d++)
         {
             printf(".");
