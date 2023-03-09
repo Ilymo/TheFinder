@@ -1,0 +1,2 @@
+ask for height between 1 and 8 (inclusif)
+

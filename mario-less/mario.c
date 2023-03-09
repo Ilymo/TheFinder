@@ -1,7 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void) 
+int main(void)
 {
-    
+    //Ask for height
+    int height;
+    do
+    {
+        height = get_int("height: \n");
+    }
+    while (1 <= height <= 8);
+    //
 }
