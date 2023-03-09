@@ -12,12 +12,13 @@ int main(void)
     while (n > 8 | n < 1);
 
     //print #
-        //n = ligne j = colone
-    for (int i = 0; i < n; i++)
+
+    int j = 0;
+    while (j < n)
     {
-        for (int j = 0; j < i; j++)
         printf("#");
         printf("\n");
+        j++;
     }
 
 }
