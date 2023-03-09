@@ -4,21 +4,25 @@
 int main (void)
 
 {
+    // Prompt for Name and Age
     string name = get_string("What's your name? ");
     int age = get_int("How old are you? ");
 
     printf("Hello %s, happy to see you.\n", name);
 
-    int n = 30;
-    int delta = (30 - age);
 
-    if (delta > 0)
+    int delta = 30;
+    int n;
+
+    if (delta > age)
     {
-        printf("You are %i years from 30 years old.\n", delta);
+        n = delta - age;
+        printf("You are %i years from 30 years old.\n", n);
     }
     else
     {
-        printf("You are %i years over 30.\n", delta);
+        n = age - delta;
+        printf("You are %i years over 30.\n", n);
     }
 
 }
