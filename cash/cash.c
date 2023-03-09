@@ -35,10 +35,9 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void);
+int get_cents(void)
 {
     // TODO
-    
     return 0;
 }
 
