@@ -19,9 +19,8 @@ int main(void)
 float half(float bill, float tax, int tip)
 {
     tax = bill * (tax / 100);
-    float sub_total = (bill + tax) / 100;
-    tip = sub_total * tip;
+    float sub_total = bill + tax;
 
-    float total = (bill + tax + tip) / 2;
+    float total = (sub_total + (sub_total * (tip / 100))) / 2;
     return total;
 }
