@@ -4,7 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-float half(int customer, float bill, float tax, int tip);
+float half(float bill, float tax, int tip);
 
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 }
 
 // TODO: Complete the function
-float half(int customer, float bill, float tax, int tip)
+float half(float bill, float tax, int tip)
 {
     //calcule tax
     tax = bill * (tax / 100);
