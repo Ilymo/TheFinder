@@ -18,9 +18,9 @@ int main(void)
     while (i < n)
     {
         //dot
-        for ( int d = n; d < i; d++)
+        for ( int d = n-1; d > i; d--)
         {
-            printf(".");
+            printf(" ");
         }
 
         //colone
