@@ -14,14 +14,16 @@ int main(void)
     //print #
 
     int i = 0;
+    //new row
     while (i < n)
     {
-        for ( int j = 0; j < n; j--)
+        //colone
+        for ( int j = 0; j <= i; j++)
         {
             printf("#");
         }
-       printf("\n");
-        i++;
+    printf("\n");
+    i++;
     }
 
 }
