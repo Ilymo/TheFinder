@@ -13,12 +13,15 @@ int main(void)
 
     //print #
 
-    int j = 0;
-    while (j < n)
+    int i = 0;
+    while (i < n)
     {
-        printf("#");
-        printf("\n");
-        j++;
+        for ( int j = 0; j < n; j--)
+        {
+            printf("#");
+        }
+       printf("\n");
+        i++;
     }
 
 }
