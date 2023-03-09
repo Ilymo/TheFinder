@@ -4,10 +4,11 @@
 #include <cs50.h>
 #include <stdio.h>
 
-float half(float bill, float tax, int tip);
+float half(int customer, float bill, float tax, int tip);
 
 int main(void)
 {
+    int customer = get_int("how many customer? ");
     float bill_amount = get_float("Bill before tax and tip: ");
     float tax_percent = get_float("Sale Tax Percent: ");
     int tip_percent = get_int("Tip percent: ");
@@ -16,7 +17,7 @@ int main(void)
 }
 
 // TODO: Complete the function
-float half(float bill, float tax, int tip)
+float half(int customer, float bill, float tax, int tip)
 {
     //calcule tax
     tax = bill * (tax / 100);
@@ -28,7 +29,7 @@ float half(float bill, float tax, int tip)
     float total_tip = sub_total / 100 * tip;
 
     //calcul total / 2
-    float total = (sub_total + total_tip) / 2;
+    float total = (sub_total + total_tip) / customer;
 
     return total;
 }
