@@ -4,7 +4,7 @@
 int main(void)
 {
     //Ask for height (1 to 8 include)
-    int n;
+   int n;
     do
     {
         n = get_int("height: ");
@@ -13,9 +13,10 @@ int main(void)
 
     //print #
 
-    for (int i = 0; i < n, i++)
+    for (int i = 0; i < n; i++)
     {
         printf("#");
+        printf("\n");
     }
-    printf("\n");
+
 }
