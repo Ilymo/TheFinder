@@ -17,11 +17,20 @@ int main(void)
     //new row
     while (i < n)
     {
+        //dot
+        for ( int d = 0; d < n; d++)
+        {
+            printf(".");
+        }
+
         //colone
         for ( int j = 0; j <= i; j++)
         {
             printf("#");
         }
+
+
+        
     printf("\n");
     i++;
     }
