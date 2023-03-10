@@ -31,12 +31,12 @@ int main(void)
 
 bool prime(int number)
 {
-    float n = number;
+    float n = number + 10;
     //divide "i" per 2 and stock in "k"
     float k = n / 4;
 
     //take result and arround the nearest and stock resulte in "j"
-    int j =  roundf (k+1);
+    int j =  roundf (k);
 
     //"n" - "j" stock in "r"
     float r = j - k;
