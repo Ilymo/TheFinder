@@ -30,6 +30,6 @@ int main(void)
 
 bool prime(int number)
 {
-    // TODO
+    
     return false;
 }
