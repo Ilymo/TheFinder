@@ -40,7 +40,7 @@ bool prime(int number)
     //"n" - "j" stock in "r"
     float r = j - n;
 
-    printf("%.2f\n", n);
+    printf("%.2f, %i\n", n, j);
 
     //compare "r" > 0
     if(r == 0)
