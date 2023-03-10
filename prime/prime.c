@@ -31,15 +31,15 @@ int main(void)
 
 bool prime(int number)
 {
-    do
-    {
     //divide "i" per 2 and stock in "n"
     float n = number / 2;
+
     //take result and arround the nearest and stock resulte in "j"
     float j = trunc (n);
+
     //"n" - "j" stock in "r"
     float r = n - j;
-    }
+    
     //compare "r" > 0
     while(r > 0)
     {
