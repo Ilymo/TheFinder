@@ -36,6 +36,10 @@ bool prime(int number)
 
     //divide par each number from i to n-1
     for (float i = 2; n < n-1 )
+    {
+        n = n / i;
+    }
+
 }
 
 
