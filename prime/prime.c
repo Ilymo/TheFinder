@@ -35,37 +35,15 @@ bool prime(int number)
     float n = number;
 
     //divide par each number from i to n-1
-    for (float i = 2; n < n-1 )
+    for (float i = 2; n <  ; i++)
     {
-        n = n / i;
+       float j = n / i;
     }
-
+    
+    return false
 }
 
 
 
 
 
-
-
-    float n = number;
-    //divide "n" per 2 and stock in "k"
-    float k = n / 4;
-
-    //take result and arround the nearest and stock resulte in "j"
-    int j =  trunc (k);
-
-    //"n" - "j" stock in "r"
-    float r = k - j;
-
-    //printf("%.2f, %i\n", k, j);
-
-    //compare "r" > 0
-    if(r > 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
