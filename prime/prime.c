@@ -33,7 +33,7 @@ bool prime(int number)
 {
     float n = number;
     //divide "n" per 2 and stock in "k"
-    float k = n / 2;
+    float k = n / 4;
 
     //take result and arround the nearest and stock resulte in "j"
     int j =  trunc (k);
