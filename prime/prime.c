@@ -31,6 +31,13 @@ int main(void)
 
 bool prime(int number)
 {
+    //convert to float
+    float n = number;
+
+    //divide par each number from 
+    for
+}
+
     float n = number;
     //divide "n" per 2 and stock in "k"
     float k = n / 4;
@@ -52,4 +59,3 @@ bool prime(int number)
     {
         return false;
     }
-}
