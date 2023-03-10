@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 bool prime(int number);
 
@@ -30,6 +31,7 @@ int main(void)
 
 bool prime(int number)
 {
-    
+    float n = i / 2
+    float 
     return false;
 }
