@@ -35,10 +35,12 @@ bool prime(int number)
     float n = number / 2;
     //take result and arround the nearest and stock resulte in "j"
     float j = trunc (n);
-    //compare "n" et "j"
-    if ((n - j) > 0)
+    //"n" - "j" stock in "r"
+    float r = n - j;
+    //compare "r" > 0
+    if(r > 0)
     {
-        char F = false;
+        
     }
     return false;
 }
