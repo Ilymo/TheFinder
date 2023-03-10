@@ -44,7 +44,7 @@ bool prime(int number)
     //printf("%.2f, %i\n", k, j);
 
     //compare "r" > 0
-    if(r == 0)
+    if(r <= 0)
     {
         return false;
     }
