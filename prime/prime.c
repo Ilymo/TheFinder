@@ -34,8 +34,9 @@ bool prime(int number)
     //convert to float
     float n = number;
 
-    //divide par each number from 
-    for
+    float i = 2
+    //divide par each number from i to n-1
+    for (; )
 }
 
     float n = number;
