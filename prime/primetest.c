@@ -8,6 +8,6 @@ int main (void)
     float n = get_float("number: ");
 
     float f = n / 2;
-    int j = nearbyint (f);
+    int j = trunc (f);
     printf("%i.\n", j);
 }
