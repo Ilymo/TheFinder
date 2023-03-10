@@ -39,12 +39,12 @@ bool prime(int number)
     int j =  trunc (k);
 
     //"n" - "j" stock in "r"
-    //float r = k - j;
+    float r = k - j;
 
     printf("%.2f, %i\n", k, j);
 
     //compare "r" > 0
-    if(k == j)
+    if(r > 0)
     {
         return false;
     }
