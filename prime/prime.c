@@ -36,15 +36,15 @@ bool prime(int number)
     float k = n / 4;
 
     //take result and arround the nearest and stock resulte in "j"
-    int j =  trunc (k);
+    int j =  round (k);
 
     //"n" - "j" stock in "r"
-    float r = k - j;
+    float r = j - k;
 
-    //printf("%.2f, %i\n", k, j);
+    printf("%.2f, %i\n", k, j);
 
     //compare "r" > 0
-    if(r <= 0)
+    if(r > 0)
     {
         return false;
     }
