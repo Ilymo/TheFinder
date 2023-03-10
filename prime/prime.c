@@ -31,16 +31,17 @@ int main(void)
 
 bool prime(int number)
 {
-    //divide "i" per 2 and stock in "n"
-    float n = number / 2;
+    float n = number;
+    //divide "i" per 2 and stock in "k"
+    float k = n / 2;
 
     //take result and arround the nearest and stock resulte in "j"
-    int j =  trunc (n);
+    int j =  trunc (k);
 
     //"n" - "j" stock in "r"
-    float r = j - n;
+    float r = k - j;
 
-    printf("%.2f, %i\n", n, j);
+    //printf("%.2f, %i\n", k, j);
 
     //compare "r" > 0
     if(r == 0)
