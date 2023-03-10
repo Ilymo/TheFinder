@@ -34,10 +34,15 @@ bool prime(int number)
     //convert to float
     float n = number;
 
-    float i = 2
     //divide par each number from i to n-1
-    for (; )
+    for (float i = 2; n < n-1 )
 }
+
+
+
+
+
+
 
     float n = number;
     //divide "n" per 2 and stock in "k"
