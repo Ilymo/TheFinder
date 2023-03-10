@@ -36,7 +36,7 @@ bool prime(int number)
     float k = n / 4;
 
     //take result and arround the nearest and stock resulte in "j"
-    int j =  round (k);
+    int j =  roundf (k+1);
 
     //"n" - "j" stock in "r"
     float r = j - k;
