@@ -31,15 +31,15 @@ int main(void)
 
 bool prime(int number)
 {
-    float n = number + 10;
+    float n = number;
     //divide "i" per 2 and stock in "k"
     float k = n / 4;
 
     //take result and arround the nearest and stock resulte in "j"
-    int j =  roundf (k);
+    int j =  trunc (k);
 
     //"n" - "j" stock in "r"
-    float r = j - k;
+    float r = k - j;
 
     printf("%.2f, %i\n", k, j);
 
