@@ -37,5 +37,8 @@ bool prime(int number)
     float j = trunc (n);
     //compare "n" et "j"
     if ((n - j) > 0)
+    {
+
+    }
     return false;
 }
