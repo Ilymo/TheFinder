@@ -40,7 +40,6 @@ bool prime(int number)
     //compare "r" > 0
     if(r == 0)
     {
-        false;
+        return false;
     }
-    return false;
 }
