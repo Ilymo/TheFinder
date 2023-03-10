@@ -38,7 +38,7 @@ bool prime(int number)
     //compare "n" et "j"
     if ((n - j) > 0)
     {
-
+        char F = false;
     }
     return false;
 }
