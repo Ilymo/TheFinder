@@ -39,11 +39,14 @@ bool prime(int number)
 
     //"n" - "j" stock in "r"
     float r = n - j;
-    
+
     //compare "r" > 0
-    while(r > 0)
+    if(r > 0)
     {
         return false;
     }
-    return true;
+    else
+    {
+        return true;
+    }
 }
