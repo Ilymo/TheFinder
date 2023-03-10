@@ -35,11 +35,11 @@ bool prime(int number)
     float n = number;
 
     //divide par each number from i to n-1
-    for (float i = 2; n <  ; i++)
+    for (float i = 2; n > number ; i++)
     {
        float j = n / i;
+       float k = number / i;
     }
-    
     return false
 }
 
