@@ -36,9 +36,9 @@ bool prime(int number)
 
 
     //divide par each number from i to n-1
-    if
+    if (i <= number)
     {
-        for (float i = 2; i <= number ;i++)
+        for (float i = 2;  ;i++)
         {
             float j = n / i;
             float k = number / i;
