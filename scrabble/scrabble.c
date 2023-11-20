@@ -18,7 +18,7 @@ int main(void)
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
 
-    // TODO: Print the winner
+    // Print the winner
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -35,8 +35,6 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
-
     //store Score of the current word
     int score = 0;
 
@@ -51,7 +49,6 @@ int compute_score(string word)
         {
             score += POINTS[word[i] - 'a'];
         }
-
     }
     return score;
 }
