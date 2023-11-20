@@ -15,12 +15,11 @@ int main(void)
     //converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-       int char_n = text[i];
        //stock binary code of the char in bit[]
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
-        stock[n] = char_n % 2;
-        char_n = char_n / 2;
+        stock[n] = text[i] % 2;
+        text[i] = text[i] / 2;
        }
        for (int x = 7; x >= 0; x--)
        {
