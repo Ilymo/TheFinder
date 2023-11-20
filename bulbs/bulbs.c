@@ -12,10 +12,10 @@ int main(void)
     // prompt for message
     string text = get_string("Message: ");
 
-    //converte char to byte
+    // converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-       //stock binary code of the char in bit[]
+       // stock binary code of the char in bit[]
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
         stock[n] = text[i] % 2;
