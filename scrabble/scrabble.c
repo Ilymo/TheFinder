@@ -25,7 +25,8 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
 
-    //convertie (word) en lowercase
+    //convertie (word) en uppercase
+    for (int i, int strlen(word); )
 
 
     //compte le nombre de lettre du mot = store dans length
