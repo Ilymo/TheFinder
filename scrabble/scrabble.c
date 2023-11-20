@@ -32,7 +32,7 @@ int compute_score(string word)
     //convertie (word) en uppercase
         for (int i, length; i < length; i++);
         {
-            if()
+            if(isupper())
         }
 
 
