@@ -22,7 +22,7 @@ int main(void)
         stock[n] = remain % 2;
         remain = remain / 2;
        }
-        for (int x = 7; x > 0; x--)
+        for (int x = 8; x > 0; x--)
         {
             printf("%i", stock[x]);
         }
