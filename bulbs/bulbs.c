@@ -6,6 +6,7 @@ const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
 int BYTE[7];
+int remain;
 
 int main(void)
 {
@@ -17,10 +18,9 @@ int main(void)
     {
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
-        BYTE[n] = text[i] % 2;
-
-
-        
+        remain = test[i]
+        BYTE[n] = remain % 2;
+        remain = text[i] / 2;
         printf("%i \n",BYTE[n]);
        }
 
