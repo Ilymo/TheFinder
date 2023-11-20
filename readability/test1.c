@@ -44,9 +44,6 @@ int count_words(string text)
         if (isalpha(text[i]))
         {
             n_words++;
-        }
-        else
-        {
             do
             {
                 i++;
