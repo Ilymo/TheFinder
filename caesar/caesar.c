@@ -4,6 +4,14 @@
 int main(int argc, string argv[])
 {
     // Make sure getting 1 argument (not 0 else 2+: return 1
+    if (argc = 1)
+    {
+        printf("0\n");
+    }
+    else
+    {
+        
+    }
 
     //Check all argv[x] are digits (print error if not)
 
