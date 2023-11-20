@@ -30,14 +30,14 @@ int compute_score(string word)
         printf("%i\n", length);
 
     //convertie (word) en uppercase
-
-        for (int i = 0; i < length; i++);
+        int upper;
+        for (int i = 0; i < length; i++)
         {
-            if(isupper(word[i]));
+            if(isupper(word[1]))
             {
-                int upper_word = toupper(word[i]);
+                upper = toupper(word[1]);
             }
-            printf("%i\n", upper_word);
+            printf("%i\n", upper);
         }
 
 
