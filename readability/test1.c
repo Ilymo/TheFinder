@@ -49,7 +49,7 @@ int count_words(string text)
         {
             i++;
         }
-        while (isalpha(text[i]));
+        while (isspace(text[i]));
 
     }
     return n_words;
