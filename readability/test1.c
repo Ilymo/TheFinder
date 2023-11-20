@@ -45,10 +45,11 @@ int count_words(string text)
         {
             n_words++;
         }
-        while (isalnum(text[i]) || ispunct(text[i]))
+        while (isalnum(text[i]) || ispunct(text[i]));
         {
             i++;
         }
+
     }
     return n_words;
 }
