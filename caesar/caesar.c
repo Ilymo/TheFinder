@@ -4,11 +4,7 @@
 int main(int argc, string argv[])
 {
     // Make sure getting 1 argument (not 0 else 2+: return 1
-    if (argc == 1)
-    {
-        return 0;
-    }
-    else
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
