@@ -39,12 +39,14 @@ int count_words(string text)
 {
     int n_words = 0;
 
-    for (int i = 0, len = strlen(text); i< len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (isspace(text[i]) || i == '\0')
+        if (isalpha(text[i]))
         {
-            n_words++;
+            i++;
         }
+        while(isspace(text[i]))
+        n_words++;
     }
     return n_words;
 }
