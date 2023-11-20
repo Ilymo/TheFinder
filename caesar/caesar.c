@@ -4,7 +4,7 @@
 #include <string.h>
 
 
-bool only_digits(string s);
+int only_digits(string s);
 
 
 int main(int argc, string argv[])
@@ -20,20 +20,20 @@ int main(int argc, string argv[])
 
     //Check all argv[x] are digits (print error if not)
 
-bool only_digits(string s)
+int only_digits(string s)
 {
-    bool answer;
     for (int i = 0, len = strlen(s); i < len; i++)
     {
         if (isdigit(s[i]))
         {
-            answer = true;
+            return 1;
         }
         else
         {
-            answer = false;
+            return 2;
         }
     }
+    return 2;
 
 }
 
