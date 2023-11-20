@@ -22,16 +22,18 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
     {
-        if (isdigit(s[1]))
+        for (int i = 0, len = strlen(s); i < len; i++)
         {
-            return(true);
-        }
-        else
-        {
-            return(false);
+            if (isdigit(s[i]))
+            {
+                return(true);
+            }
+            else
+            {
+                return(false);
+            }
         }
     }
-
 
 
 
