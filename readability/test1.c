@@ -45,11 +45,11 @@ int count_words(string text)
         {
             n_words++;
         }
-        do
+        while (is)
         {
             i++;
         }
-        while (isspace(text[i]));
+
 
     }
     return n_words;
