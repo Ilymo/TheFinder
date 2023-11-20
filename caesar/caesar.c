@@ -20,7 +20,10 @@ int main(int argc, string argv[])
 
 bool only_digits(string s);
     {
-        if (s[])
+        if (int i, len = strlen[s]; i < len; i++)
+        {
+            if (s[i])
+        }
     }
 
 
