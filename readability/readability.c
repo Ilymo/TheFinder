@@ -6,6 +6,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -33,24 +34,35 @@ int count_letters(string text)
     return n_letters;
 }
 
-
     //count words
 int count_words(string text)
 {
     int n_words = 0;
 
-    for (int i = 0, len = strlen(text); i< len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (isspace(text[i]) || i == '\0')
+        if (isalpha(text[i]))
         {
             n_words++;
+            while (isalnum(text[i]) || ispunct(text[i]))
+            {
+            i++;
+            }
         }
     }
     return n_words;
 }
 
-
-
-
     //count sentences
+int count_sentences(string text);
+{
+    int n_sentences = 0;
+
+    
+}
+
+
+
+
+
     //print "Grade: (X)"; "Grade: 16+" if higher than 16; "Before grade 1" if lower than 1
