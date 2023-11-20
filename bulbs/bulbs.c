@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int test = 0;
+int BYTE[];
 
 int main(void)
 {
@@ -15,9 +15,10 @@ int main(void)
     //converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-       test = text[i] % 2;
+       BYTE[i] = text[i] % 2;
+       printf("%i \n",BYTE[i]);
     }
-    printf("%i \n",test);
+
 }
 
 void print_bulb(int bit)
