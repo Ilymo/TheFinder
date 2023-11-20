@@ -18,7 +18,7 @@ int main(void)
        //stock binary code of the char in bit[]
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
-
+        
         printf("%i", text[i])
        }
        for (int x = 7; x >= 0; x--)
