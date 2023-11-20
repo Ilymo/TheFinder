@@ -17,9 +17,21 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
+    //calculate grade
+
+
+
+
+
+
     printf("%i letters\n%i words\n%i sentences\n", letters, words, sentences);
 
 }
+
+
+
+
+
 
     //count letters
 int count_letters(string text)
