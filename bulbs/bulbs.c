@@ -22,7 +22,7 @@ int main(void)
         remain = remain / 2;
         printf("%i",BYTE[n]);
        }
-       
+       printf("\n");
     }
 
 }
