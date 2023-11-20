@@ -24,7 +24,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    for (int n, n != /0, n++)
-        n = word{0}
-        
+        int n = word[0];
+        printf("%i\n", n);
+        return n;
 }
