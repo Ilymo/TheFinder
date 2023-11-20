@@ -12,8 +12,9 @@ int main(void)
     //prompt user for text
     string text = get_string("Text: ");
     int letters = count_letters(text);
+    int words = count_words(text);
 
-    printf("%i letters\n", letters);
+    printf("%i letters\n%i words\n", letters, words);
 
 }
 
@@ -40,8 +41,12 @@ int count_words(string text)
 
     for (int i = 0, len = strlen(text); i< len; i++)
     {
-        
+        if (isspace(text[i]))
+        {
+            n_words++;
+        }
     }
+    return n_words;
 }
 
 
