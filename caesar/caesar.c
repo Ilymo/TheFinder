@@ -25,9 +25,13 @@ bool only_digits(string s)
     bool answer;
     for (int i = 0, len = strlen(s); i < len; i++)
     {
-        while (isdigit(s[i]))
+        if (isdigit(s[i]))
         {
             answer = true
+        }
+        else
+        {
+            answer = false
         }
     }
     return answer;
