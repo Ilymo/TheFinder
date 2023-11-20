@@ -44,12 +44,12 @@ int count_words(string text)
         if (isalpha(text[i]))
         {
             n_words++;
-            do
-            {
-                i++;
-            }
-            while (isspace(text[i]));
         }
+        do
+        {
+            i++;
+        }
+        while (isalpha(text[i]));
 
     }
     return n_words;
