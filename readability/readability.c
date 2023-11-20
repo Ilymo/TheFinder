@@ -1,9 +1,8 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
-
+#include <stdio.h>
+#include <string.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -11,20 +10,20 @@ int count_sentences(string text);
 
 int main(void)
 {
-    //prompt user for text
+    // prompt user for text
     string text = get_string("Text: ");
-    //return count
+    // return count
     float letters = count_letters(text);
     int words = count_words(text);
     float sentences = count_sentences(text);
 
-    //calculate grade
+    // calculate grade
     float L = letters / words * 100.0;
     float S = sentences / words * 100.0;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = round(index);
 
-    //print grade
+    // print grade
     if (grade >= 16)
     {
         printf("Grade 16+\n");
@@ -39,7 +38,7 @@ int main(void)
     }
 }
 
-    //count letters
+// count letters
 int count_letters(string text)
 {
     int n_letters = 0;
@@ -54,7 +53,7 @@ int count_letters(string text)
     return n_letters;
 }
 
-    //count words
+// count words
 int count_words(string text)
 {
     int n_words = 0;
@@ -66,21 +65,21 @@ int count_words(string text)
             n_words++;
             while (isalnum(text[i]) || ispunct(text[i]))
             {
-            i++;
+                i++;
             }
         }
     }
     return n_words;
 }
 
-    //count sentences
+// count sentences
 int count_sentences(string text)
 {
     int n_sentences = 0;
 
-    for ( int i = 0, len = strlen(text); i < len; i++)
+    for (int i = 0, len = strlen(text); i < len; i++)
     {
-        if (text[i] == '!'|| text[i] == '.' || text[i] == '?')
+        if (text[i] == '!' || text[i] == '.' || text[i] == '?')
         {
             n_sentences++;
         }
