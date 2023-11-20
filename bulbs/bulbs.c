@@ -1,4 +1,4 @@
-clea#include <cs50.h>
+#include <cs50.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -8,7 +8,15 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+    // prompt for message
+    string text = get_string("Message: \n");
+
+    //converte char to byte
+    for (int i = 0, len = strlen(text); i < len; i++)
+    {
+        text[i]
+    }
+
 }
 
 void print_bulb(int bit)
