@@ -9,6 +9,10 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    else
+    {
+        
+    }
 
     //Check all argv[x] are digits (print error if not)
 
