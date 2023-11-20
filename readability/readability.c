@@ -24,6 +24,8 @@ int main(void)
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = round(index);
 
+
+
     //print grade
     if (grade >= 16)
     {
