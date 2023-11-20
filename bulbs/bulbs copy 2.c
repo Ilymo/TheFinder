@@ -16,12 +16,6 @@ int main(void)
     for (int i = 0, len = strlen(text); i < len; i++)
     {
        //stock binary code of the char in bit[]
-       for (int n = 0; n < BITS_IN_BYTE; n++)
-       {
-        stock[n] = text[i] % 2;
-        text[i] = text[i] / 2;
-        printf("%i", text[i])
-       }
        for (int x = 7; x >= 0; x--)
        {
         print_bulb(stock[x]);
