@@ -18,9 +18,7 @@ int main(void)
     {
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
-        remain = test[i]
         BYTE[n] = remain % 2;
-        remain = text[i] / 2;
         printf("%i \n",BYTE[n]);
        }
 
