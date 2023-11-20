@@ -12,10 +12,12 @@ int main(void)
 {
     //prompt user for text
     string text = get_string("Text: ");
+    //return count
     int letters = count_letters(text);
     int words = count_words(text);
+    int sentences = count_sentences(text);
 
-    printf("%i letters\n%i words\n", letters, words);
+    printf("%i letters\n%i words\n%i sentences\n", letters, words, sentences);
 
 }
 
@@ -54,11 +56,18 @@ int count_words(string text)
 }
 
     //count sentences
-int count_sentences(string text);
+int count_sentences(string text)
 {
     int n_sentences = 0;
 
-    
+    for ( int i = 0, len = strlen(text); i < len; i++)
+    {
+        if (text[i] == '.')
+        {
+            n_sentences++;
+        }
+    }
+    return n_sentences;
 }
 
 
