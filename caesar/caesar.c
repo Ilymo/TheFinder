@@ -8,8 +8,12 @@ int main(int argc, string argv[])
     {
         return 0;
     }
-    printf("Usage: ./caesar key\n");
-    return 1;
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+
     //Check all argv[x] are digits (print error if not)
 
     //stock argv[x] in K
