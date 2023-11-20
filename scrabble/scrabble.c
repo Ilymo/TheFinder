@@ -26,42 +26,23 @@ int compute_score(string word)
     // TODO: Compute and return score for string
 
     //store Score of the current word
-    int score = 0
+    int score = 0;
 
     //compute score of each caracter
-    for (int i = 0, int len = strlen(word); i < len; i++)
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
         if (isupper(word[i]))
         {
-            score += SCORE[i] - "A";
+            score += POINTS[word[i] - "A"];
         }
-        
-    }
-
-
-
-
-
-
-
-
-    //compte le nombre de lettre du mot = store dans length
-        int length = strlen(word);
-        printf("%i\n", length);
-
-    //convertie (word) en uppercase
-        int upper;
-        for (int i = 0; i < length; i++)
+        else if (islower(word[i]))
         {
-            if(isupper(word[1]))
-            {
-                upper = toupper(word[1]);
-            }
-            printf("%i\n", upper);
+            score += POINTS[word[i] - "a"];
+        }
+        else
+        {
+            score += 0;
         }
 
-
-        int n = word[1];
-        printf("%i\n", n);
-        return n;
-}
+    }
+    printf("%i\n", score)
