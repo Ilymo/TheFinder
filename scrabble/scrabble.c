@@ -25,15 +25,16 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
 
-    //convertie (word) en uppercase
-    for (int i, int strlen(word); )
-
-
     //compte le nombre de lettre du mot = store dans length
         int length = strlen(word);
         printf("%i\n", length);
 
-    //
+    //convertie (word) en uppercase
+        for (int i, length; i < length; i++);
+        {
+            if (s[i] >= 'a' && s[i] <= 'z')
+            
+        }
 
 
         int n = word[1];
