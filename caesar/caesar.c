@@ -22,7 +22,7 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
     {
-        for (int i, len = strlen[s]; i < len; i++)
+        for (int i, len = strlen(s); i < len; i++)
         {
             if (isdigit(s[i]))
             {
