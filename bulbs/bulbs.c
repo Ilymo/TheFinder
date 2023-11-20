@@ -15,8 +15,13 @@ int main(void)
     //converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-       BYTE[i] = text[i] % 2;
-       printf("%i \n",BYTE[i]);
+       for (int n = 0; n < BITS_IN_BYTE; n++)
+       {
+        BYTE[n] = text[i] % 2;
+        printf("%i \n",BYTE[n]);
+       }
+
+
     }
 
 }
