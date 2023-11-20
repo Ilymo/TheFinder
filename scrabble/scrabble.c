@@ -24,6 +24,10 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+        int length = strlen(word);
+        printf("%i\n", length);
+
+
         int n = word[1];
         printf("%i\n", n);
         return n;
