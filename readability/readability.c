@@ -19,8 +19,8 @@ int main(void)
     int sentences = count_sentences(text);
 
     //calculate grade
-    float L = (letters / words) * 100.0;
-    float S = (sentences / words) * 100.0;
+    float L = letters / words * 100.0;
+    float S = sentences / words * 100.0;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int grade = round(index);
 
