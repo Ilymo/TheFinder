@@ -22,8 +22,8 @@ int main(void)
         bit[n] = remain % 2;
         remain = remain / 2;
        }
-    for (BITS_IN_BYTE; )
-    print_bulb()
+        for (int x = 7; x > 0; x--)
+    print_bulb("%i)
     }
 
 }
