@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 
 bool only_digits(string s);
@@ -18,7 +20,7 @@ int main(int argc, string argv[])
 
     //Check all argv[x] are digits (print error if not)
 
-bool only_digits(string s);
+bool only_digits(string s)
     {
         for (int i, len = strlen[s]; i < len; i++)
         {
