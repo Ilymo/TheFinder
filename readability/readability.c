@@ -5,6 +5,7 @@
 
 
 int count_letters(string text);
+int count_words(string text);
 
 int main(void)
 {
@@ -33,6 +34,10 @@ int count_letters(string text)
 
 
 
-        //count words
+    //count words
+
+
+
+
     //count sentences
     //print "Grade: (X)"; "Grade: 16+" if higher than 16; "Before grade 1" if lower than 1
