@@ -9,12 +9,12 @@ void print_bulb(int bit);
 int main(void)
 {
     // prompt for message
-    string text = get_string("Message: \n");
+    string text = get_string("Message: ");
 
     //converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        text[i]
+       printf("%i \n",text[i]);
     }
 
 }
