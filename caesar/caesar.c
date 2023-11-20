@@ -24,10 +24,9 @@ bool only_digits(string s)
     {
         for (int i = 0, len = strlen(s); i < len; i++)
         {
-            bool answer = isdigit(s[i])
         }
+
      }
-    }
 
 
 
