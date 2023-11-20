@@ -41,11 +41,10 @@ int count_words(string text)
 
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-        do (isalpha(text[i]))
+        while (isalpha(text[i]))
         {
             i++;
         }
-        while(isspace(text[i]))
         n_words++;
     }
     return n_words;
