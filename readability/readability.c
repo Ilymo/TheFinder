@@ -18,13 +18,12 @@ int main(void)
     int sentences = count_sentences(text);
 
     //calculate grade
+    float L = letters / words * 100.0;
+    float S = (sentences / words * 100.0);
 
 
 
-
-
-
-    printf("%i letters\n%i words\n%i sentences\n", letters, words, sentences);
+    printf("L: %f\n S: %f\n", L, S);
 
 }
 
