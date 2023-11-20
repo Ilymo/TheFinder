@@ -24,8 +24,15 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+
+    //convertie (word) en lowercase
+
+
+    //compte le nombre de lettre du mot = store dans length
         int length = strlen(word);
         printf("%i\n", length);
+
+    //
 
 
         int n = word[1];
