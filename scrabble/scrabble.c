@@ -32,8 +32,7 @@ int compute_score(string word)
     //convertie (word) en uppercase
         for (int i, length; i < length; i++);
         {
-            if (s[i] >= 'a' && s[i] <= 'z')
-            
+            if
         }
 
 
