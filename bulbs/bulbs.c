@@ -20,8 +20,8 @@ int main(void)
        {
         BYTE[n] = remain % 2;
 
-        
-        printf("%i \n",BYTE[n]);
+
+        printf("%i",BYTE[n]);
        }
 
 
