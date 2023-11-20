@@ -14,9 +14,9 @@ int main(void)
     //converte char to byte
     for (int i = 0, len = strlen(text); i < len; i++)
     {
-       printf("%i \n",text[i]);
+        
     }
-
+    printf("%i \n",text[i]);
 }
 
 void print_bulb(int bit)
