@@ -13,9 +13,9 @@ int main(void)
     //prompt user for text
     string text = get_string("Text: ");
     //return count
-    int letters = count_letters(text);
-    int words = count_words(text);
-    int sentences = count_sentences(text);
+    float letters = count_letters(text);
+    float words = count_words(text);
+    float sentences = count_sentences(text);
 
     //calculate grade
     float L = (letters / words) * 100.0;
