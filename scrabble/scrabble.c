@@ -25,6 +25,22 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
 
+    //store Score of the current word
+    int score = 0
+
+    //compute score of each caracter
+    for (int i = 0, int len = strlen(word); i < len; i++)
+    {
+        if 
+    }
+
+
+
+
+
+
+
+
     //compte le nombre de lettre du mot = store dans length
         int length = strlen(word);
         printf("%i\n", length);
