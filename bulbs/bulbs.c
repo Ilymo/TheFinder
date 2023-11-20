@@ -5,7 +5,7 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-int bit[7];
+int stock[7];
 
 int main(void)
 {
@@ -19,11 +19,14 @@ int main(void)
        //stock binary code of the char in bit[]
        for (int n = 0; n < BITS_IN_BYTE; n++)
        {
-        bit[n] = remain % 2;
+        stock[n] = remain % 2;
         remain = remain / 2;
        }
         for (int x = 7; x > 0; x--)
-    print_bulb("%i)
+        {
+            printf("%i", stock[x]);
+        }
+        printf("\n");
     }
 
 }
