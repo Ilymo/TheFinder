@@ -20,9 +20,12 @@ int main(int argc, string argv[])
 
 bool only_digits(string s);
     {
-        if (int i, len = strlen[s]; i < len; i++)
+        for (int i, len = strlen[s]; i < len; i++)
         {
-            if (s[i])
+            if (isdigit(s[i]))
+            {
+                
+            }
         }
     }
 
