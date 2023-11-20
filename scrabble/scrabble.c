@@ -33,11 +33,11 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score += POINTS[word[i] - "A"];
+            score += POINTS[word[i] - 'A'];
         }
         else if (islower(word[i]))
         {
-            score += POINTS[word[i] - "a"];
+            score += POINTS[word[i] - 'a'];
         }
         else
         {
@@ -45,4 +45,6 @@ int compute_score(string word)
         }
 
     }
-    printf("%i\n", score)
+    printf("%i\n", score);
+    return score;
+}
