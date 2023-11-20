@@ -24,11 +24,10 @@ int main(void)
        }
        for (int x = 7; x >= 0; x--)
        {
-        print_bulb("%i", stock[x]);
+        print_bulb(stock[x]);
        }
     printf("\n");
     }
-
 }
 
 void print_bulb(int bit)
