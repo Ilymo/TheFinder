@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     //prompt for plaintext
     string P = get_string("Plaintext: ");
     //printf cyphertext
-    printf("%c \n", rotate('A', K));
+    printf("%c \n", rotate(P[0], K));
 }
 
 
@@ -64,13 +64,13 @@ char rotate (char c, int n)
         {
             //rotate majuscule
             c -= 'A';
-            c = (c - n)%26;
+            c = (c + n)%26;
         }
         else
         {
             //rotate minuscule
             c -= 'a';
-            c = (c - n)%26;
+            c = (c + n)%26;
         }
     }
     return c;
