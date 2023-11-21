@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     //print each character rotated
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-        printf("%c", cipher(P[i], ));
+        printf("%c", cipher(P[i], argv[i]));
     }
     printf("\n");
 }
