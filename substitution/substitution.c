@@ -73,7 +73,7 @@ bool valid_key(string s)
 }
 
 // encipher
-char cipher (char c, int n);
+char cipher (char c, int n)
 {
     if (isalpha(c))
     {
