@@ -51,14 +51,24 @@ bool only_digits(string s)
     return answer;
 
 }
-
-
-
-    //stock argv[x] in K
-
-    //get plaintext
-
     //for each chara in plaintexte
+char rotate (char c, int n)
+{
+    for (i = 0, len = strlen(s); i < len; i++)
+    {
+        if(isalpha(s[i]))
+        {
+            if(isupper(s[i]))
+            {
+                //rotate majuscule
+            }
+            else
+            {
+                //rotate minuscule
+            }
+        }
+    }
+}
 
         //rotate chara if it's a letter with K
 
