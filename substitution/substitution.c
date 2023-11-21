@@ -29,6 +29,7 @@ bool valid_key(string s)
     // check length
     if (strlen(s) == 25)
     {
+        string key = s;
         //check only letter
         for (int i = 0, len = strlen(s); i < len; i++)
         {
@@ -36,7 +37,21 @@ bool valid_key(string s)
             {
                 if (isalpha(s[i]))
                 {
-                    validation = true;
+                    //check non repetitive characters
+                    for (int n = 0, len = strlen(key); n < len; n++)
+                    {
+                        if (validation == true)
+                        {
+                            if (key[n] != s([i]))
+                            {
+                                validation = true;
+                            }
+                            else
+                            {
+                                validation = false;
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -44,7 +59,7 @@ bool valid_key(string s)
                 }
             }
         }
-            //check non repetitive characters
+        //check non repetitive characters
     }
     else
     {
