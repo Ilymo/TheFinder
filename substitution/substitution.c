@@ -74,9 +74,14 @@ bool valid_key(string s)
 // encipher
 char cipher (char c, int n);
 {
-    char index = c
+    if (isalpha(c))
+    {
+        
+    }
 }
     //for each character, determinate what letter it map to
     // preserve case
     // leave non-alphabetique like this
+
+
 // Print ciphertext
