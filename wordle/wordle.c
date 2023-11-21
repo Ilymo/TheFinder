@@ -38,15 +38,7 @@ int main(int argc, string argv[])
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
     int k = atoi(argv[2]);
-    if (k != 5 )
-    {
-        printf("Error: wordsize must be 5, 6, 7, or 8\n");
-        return 1;
-    }
-    else
-    {
-        wordsize = k;
-    }
+    printf("%i \n", k);
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
