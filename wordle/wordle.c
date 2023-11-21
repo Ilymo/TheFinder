@@ -152,12 +152,12 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
                 if (n == i)
                 {
-                    score += EXACT;
+                    status[n] += EXACT;
                 }
                 // if it's in the word, but not the right spot, score CLOSE point (yellow)
                 else
                 {
-                    score += CLOSE;
+                    status[n] += CLOSE;
                 }
 
             }
