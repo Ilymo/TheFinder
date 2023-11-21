@@ -26,39 +26,29 @@ int main(int argc, string argv[])
 bool valid_key(string s)
 {
     bool validation = true;
-    for (int i = 0, len = strlen(s); i < len; i++)
+    // check length
+    if (strlen(s) == 25)
     {
-        // check length
-        if (len == 25)
+        //check only letter
+        for (int i = 0, len = strlen(s); i < len; i++)
         {
-            // check only lettter
             if (isalpha(s[i]))
             {
-                //check no repeated characters
-                char key[len];
-                key[i] = s[i];
-                for (int n = 0, len1 = strlen(key); n < len1; n++)
-                {
-                    if (key[n] != s[i])
-                    {
-                        validation = true;
-                    }
-                    else
-                    {
-                        validation = false;
-                    }
-                }
+                validation = true;
             }
             else
             {
                 validation = false;
             }
         }
-        else
-        {
-            validation = false;
-        }
+            //check non repetitive characters
     }
+    else
+    {
+        validation = false;
+    }
+
+
     return validation;
 }
 
