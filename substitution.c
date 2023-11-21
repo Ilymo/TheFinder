@@ -27,7 +27,6 @@ bool valid_key(string s)
 {
     bool validation = true;
     char key[26];
-    s == toupper(s)
     // check length
     if (strlen(s) == 26)
     {
