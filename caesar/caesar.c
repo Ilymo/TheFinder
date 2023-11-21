@@ -26,12 +26,12 @@ int main(int argc, string argv[])
     int K = atoi(argv[1]);
     //prompt for plaintext
     string P = get_string("Plaintext: ");
-    //printf cyphertext
+    //cyphertext
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-        printf("cypher: %c", rotate(P[i], K));
+       string C[i] = rotate(P[i], K);
     }
-    printf("\n");
+    printf("Cypher: %s", C);
 }
 
 
