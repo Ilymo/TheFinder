@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     //prompt for plaintext
     string P = get_string("Plaintext: ");
     //printf cyphertext
-    printf("cypher: %c \n", rotate('A', K));
+    printf("cypher: %c \n", rotate(P[1], K));
 }
 
 
@@ -65,6 +65,7 @@ char rotate (char c, int n)
             //rotate majuscule
             c -= 'A';
             c = (c + n)%26;
+            printf("%c \n", c);
         }
         else
         {
