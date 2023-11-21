@@ -42,7 +42,7 @@ bool valid_key(string s)
                     {
                         if (validation == true)
                         {
-                            if (key[n] != s[i])
+                            if (key[n] != s[i + 1])
                             {
                                 validation = true;
                             }
