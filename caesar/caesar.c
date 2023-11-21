@@ -28,7 +28,6 @@ int main(int argc, string argv[])
 bool only_digits(string s)
 {
     bool answer = true;
-    while (answer == true)
     {
         for (int i = 0, len = strlen(s); i < len; i++)
         {
