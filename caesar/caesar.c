@@ -1,13 +1,11 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 bool only_digits(string s);
 char rotate(char c, int n);
-
 
 int main(int argc, string argv[])
 {
@@ -35,13 +33,12 @@ int main(int argc, string argv[])
     // print rotate char
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-         printf("%c", rotate(P[i], K));
+        printf("%c", rotate(P[i], K));
     }
     printf("\n");
 }
 
-
-    //Check all argv[x] are digits (print error if not)
+// Check all argv[x] are digits (print error if not)
 
 bool only_digits(string s)
 {
@@ -63,25 +60,24 @@ bool only_digits(string s)
         }
     }
     return answer;
-
 }
-    // for each chara in plaintexte
-char rotate (char c, int n)
+// for each chara in plaintexte
+char rotate(char c, int n)
 {
-    if(isalpha(c))
+    if (isalpha(c))
     {
-        if(isupper(c))
+        if (isupper(c))
         {
-            //rotate majuscule
+            // rotate majuscule
             c -= 'A';
-            c = (c + n)%26;
+            c = (c + n) % 26;
             c += 'A';
         }
         else
         {
-            //rotate minuscule
+            // rotate minuscule
             c -= 'a';
-            c = (c + n)%26;
+            c = (c + n) % 26;
             c += 'a';
         }
     }
