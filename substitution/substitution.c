@@ -71,6 +71,7 @@ bool valid_key(string s)
     }
     return validation;
 }
+
 // encipher
 char cipher (char c, int n);
 {
