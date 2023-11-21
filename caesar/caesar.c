@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     //prompt for plaintext
     string P = get_string("Plaintext: ");
     //printf cyphertext
-    printf("%c \n", rotate(P[0], K));
+    printf("cypher: %c \n", rotate('A', K));
 }
 
 
