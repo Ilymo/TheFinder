@@ -3,8 +3,8 @@
 // Practice using the ctype library
 
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
 bool valid(string password);
@@ -59,5 +59,4 @@ bool valid(string password)
     {
         return false;
     }
-
 }
