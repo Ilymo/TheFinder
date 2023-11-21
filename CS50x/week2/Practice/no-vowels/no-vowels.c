@@ -19,10 +19,9 @@ int main(int argc, string argv[])
     printf("%s\n", replace(argv[1]));
 }
 
-
 string replace(string s)
 {
-    for (int i = 0, len = strlen(s); i < len ; i++)
+    for (int i = 0, len = strlen(s); i < len; i++)
     {
         if (s[i] == 'a')
         {
