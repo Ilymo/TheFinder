@@ -31,13 +31,16 @@ bool only_digits(string s)
     {
         for (int i = 0, len = strlen(s); i < len; i++)
         {
-            if (isdigit(s[i]))
-            {
-                answer = true;
-            }
-            else
-            {
-                answer = false;
+            while (answer == true)
+                {
+                if (isdigit(s[i]))
+                {
+                    answer = true;
+                }
+                else
+                {
+                    answer = false;
+                }
             }
         }
     }
