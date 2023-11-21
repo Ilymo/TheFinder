@@ -29,8 +29,9 @@ int main(int argc, string argv[])
     //printf cyphertext
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-        printf("cypher: %c \n", rotate(P[i], K));
+        printf("cypher: %c", rotate(P[i], K));
     }
+    printf("\n");
 }
 
 
@@ -68,7 +69,6 @@ char rotate (char c, int n)
             //rotate majuscule
             c -= 'A';
             c = (c + n)%26;
-            printf("%c \n", c);
         }
         else
         {
