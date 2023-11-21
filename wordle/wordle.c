@@ -172,7 +172,10 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
-    
+    for (int i = 0, len = strlen(guess); i < len; i++)
+    {
+        if (guess[i] )
+    }
 
     printf("\n");
     return;
