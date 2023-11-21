@@ -35,8 +35,8 @@ bool valid_key(string s)
             if (isalpha(s[i]))
             {
                 //check no repeated characters
-                string key;
-                key [i] = s[i];
+                string key[len];
+                key[i] = s[i];
                 for (int n = 0, len1 = strlen(key); n < len1; n++)
                 {
                     if (key[n] != s[i])
