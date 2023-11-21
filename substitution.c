@@ -42,7 +42,7 @@ bool valid_key(string s)
                     {
                         if (validation == true)
                         {
-                            if (key[n] != s[i])
+                            if (key[n] != toupper(s[i]))
                             {
                                 validation = true;
                             }
@@ -52,7 +52,7 @@ bool valid_key(string s)
                             }
                         }
                     }
-                    key[i] = s[i];
+                    key[i] = toupper(s[i]);
                 }
                 else
                 {
