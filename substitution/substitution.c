@@ -45,6 +45,8 @@ char cipher (char c, int n)
     {
         if (isupper(c))
         {
+            c -= 'A'
+            c = (c + n)%26
             c = n;
             c = toupper(c);
         }
