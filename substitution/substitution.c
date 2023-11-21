@@ -5,7 +5,7 @@
 
 
 bool valid_key(string s);
-char cipher(char c, int n);
+char cipher(char c);
 
 int main(int argc, string argv[])
 {
@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     //print each character rotated
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-        printf("%c", cipher(P[i], key[i]));
+        printf("%c", cipher(P[i]);
     }
     printf("\n");
 }
@@ -40,18 +40,23 @@ int main(int argc, string argv[])
 
 
 // encipher
-char cipher (char c, int n)
+char cipher (char c)
 {
+    int stock;
     if (isalpha(c))
     {
         if (isupper(c))
         {
-            c = n;
+            c -= 'A';
+            stock = c;
+            c = key[stock];
             c = toupper(c);
         }
         else
         {
-            c = n;
+            c -= 'a';
+            stock = c;
+            c = key[stock];
             c = tolower(c);
         }
     }
