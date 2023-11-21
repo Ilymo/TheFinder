@@ -5,6 +5,7 @@
 
 
 bool valid_key(string s);
+char cipher(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -21,7 +22,7 @@ int main(int argc, string argv[])
     }
     // prompt for plaintext
     string P = get_string("plaintext: ");
-    
+
 }
 
 
@@ -70,12 +71,11 @@ bool valid_key(string s)
     }
     return validation;
 }
-
-
-
-
-
 // encipher
+char cipher (char c, int n);
+{
+    
+}
     //for each character, determinate what letter it map to
     // preserve case
     // leave non-alphabetique like this
