@@ -89,7 +89,16 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        
+        for (int n = 0, len = strlen(guess); n < len; n ++)
+        {
+            if (guess[n] == EXACT)
+            {
+                status[n] = 2;
+            }
+                    printf("%i \n", status[n]);
+        }
+
+
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
