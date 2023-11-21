@@ -174,7 +174,7 @@ void print_word(string guess, int wordsize, int status[])
     // TODO #6
     for (int i = 0, len = strlen(guess); i < len; i++)
     {
-        if (guess[i] )
+        if ([i] )
     }
 
     printf("\n");
