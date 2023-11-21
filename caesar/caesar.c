@@ -8,6 +8,7 @@
 bool only_digits(string s);
 
 
+
 int main(int argc, string argv[])
 {
     // Make sure getting 1 argument (not 0 else 2+: return 1
@@ -21,7 +22,8 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    
+    int K = atoi(argv[1]);
+    string P = get_string("Plaintext: ");
 }
 
 
