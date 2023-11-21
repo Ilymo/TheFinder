@@ -61,10 +61,12 @@ char rotate (char c, int n)
             if(isupper(s[i]))
             {
                 //rotate majuscule
+                s[i] -= 'A'
             }
             else
             {
                 //rotate minuscule
+                s[i] -= 'a'
             }
         }
     }
