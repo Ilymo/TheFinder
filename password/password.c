@@ -24,9 +24,28 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool lower = false;
+    bool upper = false;
+    bool number = false;
+    bool char = false;
+
     for (int i = 0, len_strlen(password); i < len; i++)
     {
-        if
+        if (isalpha(password[i]))
+        {
+            if (islower(password[i]))
+            {
+                lower = true;
+            }
+            else if (isupper(pawword[i]))
+            {
+                upper = true;
+            }
+        }
+        else (isdigit(password[i]))
+        {
+            number = true;
+        }
     }
     return false;
 }
