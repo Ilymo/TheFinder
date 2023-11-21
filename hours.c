@@ -28,18 +28,18 @@ int main(void)
 float calc_hours(int hours[], int weeks, char output)
 {
     float sum = 0.0;
+    for (int i = 0; i < weeks; i++)
+    {
+        sum += hours[i];
+    }
     if (output == 'T')
     {
         // addition
-        for (int i = 0, i < weeks, i++)
-        {
-            sum += hours[i]
-        }
         return sum;
     }
     else if (output == 'A')
     {
         // average
-        
+        return (sum / weeks);
     }
 }
