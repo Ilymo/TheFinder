@@ -27,7 +27,7 @@ bool valid(string password)
     bool lower = false;
     bool upper = false;
     bool number = false;
-    bool char = false;
+    bool punct = false;
 
     for (int i = 0, len_strlen(password); i < len; i++)
     {
@@ -42,9 +42,13 @@ bool valid(string password)
                 upper = true;
             }
         }
-        else (isdigit(password[i]))
+        else if (isdigit(password[i]))
         {
             number = true;
+        }
+        else if (ispunct(password[i]))
+        {
+            punct = true;
         }
     }
     return false;
