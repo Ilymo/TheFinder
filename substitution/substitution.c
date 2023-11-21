@@ -26,6 +26,7 @@ int main(int argc, string argv[])
 bool valid_key(string s)
 {
     bool validation = true;
+    string key[26];
     // check length
     if (strlen(s) == 26)
     {
@@ -36,7 +37,6 @@ bool valid_key(string s)
             {
                 if (isalpha(s[i]))
                 {
-                    string key = [i];
                     //check non repetitive characters
                     for (int n = 0, len1 = strlen(key); n < len1; n++)
                     {
