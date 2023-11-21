@@ -5,6 +5,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 string replace(string);
 
@@ -15,6 +16,7 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels word\n");
         return 1;
     }
+    printf("%s\n", replace(argv[1]));
 }
 
 
