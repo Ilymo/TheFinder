@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 bool valid_key(string s)
 {
     bool validation = true;
-    string key[26];
+    char key[26];
     // check length
     if (strlen(s) == 26)
     {
