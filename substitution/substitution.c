@@ -34,7 +34,7 @@ bool valid_key(string s);
                 key [i] = s[i];
                 for (int n = 0, len1 = strlen(key); n < len1; n++)
                 {
-                    if (key[n] != s[n])
+                    if (key[n] != s[i])
                     {
                         validation = true;
                     }
