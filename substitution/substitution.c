@@ -5,7 +5,7 @@
 
 
 bool valid_key(string s);
-char cipher(char c, int key);
+char cipher(char c, string key);
 
 int main(int argc, string argv[])
 {
@@ -40,7 +40,7 @@ int main(int argc, string argv[])
 
 
 // encipher
-char cipher (char c, int key)
+char cipher (char c, string key)
 {
     int stock;
     if (isalpha(c))
