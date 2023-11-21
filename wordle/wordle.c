@@ -91,11 +91,10 @@ int main(int argc, string argv[])
         // TODO #4
         for (int n = 0, len = strlen(guess); n < len; n ++)
         {
-            {
                 status[n] = 0;
-            }
-                    printf("status: %i \n", status[n]);
+                printf("status: %i \n", status[n]);
         }
+
 
 
 
