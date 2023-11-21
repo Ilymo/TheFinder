@@ -92,11 +92,7 @@ int main(int argc, string argv[])
         for (int n = 0, len = strlen(guess); n < len; n ++)
         {
                 status[n] = 0;
-                printf("status: %i \n", status[n]);
         }
-
-
-
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
