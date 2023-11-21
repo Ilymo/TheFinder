@@ -32,13 +32,16 @@ bool valid_key(string s)
         //check only letter
         for (int i = 0, len = strlen(s); i < len; i++)
         {
-            if (isalpha(s[i]))
+            if (validation == true)
             {
-                validation = true;
-            }
-            else
-            {
-                validation = false;
+                if (isalpha(s[i]))
+                {
+                    validation = true;
+                }
+                else
+                {
+                    validation = false;
+                }
             }
         }
             //check non repetitive characters
