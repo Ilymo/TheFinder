@@ -38,6 +38,26 @@ int main(int argc, string argv[])
 }
 
 
+// encipher
+char cipher (char c, int n)
+{
+    if (isalpha(c))
+    {
+        if (isupper(c))
+        {
+            c = n;
+            c = toupper(c);
+        }
+        else
+        {
+            c = n;
+            c = tolower(c);
+        }
+    }
+    return c;
+}
+
+
 // validate key
 bool valid_key(string s)
 {
@@ -84,24 +104,7 @@ bool valid_key(string s)
     return validation;
 }
 
-// encipher
-char cipher (char c, int n)
-{
-    if (isalpha(c))
-    {
-        if (isupper(c))
-        {
-            c = n;
-            c = toupper(c);
-        }
-        else
-        {
-            c = n;
-            c = tolower(c);
-        }
-    }
-    return c;
-}
+
     //for each character, determinate what letter it map to
     // preserve case
     // leave non-alphabetique like this
