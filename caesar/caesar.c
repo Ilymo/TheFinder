@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     //cyphertext
     for (int i = 0, len = strlen(P); i < len; i++)
     {
-       string C = rotate(P[i], K);
+        char C = rotate(P[i], K);
     }
     printf("Cypher: %s", C);
 }
