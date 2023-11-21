@@ -52,7 +52,7 @@ bool valid_key(string s)
                             }
                         }
                     }
-                    key[i] = s[i];
+                    key[i] = toupper(s[i];
                 }
                 else
                 {
