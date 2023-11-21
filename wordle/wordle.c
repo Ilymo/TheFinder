@@ -91,9 +91,8 @@ int main(int argc, string argv[])
         // TODO #4
         for (int n = 0, len = strlen(guess); n < len; n ++)
         {
-            if (guess[n] == EXACT)
             {
-                status[n] = 2;
+                status[n] = 0;
             }
                     printf("status: %i \n", status[n]);
         }
