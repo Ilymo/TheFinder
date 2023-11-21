@@ -22,8 +22,12 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    // convert argv to int K
     int K = atoi(argv[1]);
+    //prompt for plaintext
     string P = get_string("Plaintext: ");
+    //printf cyphertext
+    printf("%c \n", rotate(P[0], K));
 }
 
 
@@ -54,24 +58,22 @@ bool only_digits(string s)
     //for each chara in plaintexte
 char rotate (char c, int n)
 {
-    for (int i = 0, len = strlen(s); i < len; i++)
+    if(isalpha(c))
     {
-        if(isalpha(s[i]))
+        if(isupper(c))
         {
-            if(isupper(s[i]))
-            {
-                //rotate majuscule
-                s[i] -= 'A';
-                c = (c - k)%26;
-            }
-            else
-            {
-                //rotate minuscule
-                s[i] -= 'a';
-                c = (c - k)%26;
-            }
+            //rotate majuscule
+            c -= 'A';
+            c = (c - n)%26;
+        }
+        else
+        {
+            //rotate minuscule
+            c -= 'a';
+            c = (c - n)%26;
         }
     }
+    return c;
 }
 
         //rotate chara if it's a letter with K
