@@ -14,17 +14,22 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    if (!valid_key(argv[1]))
+    {
+        printf("Invalid key\n");
+        return 1;
+    }
 }
 
 
 // validate key
-bool valid_key(string s);
+bool valid_key(string s)
 {
     bool validation = true;
     for (int i = 0, len = strlen(s); i < len; i++)
     {
         // check length
-        if (len = 25)
+        if (len == 25)
         {
             // check only lettter
             if (isalpha(s[i]))
@@ -46,15 +51,15 @@ bool valid_key(string s);
             }
             else
             {
-                valiation = false;
+                validation = false;
             }
         }
         else
         {
-            validation = false
+            validation = false;
         }
     }
-    return valiation;
+    return validation;
 }
 
 
