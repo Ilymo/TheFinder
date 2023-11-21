@@ -95,7 +95,7 @@ int main(int argc, string argv[])
             {
                 status[n] = 2;
             }
-                    printf("%i \n", status[n]);
+                    printf("status: %i \n", status[n]);
         }
 
 
