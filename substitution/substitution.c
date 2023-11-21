@@ -19,6 +19,9 @@ int main(int argc, string argv[])
         printf("Invalid key\n");
         return 1;
     }
+    // prompt for plaintext
+    string P = get_string("plaintext: ");
+    
 }
 
 
@@ -70,7 +73,7 @@ bool valid_key(string s)
 
 
 
-// prompt for plaintext
+
 
 // encipher
     //for each character, determinate what letter it map to
