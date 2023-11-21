@@ -54,19 +54,21 @@ bool only_digits(string s)
     //for each chara in plaintexte
 char rotate (char c, int n)
 {
-    for (i = 0, len = strlen(s); i < len; i++)
+    for (int i = 0, len = strlen(s); i < len; i++)
     {
         if(isalpha(s[i]))
         {
             if(isupper(s[i]))
             {
                 //rotate majuscule
-                s[i] -= 'A'
+                s[i] -= 'A';
+                c = (c - k)%26;
             }
             else
             {
                 //rotate minuscule
-                s[i] -= 'a'
+                s[i] -= 'a';
+                c = (c - k)%26;
             }
         }
     }
