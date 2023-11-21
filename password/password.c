@@ -51,7 +51,7 @@ bool valid(string password)
             punct = true;
         }
     }
-    if (lower | upper | number | punct)
+    if (lower && upper && number && punct)
     {
         return true;
     }
