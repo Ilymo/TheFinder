@@ -23,6 +23,15 @@ int main(int argc, string argv[])
     // prompt for plaintext
     string P = get_string("plaintext: ");
 
+    // print 'cipher: "
+    printf("ciphertext: ");
+
+    //print each character rotated
+    for (int i = 0, len = strlen(P); i < len; i++)
+    {
+        printf("%c", cipher(P[i], ));
+    }
+    printf("\n");
 }
 
 
