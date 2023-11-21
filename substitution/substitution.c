@@ -27,7 +27,6 @@ bool valid_key(string s)
 {
     bool validation = true;
     char key[26];
-    char upper_s = toupper(s);
     // check length
     if (strlen(s) == 26)
     {
@@ -43,7 +42,7 @@ bool valid_key(string s)
                     {
                         if (validation == true)
                         {
-                            if (key[n] != upper_s[i])
+                            if (key[n] != toupper(s[i]))
                             {
                                 validation = true;
                             }
@@ -53,7 +52,7 @@ bool valid_key(string s)
                             }
                         }
                     }
-                    key[i] = upper_s[i];
+                    key[i] = toupper(s[i]);
                 }
                 else
                 {
@@ -66,8 +65,6 @@ bool valid_key(string s)
     {
         validation = false;
     }
-
-
     return validation;
 }
 
