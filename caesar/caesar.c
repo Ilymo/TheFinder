@@ -69,12 +69,14 @@ char rotate (char c, int n)
             //rotate majuscule
             c -= 'A';
             c = (c + n)%26;
+            c += 'A';
         }
         else
         {
             //rotate minuscule
             c -= 'a';
             c = (c + n)%26;
+            c += 'a';
         }
     }
     return c;
