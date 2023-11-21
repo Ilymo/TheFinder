@@ -30,6 +30,8 @@ bool valid_key(string s);
             if (isalpha(s[i]))
             {
                 //check no repeated characters
+                string key;
+                
             }
             else
             {
