@@ -54,7 +54,7 @@ bool only_digits(string s)
                 }
                 else
                 {
-                    return false;
+                    answer = false;
                 }
             }
         }
