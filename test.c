@@ -8,7 +8,7 @@ bool test(char c);
 int main(void)
 {
     char letter = get_char("char: \n");
-    if (test)
+    if (test(letter))
     {
         printf("%c is a letter", letter);
     }
@@ -20,7 +20,7 @@ int main(void)
 
 bool test(char c)
 {
-    if (ischar(c))
+    if (isalpha(c))
     {
         return true;
     }
