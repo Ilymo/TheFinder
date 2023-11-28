@@ -67,16 +67,22 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         // find greater number between temps[i] and temps[n - 1];
-            int n = i;
         int stock = temps[i].temp;
-        while (stock > temps[n + 1])
+
+        for (int n = i; n < NUM_CITIES; n++)
         {
-            n ++;
-            if (temps[n].temp == '\0')
+            if (stock > temps[n + 1].temp)
             {
-                return;
+                n++;
+            }
+            else
+            {
+                stock = temps[n + 1].temp
             }
         }
+
+
+    }
         // swap greater number to temps[i]
 
     }
