@@ -7,7 +7,6 @@
 int convert(string input);
 int number = 0;
 
-
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
