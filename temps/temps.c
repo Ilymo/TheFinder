@@ -63,5 +63,5 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    
+    // sort left part of the array (while )
 }
