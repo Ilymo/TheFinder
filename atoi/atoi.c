@@ -37,7 +37,7 @@ int convert(string input)
         }
 
         input[i] = (input[i] - '0');
-        printf("%i \n", number);
+        printf("%i \n", input[i]);
         input[i] = '\0';
         convert(input);
     }
