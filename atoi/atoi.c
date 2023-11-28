@@ -36,7 +36,7 @@ int convert(string input)
         break;
     }
 
-    number = input[i] - '0';
+    number = number * 10 + (input[i] - '0');
     printf("%i \n", number);
     input[i] = '\0';
     convert(input);
