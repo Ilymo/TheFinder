@@ -31,13 +31,13 @@ int convert(string input)
 
     if (input[i] == '\0')
     {
-        return;
+        return 1;
     }
 
     convert (input[i]);
 
     number = input[i] - '0';
     input[i] == '\0';
-
+    return number;
 
 }
