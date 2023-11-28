@@ -81,8 +81,7 @@ void sort_cities(void)
                 n++;
             }
         }
-
-        temps[i].temp = stock;
+        
 
     }
         // swap greater number to temps[i]
