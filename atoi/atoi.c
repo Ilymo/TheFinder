@@ -34,7 +34,7 @@ int convert(string input)
         return;
     }
 
-    convert (i - 1);
+    convert (input[i]);
 
     number = input[i] - '0';
     input[i] == '\0';
