@@ -64,6 +64,7 @@ void sort_cities(void)
 {
     // Add your code here
     // sort left half of the array (assuming n > 1)
+    void sort(avg_temp)
     
     // sort right half of the array (assuming n > 1)
     // merge the two half together
