@@ -64,5 +64,5 @@ void sort_cities(void)
 {
     // Add your code here
     // for i from 0 to n-1
-        // find greater number between temps[i] and
+        // find greater number between temps[i] and temps[n - 1]
 }
