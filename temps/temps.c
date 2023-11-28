@@ -87,6 +87,6 @@ void sort_cities(void)
     }
         // swap greater number to temps[i]
 
-    }
-
 }
+
+
