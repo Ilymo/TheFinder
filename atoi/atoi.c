@@ -34,10 +34,10 @@ int convert(string input)
         return 1;
     }
 
-    convert (input[i]);
+    convert (input);
 
     number = input[i] - '0';
-    input[i] == '\0';
+    input[i] = '\0';
     return number;
 
 }
