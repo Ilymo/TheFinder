@@ -65,10 +65,14 @@ void sort_cities(void)
     // Add your code here
     // for i from 0 to n-1
     for (int i = 0; i < NUM_CITIES; i++)
+    {
         // find greater number between temps[i] and temps[n - 1];
-        if (temps[i] > temps[i + 1])
+        int n = i + 1;
+        if (temps[i] > temps[n + 1])
         {
-            
+            n ++;
         }
         // swap greater number to temps[i]
+    }
+
 }
