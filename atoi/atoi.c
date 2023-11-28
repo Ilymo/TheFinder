@@ -29,6 +29,8 @@ int convert(string input)
     int number = 0;
     int i = (strlen(input) - 1);
 
+    while (i >= 0)
+    {
     if (input[i] == '\0')
     {
         return number;
@@ -37,8 +39,10 @@ int convert(string input)
     number = input[i] - '0';
     printf("%i \n", number);
     input[i] = '\0';
+    convert(input);
+    }
     return number;
 
-    convert(input);
+
 
 }
