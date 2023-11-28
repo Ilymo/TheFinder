@@ -37,5 +37,5 @@ int convert(string input)
         input[i] = '\0';
         return number + (convert(input) * 10);
     }
-
+return number;
 }
