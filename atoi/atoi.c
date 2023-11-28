@@ -26,5 +26,6 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int number
+    int number = 0;
+    
 }
