@@ -67,8 +67,8 @@ void sort_cities(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         // find greater number between temps[i] and temps[n - 1];
-        int n = i + 1;
-        if (temps[i] > temps[n + 1])
+        int n = i;
+        while (temps[i] > temps[n + 1])
         {
             n ++;
         }
