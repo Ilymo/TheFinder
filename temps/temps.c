@@ -68,15 +68,16 @@ void sort_cities(void)
     {
         // find greater number between temps[i] and temps[n - 1];
         int n = i;
-        do (temps[i] > temps[n + 1])
+        while (temps[i].temp > temps[n + 1].temp)
         {
             n ++;
-            if (temps[n] == '\0')
+            if (temps[n].temp == '\0')
             {
                 return;
             }
         }
         // swap greater number to temps[i]
+        
     }
 
 }
