@@ -27,16 +27,15 @@ int convert(string input)
 {
     // TODO
     int number = 0;
-    int i = 0;
+    int i = (strlen(input));
 
     if (input[i] == '\0')
     {
         return;
     }
+
     convert (i - 1);
 
-
-    int i = (strlen(input) - 1);
     number = input[i] - '0';
     input[i] == '\0';
 
