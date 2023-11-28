@@ -77,7 +77,7 @@ void sort_cities(void)
             }
             else
             {
-                stock = temps[n + 1].temp
+                stock = temps[n + 1].temp;
             }
         }
 
