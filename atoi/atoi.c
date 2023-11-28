@@ -5,6 +5,7 @@
 #include <string.h>
 
 int convert(string input);
+int number = 0;
 
 int main(void)
 {
@@ -26,23 +27,21 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int number = 0;
     int i = (strlen(input) - 1);
 
     while (i >= 0)
     {
-    if (input[i] == '\0')
-    {
-        break;
+        if (input[i] == '\0')
+        {
+            break;
+        }
+
+        number = number * 10 + (input[i] - '0');
+        //printf("%i \n", number);
+        input[i] = '\0';
+        convert(input);
     }
 
-    number = number * 10 + (input[i] - '0');
-    printf("%i \n", number);
-    input[i] = '\0';
-    convert(input);
-    }
+
     return number;
-
-
-
 }
