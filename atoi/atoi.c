@@ -33,7 +33,7 @@ int convert(string input)
     {
     if (input[i] == '\0')
     {
-        return number;
+        break;
     }
 
     number = input[i] - '0';
