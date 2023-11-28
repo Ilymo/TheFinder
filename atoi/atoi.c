@@ -30,5 +30,7 @@ int convert(string input)
 
     int i = (strlen(input) - 1);
     number = input[i] - '0';
+    input[i] == '\0';
+    
 
 }
