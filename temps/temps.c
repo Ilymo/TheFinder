@@ -63,5 +63,8 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    // sort left part of the array (while )
+    // sort left half of the array (assuming n > 1)
+    
+    // sort right half of the array (assuming n > 1)
+    // merge the two half together
 }
