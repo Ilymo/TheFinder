@@ -29,25 +29,13 @@ int convert(string input)
 {
     // TODO
     int i = (strlen(input) - 1);
-    input[i] = (input[i] - '0');
+    number = (input[i] - '0');
+    printf("%i \n", number);
+    input[i] = '\0';
 
     while (i >= 0)
     {
-        if (input[i] == '\0')
-        {
-            break;
-        }
-
-
-        printf("%i \n", input[i]);
-
-        number = input[i] + (number * 10);
-        input[i] = '\0';
-
-        convert(input);
+        return number + (convert(input) * 10);
     }
-
-
-
     return number;
 }
