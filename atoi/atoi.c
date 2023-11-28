@@ -30,13 +30,12 @@ int convert(string input)
     // TODO
     int i = (strlen(input) - 1);
 
-    if (input[i] != '\0')
+    if (i >= 0)
     {
         number = (input[i] - '0');
         printf("%i \n", number);
         input[i] = '\0';
         number = number + (convert(input) * 10);
-        printf("%i \n", number);
     }
     return number;
 }
