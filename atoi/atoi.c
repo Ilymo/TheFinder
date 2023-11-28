@@ -31,14 +31,14 @@ int convert(string input)
 
     if (input[i] == '\0')
     {
-        return 1;
+        return number;
     }
-
-    convert(input);
 
     number = input[i] - '0';
     printf("%i \n", number);
     input[i] = '\0';
     return number;
+
+    convert(input);
 
 }
