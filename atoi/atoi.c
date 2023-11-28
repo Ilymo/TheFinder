@@ -27,5 +27,8 @@ int convert(string input)
 {
     // TODO
     int number = 0;
-    
+
+    int i = (strlen(input) - 1);
+    number = input[i] - '0';
+
 }
