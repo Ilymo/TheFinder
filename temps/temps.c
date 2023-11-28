@@ -78,9 +78,11 @@ void sort_cities(void)
             else
             {
                 stock = temps[n + 1].temp;
+                n++;
             }
         }
 
+        temps[i].temp = stock;
 
     }
         // swap greater number to temps[i]
