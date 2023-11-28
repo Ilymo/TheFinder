@@ -71,6 +71,10 @@ void sort_cities(void)
         do (temps[i] > temps[n + 1])
         {
             n ++;
+            if (temps[n] == '\0')
+            {
+                return;
+            }
         }
         // swap greater number to temps[i]
     }
