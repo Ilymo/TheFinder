@@ -29,13 +29,13 @@ int convert(string input)
 {
     // TODO
     int i = (strlen(input) - 1);
+    int stock = 0;
 
     if (i >= 0)
     {
-        number = (input[i] - '0');
-        printf("%i \n", number);
+        stock = (input[i] - '0');
         input[i] = '\0';
-        number = number + (convert(input) * 10);
+        number = stock + (convert(input) * 10);
     }
     return number;
 }
