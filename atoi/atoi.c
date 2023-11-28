@@ -7,6 +7,7 @@
 int convert(string input);
 int number = 0;
 
+
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -28,7 +29,7 @@ int convert(string input)
 {
     // TODO
     int i = (strlen(input) - 1);
-    int number = 0;
+
 
     while (i >= 0)
     {
@@ -39,10 +40,13 @@ int convert(string input)
 
         input[i] = (input[i] - '0');
         printf("%i \n", input[i]);
-        number = input[i];
+
+        number = input[i] + (number * 10);
         input[i] = '\0';
+
+        convert(input);
     }
-    convert(input);
+
 
 
     return number;
