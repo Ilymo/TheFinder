@@ -93,6 +93,10 @@ void print_winner(void)
             {
                 n++;
             }
+            else
+            {
+                return;
+            }
         }
         printf("%s \n", candidates[i].name);
     }
