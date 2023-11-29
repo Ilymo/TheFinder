@@ -84,7 +84,7 @@ void print_winner(void)
 {
     int winners[candidate_count];
     // TODO
-    //find greater vote counte
+    //find greater vote count
     for (int i = 0; i < candidate_count - 1; i++)
     {
         for (int n = i + 1; n < candidate_count - 1; n++)
