@@ -66,6 +66,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    //compare name with each name in array
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if ()
+    }
     return false;
 }
 
