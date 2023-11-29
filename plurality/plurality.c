@@ -100,7 +100,7 @@ void print_winner(void)
             }
         }
     }
-    printf("%s \n", candidates[winner_nmb[]].name);
+    printf("%s \n", candidates[winner_nmb[0]].name);
 
     return;
 }
