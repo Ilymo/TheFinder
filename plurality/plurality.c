@@ -86,6 +86,7 @@ void print_winner(void)
     //find greater vote counte
     for (int i = 0; i < candidate_count - 1; i++)
     {
+        int holder;
         for (int n = i + 1; n < candidate_count - 1; n++)
         {
             while (candidates[i].votes > candidates[n].votes)
@@ -96,10 +97,11 @@ void print_winner(void)
                 }
                 else
                 {
-                    return;
+                    holder
                 }
             }
-            printf("%s \n", candidates[n].name);
+
+            printf("%s \n", candidates[].name);
         }
 
     }
