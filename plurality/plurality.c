@@ -91,11 +91,7 @@ void print_winner(void)
         {
             if (candidates[i].vote > candidates[n].vote)
             {
-                break;
-            }
-            else
-            {
-                return;
+                
             }
         }
 
