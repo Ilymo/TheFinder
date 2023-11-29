@@ -97,11 +97,11 @@ void print_winner(void)
                 }
                 else
                 {
-                    holder
+                    holder[i] = i;
                 }
             }
 
-            printf("%s \n", candidates[].name);
+            printf("%s \n", candidates[i].name);
         }
 
     }
