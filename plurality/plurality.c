@@ -96,7 +96,7 @@ void print_winner(void)
                 }
                 else
                 {
-                    printf("%s \n", candidates[i].name);
+                    printf("%s\n", candidates[i].name);
                     break;
                 }
             }
