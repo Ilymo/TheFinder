@@ -86,7 +86,7 @@ void print_winner(void)
     //find greater vote counte
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        int holder[];
+        int holder[candidate_count];
         for (int n = i + 1; n < candidate_count - 1; n++)
         {
             while (candidates[i].votes > candidates[n].votes)
