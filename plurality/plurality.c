@@ -99,8 +99,9 @@ void print_winner(void)
                     return;
                 }
             }
-            printf("%s \n", candidates[i].name);
+            printf("%s \n", candidates[n].name);
         }
+
     }
     return;
 }
