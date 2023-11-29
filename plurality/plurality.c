@@ -87,9 +87,17 @@ void print_winner(void)
     //find greater vote counte
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].votes > candidate[i + 1].votes)
+        int n = i;
+        while (candidate[i].votes > candidate[n + 1].votes)
         {
-            
+            if (n < candidate_count)
+            {
+                n++;
+            }
+            else
+            {
+                winner_nbm[i] = i;
+            }
         }
     }
 
