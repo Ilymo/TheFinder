@@ -83,7 +83,15 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    //comp
+    int winner_nmb[candidate_count];
+    //find greater vote counte
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidate[i].votes > candidate[i + 1].votes)
+        {
+            
+        }
+    }
 
     return;
 }
