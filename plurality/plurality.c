@@ -69,7 +69,11 @@ bool vote(string name)
     //compare name with each name in array
     for (int i = 0; i < candidate_count; i++)
     {
-        if ()
+        if (strcasecmp(name, candidates[i].name))
+        {
+            candidates[i].votes++
+            return true;
+        }
     }
     return false;
 }
