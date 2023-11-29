@@ -83,7 +83,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int winner_nmb[candidate_count];
     //find greater vote counte
     for (int i = 0; i < candidate_count; i++)
     {
@@ -96,10 +95,9 @@ void print_winner(void)
             }
             else
             {
-                winner_nmb[i] = i;
+                printf("%s \n", candidates[i].name);
             }
         }
     }
-    printf("%s \n", candidates[winner_nmb[1]].name);
     return;
 }
