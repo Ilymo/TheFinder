@@ -88,7 +88,7 @@ void print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
         int n = i;
-        while (candidate[i].votes > candidate[n + 1].votes)
+        while (candidates[i].votes > candidates[n + 1].votes)
         {
             if (n < candidate_count)
             {
@@ -96,10 +96,11 @@ void print_winner(void)
             }
             else
             {
-                winner_nbm[i] = i;
+                winner_nmb[i] = i;
             }
         }
     }
+    printf("%s \n", candidates[winner_nmb[]].name);
 
     return;
 }
