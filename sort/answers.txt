@@ -1,6 +1,6 @@
 sort1 uses: bubble sort
 
-How do you know?: it's faster for sorted list than random or reversed list => 
+How do you know?: it's faster for sorted list than random or reversed list => O(n2) and Ω(n)
 
 sort2 uses: merge sort
 
