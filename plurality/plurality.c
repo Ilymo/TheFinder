@@ -90,7 +90,7 @@ void print_winner(void)
         {
             while (candidates[i].votes > candidates[n].votes)
             {
-                if (n < candidate_count - 1)
+                if (n < candidate_count)
                 {
                     n++;
                 }
@@ -101,7 +101,6 @@ void print_winner(void)
                 }
             }
         }
-        printf("%s \n", candidates[i].name);
     }
     return;
 }
