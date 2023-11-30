@@ -127,22 +127,15 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
-    //for each voter from voter i(0) to voter_count - 1;
-    for (int i = 0; i < voter_count; i++)
+    //compare name with each name in candidates[n].name
+    for ()
     {
-        //check name with each candidate
-        for (int j = 0; j < candidate_count; j++)
+        if (strcasecmp(candidates[n].name, name) == 0)
         {
-            //if found, store candidate n° in voter rank[i]
-            if (strcasecmp(candidates[j].name, name) == 0)
-            {
-                preferences[i][i] = j;
-                return true;
-            }
+            preferences[voter][rank] = ;
+            return true;
         }
     }
-
 
     return false;
 }
