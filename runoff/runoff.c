@@ -144,7 +144,10 @@ void tabulate(void)
 {
     // TODO
     //calculate vote nb of each candidates
-    for (i)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     return;
 }
 
