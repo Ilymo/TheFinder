@@ -127,6 +127,9 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    //for each voter from voter i(0) to voter_count - 1;
+        //check name with each candidate
+            //if found, store candidate n° in voter rank[i]
     return false;
 }
 
