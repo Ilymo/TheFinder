@@ -188,7 +188,15 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    
+    int holder = voter_count;
+    //find smaller vote count
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes <= holder)
+        {
+            
+        }
+    }
     return 0;
 }
 
