@@ -128,7 +128,7 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     //compare name with each name in candidates[n].name
-    for (int n = 0; n < candidate_count - 1; n++)
+    for (int n = 0; n < candidate_count; n++)
     {
         if (strcasecmp(candidates[n].name, name) == 0)
         {
