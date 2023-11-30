@@ -172,6 +172,13 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    //ckeck each candidate vote nb
+    for (int i = 0; i < candidate_count)
+    {
+        //if more than candidate_count/2 return true
+        if ()
+    }
+
     return false;
 }
 
