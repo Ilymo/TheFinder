@@ -208,7 +208,7 @@ bool is_tie(int min)
 {
     // TODO
     //compare min with each candidate
-    
+    for (i)
     return false;
 }
 
