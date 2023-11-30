@@ -83,23 +83,21 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    int holder = 0;
     //find greater vote count
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int n = i; n < candidate_count; n++)
+        if (holder < candidates[i].votes)
         {
-            while (candidates[i].votes >= candidates[n].votes)
-            {
-                if (n < candidate_count)
-                {
-                    n++;
-                }
-                else
-                {
-                    printf("%s\n", candidates[i].name);
-                    break;
-                }
-            }
+            holder = candidates[i].votes;
+        }
+    }
+    //find and print every name with this vote count
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == holder)
+        {
+            printf("%s\n", candidates[i].name);
         }
     }
     return;
