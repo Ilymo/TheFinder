@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    //compare name with each name in array and add 1vote if finded, else return false
+    // compare name with each name in array and add 1vote if finded, else return false
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcasecmp(name, candidates[i].name) == 0)
@@ -84,7 +84,7 @@ void print_winner(void)
 {
     // TODO
     int holder = 0;
-    //find greater vote count
+    // find greater vote count
     for (int i = 0; i < candidate_count; i++)
     {
         if (holder < candidates[i].votes)
@@ -92,7 +92,7 @@ void print_winner(void)
             holder = candidates[i].votes;
         }
     }
-    //find and print every name with this vote count
+    // find and print every name with this vote count
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == holder)
