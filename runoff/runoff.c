@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
             //if found, store candidate n° in voter rank[i]
             if (strcasecmp(candidates[j].name, name) == 0)
             {
-                preferences[i][j] = 
+                preferences[i][i] = candidates
             }
         }
     }
