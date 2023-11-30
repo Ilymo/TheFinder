@@ -189,15 +189,15 @@ int find_min(void)
 {
     // TODO
     int holder = voter_count;
-    //find smaller vote count
+    //find smaller vote count and store in holder
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes <= holder)
+        if (candidates[i].votes < holder)
         {
             holder = candidates[i].votes;
         }
     }
-    return 0;
+    return holder;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
