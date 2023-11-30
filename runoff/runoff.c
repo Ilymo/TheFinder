@@ -192,9 +192,12 @@ int find_min(void)
     //find smaller vote count and store in holder
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes < holder)
+        if (!candidates[i].eliminated)
         {
-            holder = candidates[i].votes;
+            if (candidates[i].votes < holder)
+            {
+                holder = candidates[i].votes;
+            }
         }
     }
     return holder;
