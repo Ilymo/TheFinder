@@ -144,10 +144,10 @@ void tabulate(void)
 {
     // TODO
     //for each voter
-    for (int j = 0; j < voter_count; j++)
+    for (int j = 0; j < voter_count - 1; j++)
     {
         //for each rank of the voter
-        for (int n = 0; n < candidate_count; n++)
+        for (int n = 0; n < candidate_count - 1; n++)
         {
             //for each candidate
             for (int i = 0; i < candidate_count; i++)
