@@ -207,7 +207,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    
+    //compare min with each candidate
     return false;
 }
 
