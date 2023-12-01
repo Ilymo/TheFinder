@@ -149,20 +149,7 @@ void tabulate(void)
         //for each rank of the voter
         for (int n = 0; n < candidate_count; n++)
         {
-            //for each candidate
-            for (int i = 0; i < candidate_count; i++)
-            {
-                //if not eliminated
-                if (!candidates[i].eliminated)
-                {
-                    //if candidate nb correspond to voter[j] rank[n]
-                    if (i == preferences[j][n])
-                    {
-                    candidates[i].votes++;
-                    break;
-                    }
-                }
-            }
+            
         }
     }
     return;
