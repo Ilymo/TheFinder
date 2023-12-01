@@ -127,7 +127,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    //compare name with each name in candidates[n].name
+    // compare name with each name in candidates[n].name
     for (int n = 0; n < candidate_count; n++)
     {
         if (strcasecmp(candidates[n].name, name) == 0)
@@ -143,10 +143,10 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    //for each voter
+    // for each voter
     for (int j = 0; j < voter_count; j++)
     {
-        //for each rank of the voter
+        // for each rank of the voter
         for (int n = 0; n < candidate_count; n++)
         {
             if (!candidates[preferences[j][n]].eliminated)
@@ -163,11 +163,11 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    //ckeck each candidate vote nb
+    // ckeck each candidate vote nb
     for (int i = 0; i < candidate_count; i++)
     {
-        //if more than candidate_count/2 return true
-        if (candidates[i].votes > (voter_count/2))
+        // if more than candidate_count/2 return true
+        if (candidates[i].votes > (voter_count / 2))
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -181,7 +181,7 @@ int find_min(void)
 {
     // TODO
     int holder = voter_count;
-    //find smaller vote count and store in holder
+    // find smaller vote count and store in holder
     for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
@@ -199,12 +199,12 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    //compare min with each candidate
+    // compare min with each candidate
     for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
-            if(candidates[i].votes > min)
+            if (candidates[i].votes > min)
             {
                 return false;
             }
@@ -217,10 +217,10 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    //for each candidate
+    // for each candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        //if candidates[i]votes = min then candidates[i].eliminated = true
+        // if candidates[i]votes = min then candidates[i].eliminated = true
         if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
