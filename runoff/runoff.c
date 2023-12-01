@@ -149,7 +149,11 @@ void tabulate(void)
         //for each rank of the voter
         for (int n = 0; n < candidate_count; n++)
         {
-            
+            if (!candidates[preferences[j][n]].eliminated)
+            {
+                candidates[preferences[j][n]].votes++;
+                break;
+            }
         }
     }
     return;
