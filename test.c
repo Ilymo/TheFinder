@@ -2,7 +2,6 @@
 
 int main(void)
 {
-    char *s = "HI!";
-    int *p = &s;
-    printf("%p\n", p);
+    char *s = "hi";
+    printf("%c\n", s);
 }
