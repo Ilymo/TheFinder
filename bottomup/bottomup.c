@@ -65,10 +65,11 @@ int main(int argc, char *argv[])
     //convert bi.biHeight into positive
     bi.biHeight = bi.biHeight*(-1);
     printf("%i\n", bi.biHeight);
-    
+
     // Iterate over infile's scanlines
     for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
     {
+        printf("%i\n", bi.biHeight);
         // Iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
         {
@@ -77,7 +78,6 @@ int main(int argc, char *argv[])
 
             // Read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
-
             // Write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
         }
