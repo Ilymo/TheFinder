@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
+        
         strcpy
 
         // Save plate number in array
