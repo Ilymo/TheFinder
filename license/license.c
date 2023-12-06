@@ -21,7 +21,12 @@ int main(int argc, char *argv[])
 
     int idx = 0;
 
-    
+    char *holder[8];
+
+    for (int i = 0; i < 8; i++)
+    {
+        holder[i] = malloc(7);
+    }
 
     while (fread(buffer, 1, 7, infile) == 7)
     {
