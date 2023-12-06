@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -46,4 +45,9 @@ int main(int argc, char *argv[])
         printf("%s\n", plates[i]);
     }
 
+    // Free memory
+    for (int i = 0; i < 8; i++)
+    {
+        free(plates[i]);
+    }
 }
