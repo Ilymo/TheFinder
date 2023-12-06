@@ -5,15 +5,13 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < width; i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height; j++)
+        for (int j = 0; j < width; j++)
         {
                 float gscale = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
                 int rounded = round(gscale);
-                printf("%i, %i, %i\n", image[i][j].rgbtRed, image[i][j].rgbtGreen, image[i][j].rgbtBlue);
                 image[i][j].rgbtRed = rounded;
-                printf("%i\n", image[i][j].rgbtRed);
                 image[i][j].rgbtBlue = rounded;
                 image[i][j].rgbtGreen = rounded;
 
