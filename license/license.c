@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 
     // Create array to store plate numbers
     char *plates[8];
-    char holder[7];
 
     FILE *infile = fopen(argv[1], "r");
 
@@ -27,10 +26,8 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-        strcpy(holder, buffer);
-
         // Save plate number in array
-        plates[idx] = holder;
+        plates[idx] = buffer;
         idx++;
     }
 
