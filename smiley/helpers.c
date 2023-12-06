@@ -10,9 +10,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < height; j++)
         {
             RGBTRIPLE pixel = image[i][j];
-            printf("%i\n", pixel.rgbtBlue);
-            printf("%i\n", pixel.rgbtRed);
-            printf("%i\n", pixel.rgbtGreen);
+            printf("%i; %i; %i\n", pixel.rgbtBlue, pixel.rgbtRed, pixel.rgbtGreen);
         }
     }
 }
