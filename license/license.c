@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
@@ -33,10 +34,10 @@ int main(int argc, char *argv[])
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-
+        holder[idx] = buffer;
 
         // Save plate number in array
-        plates[idx] = buffer;
+        plates[idx] = holder[idx];
         idx++;
     }
 
