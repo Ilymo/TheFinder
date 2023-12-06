@@ -18,26 +18,24 @@ int main(int argc, char *argv[])
     // Create array to store plate numbers
     char *plates[8];
 
+    // Give memory for this array
+    for (int i = 0; i < 8; i++)
+    {
+        plates[i] = malloc(7);
+    }
+
+
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
-
-    char *holder[8];
-
-    for (int i = 0; i < 8; i++)
-    {
-        holder[i] = malloc(7);
-    }
 
     while (fread(buffer, 1, 7, infile) == 7)
     {
         // Replace '\n' with '\0'
         buffer[6] = '\0';
 
-        strcpy(holder[idx], buffer);
-
         // Save plate number in array
-        plates[idx] = holder[idx];
+        strcpy(plates[idx], buffer);
         idx++;
     }
 
