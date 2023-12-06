@@ -28,8 +28,11 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
                 float sepiaRed = .393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 * image[i][j].rgbtBlue
-                
-                image[i][j].rgbtRed = rounded;
+                if (sepiaRed > '255')
+                {
+                    sepiaRed = 255;
+                }
+                image[i][j].rgbtRed = round(sepiaRed);
                 image[i][j].rgbtBlue = rounded;
                 image[i][j].rgbtGreen = rounded;
 
