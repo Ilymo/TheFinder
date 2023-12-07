@@ -19,11 +19,13 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer for reading
-    int buffer[512];
+    int BLOCK_SIZE = 512;
+    int buffer[BLOCK_SIZE];
     int n = 1;
     char *filename;
 
-    while (fread(buffer, 512, 1, infile) == 1)
+
+    while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff)
         {
@@ -34,9 +36,9 @@ int main(int argc, char *argv[])
                     if ((buffer[3] & 0xf0) == 0xe0)
                     {
                         sprintf(filename, "%03i.jpg", n);
-                        filename = malloc(512);
+                        filename = malloc(BLOCK_SIZE);
                         FILE *img = fopen(filename, "w");
-                        fwrite(buffer, 512, 1, filename)
+                        fwrite(buffer, 1, BLOCK_SIZE, filename)
                     }
                 }
             }
