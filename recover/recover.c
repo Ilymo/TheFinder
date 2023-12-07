@@ -52,5 +52,6 @@ int main(int argc, char *argv[])
         }
     }
     fclose(img);
+    fclose(infile);
     free(img);
 }
