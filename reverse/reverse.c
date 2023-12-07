@@ -29,18 +29,23 @@ int main(int argc, char *argv[])
 
     // Read header
     // TODO #3
-    WAVHEADER in;
-    fread(&in, sizeof(WAVHEADER), 1, input);
+    WAVHEADER hin;
+    fread(&hin, sizeof(WAVHEADER), 1, input);
 
     // Use check_format to ensure WAV format
     // TODO #4
-    if (check_format(in) == 1)
+    if (check_format(hin) == 1)
     {
         return 1;
     }
 
     // Open output file for writing
     // TODO #5
+    FILE *output = fopen(argv[2], "w");
+    if (output == NULL)
+    {
+        return 1;
+    }
 
     // Write header to file
     // TODO #6
