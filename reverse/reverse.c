@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // TODO #3
     WAVHEADER hin;
     fread(&hin, sizeof(WAVHEADER), 1, input);
-    ftell(input);
+    printf("%li\n", ftell(input));
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -55,16 +55,15 @@ int main(int argc, char *argv[])
     // Use get_block_size to calculate size of block
     // TODO #7
     int block_size = get_block_size(hin);
-    printf("%i\n", block_size);
 
     // Write reversed audio to file
     // TODO #8
     char *buffer;
     for (int i = hin.subchunk2Size; i > 0; i--)
     {
-        fseek(input, 0, SEEK_END);
         fread(&buffer, sizeof(block_size), 1, input);
         fseek(input, -2, SEEK_CUR);
+        printf("%li\n", ftell(input));
         fwrite(&buffer, sizeof(block_size), 1, output);
     }
 
