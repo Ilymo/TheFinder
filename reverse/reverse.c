@@ -19,6 +19,12 @@ int main(int argc, char *argv[])
 
     // Open input file for reading
     // TODO #2
+    FILE *input = fread(argv[1], "r");
+    if (input == NULL)
+    {
+        printf("Could not open file.\n");
+        return 1;
+    }
 
     // Read header
     // TODO #3
