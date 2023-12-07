@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
                         sprintf(filename, "%03i.jpg", n);
                         filename = malloc(BLOCK_SIZE);
                         FILE *img = fopen(filename, "w");
-                        fwrite(buffer, 1, BLOCK_SIZE, filename)
+                        fwrite(buffer, 1, BLOCK_SIZE, img);
                     }
                 }
             }
