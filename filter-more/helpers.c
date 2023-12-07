@@ -36,7 +36,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             float npixel = 0.0;
-            int R = 0;
+            int Rtop = 0;
+            int Rmid = 0;
+            int Rbot = 0;
             int G = 0;
             int B = 0;
 
