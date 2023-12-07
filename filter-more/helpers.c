@@ -124,10 +124,24 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 Bgy += copy[i + 1][j].rgbtBlue * 2;
             }
 
-            // Calculate average of each color
-            float avR = R / npixel;
-            float avG = G / npixel;
-            float avB = B / npixel;
+            // Calculate value of R, B and G and check if <255
+            int Rholder = (round(sqrt(Rgx^2 + Rgy^2)));
+            if (Rholder > 255)
+            {
+                Rholder = 255;
+            }
+            
+            int Gholder = (round(sqrt(Ggx^2 + Ggy^2)));
+            if (Gholder > 255)
+            {
+                Gholder = 255;
+            }
+
+            int Bholder = (round(sqrt(Bgx^2 + Bgy^2)));
+            if (Bholder > 255)
+            {
+                Bholder = 255;
+            }
 
             // write the rounded value to image
             image[i][j].rgbtRed = round(avR);
