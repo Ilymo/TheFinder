@@ -35,23 +35,22 @@ int main(int argc, char *argv[])
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             //if first jpeg
-            if (count == 0)
-            {
-                //creat new jpeg file
-                sprintf(filename, "%03i.jpg", count);
-                img = fopen(filename, "w");
-                img = malloc(BLOCK_SIZE);
-                count++;
-            }
-            else
+            if (count > 0)
             {
                 fclose(img);
             }
+            //creat new jpeg file
+            sprintf(filename, "%03i.jpg", count);
+            img = fopen(filename, "w");
+            img = malloc(BLOCK_SIZE);
+            count++;
         }
         else if (img != NULL)
         {
             fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
+    free(img);
+    fclose(img);
 
 }
