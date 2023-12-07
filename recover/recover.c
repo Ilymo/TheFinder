@@ -9,6 +9,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *input = fopen(card)
+    FILE *infile = fopen("argv[1]", "r");
+    if (infile != NULL)
+    {
+        printf("Could not open %s.\n", infile);
+        return 1;
+    }
 
 }
