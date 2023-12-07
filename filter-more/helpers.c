@@ -116,13 +116,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     Bgy = Bgx;
                 }
             }
-
-            // Add main Pixel to sum
-            R += copy[i][j].rgbtRed;
-            G += copy[i][j].rgbtGreen;
-            B += copy[i][j].rgbtBlue;
-            npixel++;
-
             // Add top pixel
             if (i - 1 >= 0)
             {
