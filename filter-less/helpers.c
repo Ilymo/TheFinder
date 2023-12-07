@@ -178,9 +178,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float avB = B / npixel;
 
             // write the rounded value to image
-            image[i][j].rgbtRed = ceil(avR);
-            image[i][j].rgbtGreen = ceil(avG);
-            image[i][j].rgbtBlue = ceil(avB);
+            image[i][j].rgbtRed = floor(avR);
+            image[i][j].rgbtGreen = floor(avG);
+            image[i][j].rgbtBlue = floor(avB);
         }
     }
     return;
