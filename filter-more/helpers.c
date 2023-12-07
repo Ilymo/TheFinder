@@ -51,10 +51,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 Ggx += copy[i][j - 1].rgbtGreen * -2;
                 Bgx += copy[i][j - 1].rgbtBlue * -2;
 
-                Rgy += copy[i][j - 1].rgbtRed * 0;
-                Ggy += copy[i][j - 1].rgbtGreen * 0;
-                Bgy += copy[i][j - 1].rgbtBlue * 0;
-
                 // Add left top
                 if (i - 1 >= 0)
                 {
@@ -88,10 +84,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 Ggx += copy[i][j + 1].rgbtGreen * 2;
                 Bgx += copy[i][j + 1].rgbtBlue * 2;
 
-                Rgy += copy[i][j + 1].rgbtRed * 0;
-                Ggy += copy[i][j + 1].rgbtGreen * 0;
-                Bgy += copy[i][j + 1].rgbtBlue * 0;
-
                 // add right top
                 if (i - 1 >= 0)
                 {
@@ -119,19 +111,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Add top pixel
             if (i - 1 >= 0)
             {
-                Rgx += copy[i - 1][j].rgbtRed;
-                Ggx += copy[i - 1][j].rgbtGreen;
-                Bgx += copy[i - 1][j].rgbtBlue;
-                npixel++;
+                Rgy += copy[i - 1][j].rgbtRed * -2;
+                Ggy += copy[i - 1][j].rgbtGreen * -2;
+                Bgy += copy[i - 1][j].rgbtBlue * -2;
             }
 
             // Add bottom pixel
             if (i + 1 < height)
             {
-                R += copy[i + 1][j].rgbtRed;
-                G += copy[i + 1][j].rgbtGreen;
-                B += copy[i + 1][j].rgbtBlue;
-                npixel++;
+                Rgy += copy[i + 1][j].rgbtRed * 2;
+                Ggy += copy[i + 1][j].rgbtGreen * 2;
+                Bgy += copy[i + 1][j].rgbtBlue * 2;
             }
 
             // Calculate average of each color
