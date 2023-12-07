@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 
     // Create buffer for reading
     int BLOCK_SIZE = 512;
-    int buffer[BLOCK_SIZE];
+    BYTE buffer[BLOCK_SIZE];
     int count = 0;
     char *filename;
 
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
             //if first jpeg
             if (count == 0)
             {
-                
+
             }
 
                         sprintf(filename, "%03i.jpg", n);
