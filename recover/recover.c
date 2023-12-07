@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     // Create buffer for reading
     BYTE buffer[BLOCK_SIZE];
     int count = 0;
-    char *filename;
+    char filename[8];
     FILE *img = NULL;
 
     // read 512 byte into memory
