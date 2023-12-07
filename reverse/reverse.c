@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     // TODO #3
     WAVHEADER hin;
     fread(&hin, sizeof(WAVHEADER), 1, input);
+    ftell
 
     // Use check_format to ensure WAV format
     // TODO #4
@@ -61,9 +62,10 @@ int main(int argc, char *argv[])
     char *buffer;
     for (int i = hin.subchunk2Size; i > 0; i--)
     {
-    fread(&buffer, sizeof(block_size), 1, input);
-    fseek(input, -2, SEEK_END);
-    fwrite(&buffer, sizeof(block_size), 1, output);
+        fseek(input, 0, SEEK_END);
+        fread(&buffer, sizeof(block_size), 1, input);
+        fseek(input, -2, SEEK_CUR);
+        fwrite(&buffer, sizeof(block_size), 1, output);
     }
 
 
