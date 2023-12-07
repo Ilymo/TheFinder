@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "wav.h"
 
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 
     // Open input file for reading
     // TODO #2
-    FILE *input = fread(argv[1], "r");
+    FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
         printf("Could not open file.\n");
@@ -51,7 +52,7 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    if (header.format == "WAVE")
+    if (strcmp(header.format, "WAVE") == 0)
     {
         return true;
     }
