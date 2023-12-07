@@ -59,9 +59,13 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
     char *buffer;
+    for (int i = hin.subchunk2Size; i > 0; i--)
+    {
     fread(&buffer, sizeof(block_size), 1, input);
     fseek(output, 0, SEEK_END);
     fwrite(&buffer, sizeof(block_size), 1, output);
+    }
+
 
 }
 
