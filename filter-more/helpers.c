@@ -119,9 +119,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             // Add top pixel
             if (i - 1 >= 0)
             {
-                R += copy[i - 1][j].rgbtRed;
-                G += copy[i - 1][j].rgbtGreen;
-                B += copy[i - 1][j].rgbtBlue;
+                Rgx += copy[i - 1][j].rgbtRed;
+                Ggx += copy[i - 1][j].rgbtGreen;
+                Bgx += copy[i - 1][j].rgbtBlue;
                 npixel++;
             }
 
