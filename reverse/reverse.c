@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     char *buffer;
     fread(&buffer, sizeof(block_size), 1, input);
     fseek(output, 0, SEEK_END);
-    fwrite(&buffer, sozeof(block_size), 1, output);
+    fwrite(&buffer, sizeof(block_size), 1, output);
 
 }
 
