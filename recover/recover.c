@@ -36,13 +36,11 @@ int main(int argc, char *argv[])
             //if first jpeg
             if (count == 0)
             {
-
+                sprintf(filename, "%03i.jpg", count);
+                filename = malloc(BLOCK_SIZE);
+                FILE *img = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE, img);
             }
-
-                        sprintf(filename, "%03i.jpg", count);
-                        filename = malloc(BLOCK_SIZE);
-                        FILE *img = fopen(filename, "w");
-                        fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
 
