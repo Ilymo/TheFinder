@@ -126,19 +126,19 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate value of R, B and G and check if <255
-            int Rholder = (round(sqrt(Rgx^2 + Rgy^2)));
+            int Rholder = round(sqrt((Rgx * Rgx) + (Rgy * Rgy)));
             if (Rholder > 255)
             {
                 Rholder = 255;
             }
 
-            int Gholder = (round(sqrt(Ggx^2 + Ggy^2)));
+            int Gholder = round(sqrt((Ggx * Ggx) + (Ggy * Ggy)));
             if (Gholder > 255)
             {
                 Gholder = 255;
             }
 
-            int Bholder = (round(sqrt(Bgx^2 + Bgy^2)));
+            int Bholder = round(sqrt((Bgx * Bgx) + (Bgy * Bgy)));
             if (Bholder > 255)
             {
                 Bholder = 255;
