@@ -26,21 +26,13 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
-        if (buffer[0] == 0xff)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            if (buffer[1] == 0xd8)
-            {
-                if (buffer[2] == 0xff)
-                {
-                    if ((buffer[3] & 0xf0) == 0xe0)
-                    {
+
                         sprintf(filename, "%03i.jpg", n);
                         filename = malloc(BLOCK_SIZE);
                         FILE *img = fopen(filename, "w");
                         fwrite(buffer, 1, BLOCK_SIZE, img);
-                    }
-                }
-            }
         }
     }
 
