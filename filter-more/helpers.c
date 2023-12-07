@@ -35,71 +35,93 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float npixel = 0.0;
-            int R = 0;
-            int G = 0;
-            int B = 0;
-            // determine Gx
+            int Rgx = 0;
+            int Ggx = 0;
+            int Bgx = 0;
 
-            // Add main Pixel to sum
-            R += copy[i][j].rgbtRed;
-            G += copy[i][j].rgbtGreen;
-            B += copy[i][j].rgbtBlue;
-            npixel++;
+            int Rgy = 0;
+            int Ggy = 0;
+            int Bgy = 0;
 
+            // determine Gx and Gy
             // Add left pixel
             if (j - 1 >= 0)
             {
-                R += copy[i][j - 1].rgbtRed;
-                G += copy[i][j - 1].rgbtGreen;
-                B += copy[i][j - 1].rgbtBlue;
-                npixel++;
+                Rgx += copy[i][j - 1].rgbtRed * -2;
+                Ggx += copy[i][j - 1].rgbtGreen * -2;
+                Bgx += copy[i][j - 1].rgbtBlue * -2;
+
+                Rgy += copy[i][j - 1].rgbtRed * 0;
+                Ggy += copy[i][j - 1].rgbtGreen * 0;
+                Bgy += copy[i][j - 1].rgbtBlue * 0;
 
                 // Add left top
                 if (i - 1 >= 0)
                 {
-                    R += copy[i - 1][j - 1].rgbtRed;
-                    G += copy[i - 1][j - 1].rgbtGreen;
-                    B += copy[i - 1][j - 1].rgbtBlue;
-                    npixel++;
+                    Rgx += copy[i - 1][j - 1].rgbtRed * -1;
+                    Ggx += copy[i - 1][j - 1].rgbtGreen * -1;
+                    Bgx += copy[i - 1][j - 1].rgbtBlue * -1;
+
+                    Rgy = Rgx;
+                    Ggy = Ggx;
+                    Bgy = Bgx;
                 }
 
                 // add left bot
                 if (i + 1 < height)
                 {
-                    R += copy[i + 1][j - 1].rgbtRed;
-                    G += copy[i + 1][j - 1].rgbtGreen;
-                    B += copy[i + 1][j - 1].rgbtBlue;
-                    npixel++;
+                    Rgx += copy[i + 1][j - 1].rgbtRed * -1;
+                    Ggx += copy[i + 1][j - 1].rgbtGreen * -1;
+                    Bgx += copy[i + 1][j - 1].rgbtBlue * -1;
+
+                    Rgy += copy[i + 1][j - 1].rgbtRed * 1;
+                    Ggy += copy[i + 1][j - 1].rgbtGreen * 1;
+                    Bgy += copy[i + 1][j - 1].rgbtBlue * 1;
+
                 }
             }
 
             // Add right pixel
             if (j + 1 < width)
             {
-                R += copy[i][j + 1].rgbtRed;
-                G += copy[i][j + 1].rgbtGreen;
-                B += copy[i][j + 1].rgbtBlue;
-                npixel++;
+                Rgx += copy[i][j + 1].rgbtRed * 2;
+                Ggx += copy[i][j + 1].rgbtGreen * 2;
+                Bgx += copy[i][j + 1].rgbtBlue * 2;
+
+                Rgy += copy[i][j + 1].rgbtRed * 0;
+                Ggy += copy[i][j + 1].rgbtGreen * 0;
+                Bgy += copy[i][j + 1].rgbtBlue * 0;
 
                 // add right top
                 if (i - 1 >= 0)
                 {
-                    R += copy[i - 1][j + 1].rgbtRed;
-                    G += copy[i - 1][j + 1].rgbtGreen;
-                    B += copy[i - 1][j + 1].rgbtBlue;
-                    npixel++;
+                    Rgx += copy[i - 1][j + 1].rgbtRed * 1;
+                    Ggx += copy[i - 1][j + 1].rgbtGreen * 1;
+                    Bgx += copy[i - 1][j + 1].rgbtBlue * 1;
+
+                    Rgy += copy[i - 1][j + 1].rgbtRed * - 1;
+                    Ggy += copy[i - 1][j + 1].rgbtGreen * - 1;
+                    Bgy += copy[i - 1][j + 1].rgbtBlue * - 1;
                 }
 
                 // add right bot
                 if (i + 1 < height)
                 {
-                    R += copy[i + 1][j + 1].rgbtRed;
-                    G += copy[i + 1][j + 1].rgbtGreen;
-                    B += copy[i + 1][j + 1].rgbtBlue;
-                    npixel++;
+                    Rgx += copy[i + 1][j + 1].rgbtRed * 1;
+                    Ggx += copy[i + 1][j + 1].rgbtGreen * 1;
+                    Bgx += copy[i + 1][j + 1].rgbtBlue * 1;
+
+                    Rgy = Rgx;
+                    Ggy = Ggx;
+                    Bgy = Bgx;
                 }
             }
+
+            // Add main Pixel to sum
+            R += copy[i][j].rgbtRed;
+            G += copy[i][j].rgbtGreen;
+            B += copy[i][j].rgbtBlue;
+            npixel++;
 
             // Add top pixel
             if (i - 1 >= 0)
