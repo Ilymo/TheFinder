@@ -107,6 +107,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             G += copy[i][j - 1].rgbtGreen;
             B += copy[i][j - 1].rgbtBlue;
             npixel++;
+                // Add top right
+                if (i)
             }
 
             // Add bottom pixel
@@ -136,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             npixel++;
             }
 
-            
+
         }
     }
 
