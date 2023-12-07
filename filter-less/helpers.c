@@ -85,11 +85,57 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    int npixel = 0;
+    int R = 0;
+    int G = 0;
+    int B = 0;
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            // Add main Pixel to sum
+            R += copy[i][j].rgbtRed;
+            G += copy[i][j].rgbtGreen;
+            B += copy[i][j].rgbtBlue;
+            npixel++;
+
+            // Add top pixel
+            if (j - 1 >= 0)
+            {
+            R += copy[i][j - 1].rgbtRed;
+            G += copy[i][j - 1].rgbtGreen;
+            B += copy[i][j - 1].rgbtBlue;
+            npixel++;
+            }
+
+            // Add bottom pixel
+            if (j + 1 < height)
+            {
+            R += copy[i][j + 1].rgbtRed;
+            G += copy[i][j + 1].rgbtGreen;
+            B += copy[i][j + 1].rgbtBlue;
+            npixel++;
+            }
+
+            // Add left pixel
+            if (i - 1 >= 0)
+            {
+            R += copy[i - 1][j].rgbtRed;
+            G += copy[i - 1][j].rgbtGreen;
+            B += copy[i - 1][j].rgbtBlue;
+            npixel++;
+            }
+
+            // Add right pixel
+            if (i + 1 < width)
+            {
+            R += copy[i + 1][j].rgbtRed;
+            G += copy[i + 1][j].rgbtGreen;
+            B += copy[i + 1][j].rgbtBlue;
+            npixel++;
+            }
+
             
         }
     }
