@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
             }
             //creat new jpeg file
             sprintf(filename, "%03i.jpg", count);
-            img = fopen(filename, "w");debug50 
+            img = fopen(filename, "w");
             count++;
         }
         else if (img != NULL)
