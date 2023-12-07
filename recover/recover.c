@@ -39,13 +39,15 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
             }
-            //creat new jpeg file
+            //creat new jpeg file and write first block
             sprintf(filename, "%03i.jpg", count);
             img = fopen(filename, "w");
+            fwrite(buffer, 1, BLOCK_SIZE, img);
             count++;
         }
         else if (img != NULL)
         {
+            //write each block into opened img
             fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
