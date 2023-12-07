@@ -21,6 +21,6 @@ int main(int argc, char *argv[])
     // Create buffer for reading
     int buffer[512];
 
-    fread(buffer)
+    fread(buffer, 512, 1, infile);
 
 }
