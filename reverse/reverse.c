@@ -50,9 +50,12 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    for ()
-    if (header.format)
-    return 0;
+
+    if (header.format == "WAVE")
+    {
+        return true;
+    }
+    return false;
 }
 
 int get_block_size(WAVHEADER header)
