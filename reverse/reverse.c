@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     for (int i = hin.subchunk2Size; i > 0; i--)
     {
     fread(&buffer, sizeof(block_size), 1, input);
-    fseek(output, 0, SEEK_END);
+    fseek(input, -2, S);
     fwrite(&buffer, sizeof(block_size), 1, output);
     }
 
