@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer for reading
-    int buffer[512];
+    char *buffer[512];
 
-    while (fread(buffer, 512, 1, infile) == 1);
+    fread(buffer, 512, 1, infile);
     {
 
     }
