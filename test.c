@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    float n = (70*70);
+    float n = (70*70) + ((-20) * (-20));
     printf("%f\n", n);
     n = sqrt(n);
     printf("%f\n", n);
