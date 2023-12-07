@@ -39,9 +39,8 @@ int main(int argc, char *argv[])
             {
                 //creat new jpeg file
                 sprintf(filename, "%03i.jpg", count);
-                filename = malloc(BLOCK_SIZE);
                 img = fopen(filename, "w");
-                fwrite(buffer, 1, BLOCK_SIZE, img);
+                img = malloc(BLOCK_SIZE);
                 count++;
             }
             else
