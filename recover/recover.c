@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
                 filename = malloc(BLOCK_SIZE);
                 FILE *img = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, img);
-                
+                count++;
             }
             else
             {
