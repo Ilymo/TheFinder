@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+typedef uint8_t BYTE;
+
 int main(int argc, char *argv[])
 {
     // Ensure 1 command line argument
@@ -37,7 +39,7 @@ int main(int argc, char *argv[])
 
             }
 
-                        sprintf(filename, "%03i.jpg", n);
+                        sprintf(filename, "%03i.jpg", count);
                         filename = malloc(BLOCK_SIZE);
                         FILE *img = fopen(filename, "w");
                         fwrite(buffer, 1, BLOCK_SIZE, img);
