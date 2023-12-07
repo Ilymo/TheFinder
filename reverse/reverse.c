@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     // TODO #8
     char *buffer;
     fseek(input, -1, SEEK_END);
-    for (int i = hin.subchunk2Size; i > 0; i--)
+    //for (int i = hin.subchunk2Size; i > 0; i--)
     {
         printf("%li\n", ftell(input));
         fread(&buffer, sizeof(block_size), 1, input);
@@ -68,6 +68,11 @@ int main(int argc, char *argv[])
         fseek(input, -2, SEEK_CUR);
         printf("%li\n", ftell(input));
         fwrite(&buffer, sizeof(block_size), 1, output);
+        printf("%li\n", ftell(input));
+        fread(&buffer, sizeof(block_size), 1, input);
+        printf("%li\n", ftell(input));
+        fseek(input, -2, SEEK_CUR);
+        printf("%li\n", ftell(input));
     }
 
 
