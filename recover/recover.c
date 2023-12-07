@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
                     if ((buffer[3] & 0xf0) == 0xe0)
                     {
                         sprintf(filename, "%03i.jpg", n);
+                        FILE *img = fopen(filename, "w");
                     }
                 }
             }
