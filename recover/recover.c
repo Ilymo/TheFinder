@@ -41,8 +41,7 @@ int main(int argc, char *argv[])
             }
             //creat new jpeg file
             sprintf(filename, "%03i.jpg", count);
-            img = fopen(filename, "w");
-            img = malloc(BLOCK_SIZE);
+            img = fopen(filename, "w");debug50 
             count++;
         }
         else if (img != NULL)
