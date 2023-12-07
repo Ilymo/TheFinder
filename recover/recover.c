@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
+int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -22,10 +23,10 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer for reading
-    int BLOCK_SIZE = 512;
     BYTE buffer[BLOCK_SIZE];
     int count = 0;
     char *filename;
+    FILE *img = NULL;
 
     // read 512 byte into memory
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
                 //creat new jpeg file
                 sprintf(filename, "%03i.jpg", count);
                 filename = malloc(BLOCK_SIZE);
-                FILE *img = fopen(filename, "w");
+                img = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 count++;
             }
