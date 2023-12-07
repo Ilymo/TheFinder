@@ -130,7 +130,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 Rholder = 255;
             }
-            
+
             int Gholder = (round(sqrt(Ggx^2 + Ggy^2)));
             if (Gholder > 255)
             {
@@ -144,9 +144,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // write the rounded value to image
-            image[i][j].rgbtRed = round(avR);
-            image[i][j].rgbtGreen = round(avG);
-            image[i][j].rgbtBlue = round(avB);
+            image[i][j].rgbtRed = Rholder;
+            image[i][j].rgbtGreen = Gholder;
+            image[i][j].rgbtBlue = Bholder;
         }
     }
     return;
