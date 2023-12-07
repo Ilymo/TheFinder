@@ -49,6 +49,10 @@ int main(int argc, char *argv[])
                 fclose(img);
             }
         }
+        else if (img != NULL)
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, img);
+        }
     }
 
 }
