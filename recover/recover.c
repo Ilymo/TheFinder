@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 typedef uint8_t BYTE;
 int BLOCK_SIZE = 512;
@@ -34,12 +34,12 @@ int main(int argc, char *argv[])
         // if start of new jpeg
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            //if first jpeg
+            // if first jpeg
             if (count > 0)
             {
                 fclose(img);
             }
-            //creat new jpeg file and write first block
+            // creat new jpeg file and write first block
             sprintf(filename, "%03i.jpg", count);
             img = fopen(filename, "w");
             fwrite(buffer, 1, BLOCK_SIZE, img);
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         }
         else if (img != NULL)
         {
-            //write each block into opened img
+            // write each block into opened img
             fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
