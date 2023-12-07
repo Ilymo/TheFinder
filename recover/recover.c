@@ -51,5 +51,6 @@ int main(int argc, char *argv[])
             fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
-
+    fclose(img);
+    fclose(infile);
 }
