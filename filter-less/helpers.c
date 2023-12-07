@@ -143,6 +143,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     B += copy[i - 1][j + 1].rgbtBlue;
                     npixel++;
                 }
+
+                // add right bot
+                if (i + 1 < height)
+                {
+                    R += copy[i + 1][j + 1].rgbtRed;
+                    G += copy[i + 1][j + 1].rgbtGreen;
+                    B += copy[i + 1][j + 1].rgbtBlue;
+                    npixel++;
+                }
             }
 
             // Add top pixel
@@ -163,7 +172,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 npixel++;
             }
 
-
+            
         }
     }
 
