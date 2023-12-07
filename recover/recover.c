@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
     // Create buffer for reading
     int buffer[512];
 
-    fread(buffer, 512, 1, infile);
+    while (fread(buffer, 512, 1, infile) == 1);
+    {
+
+    }
 
 }
