@@ -52,11 +52,20 @@ int check_format(WAVHEADER header)
 {
     // TODO #4
 
-    if (strcmp(header.format, "WAVE") == 0)
+    if (header.format[0] == 'W')
     {
-        return true;
+        if (header.format[1] == 'A')
+        {
+            if (header.format[2] == 'V')
+            {
+                if (header.format[3] == 'E')
+                {
+                    return 0;
+                }
+            }
+        }
     }
-    return false;
+    return 1;
 }
 
 int get_block_size(WAVHEADER header)
