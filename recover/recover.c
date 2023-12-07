@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     // Create buffer for reading
     int BLOCK_SIZE = 512;
     int buffer[BLOCK_SIZE];
-    int n = 1;
+    int n = 0;
     char *filename;
 
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
