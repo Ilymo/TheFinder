@@ -172,7 +172,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 npixel++;
             }
 
-            
+            // Calculate average of each color
+            float avR = R / npixel;
+            float avG = G / npixel;
+            float avB = B / npixel;
+
+            // write the rounded value to image
+            image[i][j].rgbtRed = round(avR)
+            image[i][j].rgbtGreen = round(avG)
+            image[i][j].rgbtBlue = round(avB)
         }
     }
 
