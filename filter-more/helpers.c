@@ -202,7 +202,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     Rgy += (copy[i + 1][j - 1].rgbtRed * 1);
                     Ggy += (copy[i + 1][j - 1].rgbtGreen * 1);
                     Bgy += (copy[i + 1][j - 1].rgbtBlue * 1);
-
                 }
             }
 
