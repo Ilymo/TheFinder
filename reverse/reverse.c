@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     // TODO #3
     WAVHEADER hin;
     fread(&hin, sizeof(WAVHEADER), 1, input);
-    ftell
+    ftell(input);
 
     // Use check_format to ensure WAV format
     // TODO #4
