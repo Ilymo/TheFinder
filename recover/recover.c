@@ -24,7 +24,6 @@ int main(int argc, char *argv[])
     int n = 1;
     char *filename;
 
-
     while (fread(buffer, 1, BLOCK_SIZE, infile) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff)
