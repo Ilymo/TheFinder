@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 
     // Create buffer for reading
     int buffer[512];
+    int n = 1;
 
     while (fread(buffer, 512, 1, infile) == 1)
     {
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
                 {
                     if ((buffer[3] & 0xf0) == 0xe0)
                     {
-                        
+                        sprintf(filename, "%03i.jpg", n);
                     }
                 }
             }
