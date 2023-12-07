@@ -33,7 +33,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 sepiaRed = 255;
             }
-            image[i][j].rgbtRed = round(sepiaRed);
 
             // Modifie GREEN
             float sepiaGreen = .349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 * image[i][j].rgbtBlue;
@@ -41,7 +40,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 sepiaGreen = 255;
             }
-            image[i][j].rgbtGreen = round(sepiaGreen);
 
             // Modifie BLUE
             float sepiaBlue = .272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 * image[i][j].rgbtBlue;
@@ -49,6 +47,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             {
                 sepiaBlue = 255;
             }
+
+            image[i][j].rgbtRed = round(sepiaRed);
+            image[i][j].rgbtGreen = round(sepiaGreen);
             image[i][j].rgbtBlue = round(sepiaBlue);
 
         }
