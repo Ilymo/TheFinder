@@ -59,14 +59,14 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
     char *buffer;
-    fseek(input, -4, SEEK_END);
+    fseek(input, -block_size, SEEK_END);
     printf("%i\n", hin.subchunk2Size);
-    for (int i = hin.subchunk2Size; i > 44; i--)
+    for (int i = 0; i < (hin.subchunk2Size/block_size); i++)
     {
         printf("%li\n", ftell(input));
         fread(&buffer, sizeof(block_size), 1, input);
         printf("%li\n", ftell(input));
-        fseek(input, -8, SEEK_CUR);
+        fseek(input, -2*block_size, SEEK_CUR);
         printf("%li\n", ftell(input));
         fwrite(&buffer, sizeof(block_size), 1, output);
     }
