@@ -19,6 +19,6 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer for reading
-    
+    int buffer[512];
 
 }
