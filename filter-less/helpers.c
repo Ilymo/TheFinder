@@ -103,39 +103,64 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // Add left pixel
             if (j - 1 >= 0)
             {
-            R += copy[i][j - 1].rgbtRed;
-            G += copy[i][j - 1].rgbtGreen;
-            B += copy[i][j - 1].rgbtBlue;
-            npixel++;
-                // Add top right
-                if (i)
+                R += copy[i][j - 1].rgbtRed;
+                G += copy[i][j - 1].rgbtGreen;
+                B += copy[i][j - 1].rgbtBlue;
+                npixel++;
+
+                // Add left top
+                if (i - 1 >= 0)
+                {
+                    R += copy[i - 1][j - 1].rgbtRed;
+                    G += copy[i - 1][j - 1].rgbtGreen;
+                    B += copy[i - 1][j - 1].rgbtBlue;
+                    npixel++;
+                }
+
+                // add left bot
+                if (i + 1 < height)
+                {
+                    R += copy[i + 1][j - 1].rgbtRed;
+                    G += copy[i + 1][j - 1].rgbtGreen;
+                    B += copy[i + 1][j - 1].rgbtBlue;
+                    npixel++;
+                }
             }
 
             // Add right pixel
             if (j + 1 < width)
             {
-            R += copy[i][j + 1].rgbtRed;
-            G += copy[i][j + 1].rgbtGreen;
-            B += copy[i][j + 1].rgbtBlue;
-            npixel++;
+                R += copy[i][j + 1].rgbtRed;
+                G += copy[i][j + 1].rgbtGreen;
+                B += copy[i][j + 1].rgbtBlue;
+                npixel++;
+
+                // add right top
+                if (i - 1 >= 0)
+                {
+                    R += copy[i - 1][j + 1].rgbtRed;
+                    G += copy[i - 1][j + 1].rgbtGreen;
+                    B += copy[i - 1][j + 1].rgbtBlue;
+                    npixel++;
+                }
             }
 
-            // Add  pixel
+            // Add top pixel
             if (i - 1 >= 0)
             {
-            R += copy[i - 1][j].rgbtRed;
-            G += copy[i - 1][j].rgbtGreen;
-            B += copy[i - 1][j].rgbtBlue;
-            npixel++;
+                R += copy[i - 1][j].rgbtRed;
+                G += copy[i - 1][j].rgbtGreen;
+                B += copy[i - 1][j].rgbtBlue;
+                npixel++;
             }
 
-            // Add right pixel
-            if (i + 1 < width)
+            // Add bottom pixel
+            if (i + 1 < height)
             {
-            R += copy[i + 1][j].rgbtRed;
-            G += copy[i + 1][j].rgbtGreen;
-            B += copy[i + 1][j].rgbtBlue;
-            npixel++;
+                R += copy[i + 1][j].rgbtRed;
+                G += copy[i + 1][j].rgbtGreen;
+                B += copy[i + 1][j].rgbtBlue;
+                npixel++;
             }
 
 
