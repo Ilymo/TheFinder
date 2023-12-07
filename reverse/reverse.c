@@ -50,6 +50,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    if (header.format)
     return 0;
 }
 
