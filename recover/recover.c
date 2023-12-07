@@ -19,11 +19,23 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer for reading
-    char *buffer[512];
+    int buffer[512];
 
-    fread(buffer, 512, 1, infile);
+    while (fread(buffer, 512, 1, infile) == 1)
     {
-
+        if (buffer[0] == 0xff)
+        {
+            if (buffer[1] == 0xd8)
+            {
+                if (buffer[2] == 0xff)
+                {
+                    if ((buffer[3] & 0xf0) == 0xe0)
+                    {
+                        
+                    }
+                }
+            }
+        }
     }
 
 }
