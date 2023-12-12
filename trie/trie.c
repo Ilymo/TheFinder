@@ -113,7 +113,14 @@ bool check(char *word)
     for(int i = 0, len = strlen(word); i < len; i++)
     {
         int index = tolower(name[i]) - 'a';
-        
+        if (cursor -> children[index] == NULL)
+        {
+            return false;
+        }
+        else
+        {
+            cursor = cursor -> children[index]
+        }
     }
     return false;
 }
