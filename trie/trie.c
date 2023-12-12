@@ -122,10 +122,6 @@ bool check(char *word)
             cursor = cursor -> children[index];
         }
     }
-    if (cursor -> is_word == true)
-    {
-        return true;
-    }
 }
 
 // Unload trie from memory
