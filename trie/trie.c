@@ -110,6 +110,10 @@ int main(int argc, char *argv[])
 bool check(char *word)
 {
     node *cursor = root;
+    for(int i = 0, len = strlen(word); i < len; i++)
+    {
+        
+    }
     return false;
 }
 
