@@ -110,20 +110,20 @@ int main(int argc, char *argv[])
 bool check(char *word)
 {
     node *cursor = root;
-    for(int i = 0, len = strlen(word); i < len + 1; i++)
+    for (int i = 0, len = strlen(word); i < len + 1; i++)
     {
         int index = tolower(word[i]) - 'a';
-        if (cursor -> is_word == true)
+        if (cursor->is_word == true)
         {
             return true;
         }
-        else if (cursor -> children[index] == NULL)
+        else if (cursor->children[index] == NULL)
         {
             return false;
         }
         else
         {
-            cursor = cursor -> children[index];
+            cursor = cursor->children[index];
         }
     }
     return false;
