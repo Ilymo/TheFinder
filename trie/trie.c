@@ -113,6 +113,7 @@ bool check(char *word)
     for(int i = 0, len = strlen(word); i < len; i++)
     {
         int index = tolower(name[i]) - 'a';
+        
     }
     return false;
 }
