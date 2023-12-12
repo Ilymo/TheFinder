@@ -119,10 +119,10 @@ bool check(char *word)
         }
         else
         {
-            cursor = cursor -> children[index]
+            cursor = cursor -> children[index];
         }
     }
-    return false;
+    return true;
 }
 
 // Unload trie from memory
