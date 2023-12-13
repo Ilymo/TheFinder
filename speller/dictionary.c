@@ -60,7 +60,7 @@ bool load(const char *dictionary)
         strcpy(n->word, holder);
         n->next = NULL;
         int index = hash(n->word);
-        
+        n->next = 
         table[index] = n;
     }
     while(fscanf(dico, "%s", holder) != EOF);
