@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
     // use is_apost to check for apostrophe
     if (is_apost(word) == true)
     {
-        index = (toupper(word[0]) - 'A') + 45;
+        index = ((toupper(word[0]) - 'A') * 45) + 45;
     }
     else
     {
