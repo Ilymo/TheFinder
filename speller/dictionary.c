@@ -58,6 +58,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(n->word, holder);
+        int index = hash(n->word);
     }
     while(fscanf(dico, "%s", holder) != EOF);
 
