@@ -68,6 +68,7 @@ bool load(const char *dictionary)
     {
         //read word and store in holder
         fscanf(dico, "%s", holder);
+        printf("%s\n", holder);
 
         //creat new node
         node *n = malloc(sizeof(node));
