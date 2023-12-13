@@ -51,7 +51,7 @@ bool load(const char *dictionary)
         fscanf(dico, "%s", word);
         printf("%s\n", word);
     }
-    while(fscanf != );
+    while(fscanf(dico, "%s", word) != EOF);
 
 
 
