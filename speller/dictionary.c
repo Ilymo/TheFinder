@@ -46,7 +46,7 @@ unsigned int hash(const char *word)
     {
         index = ((toupper(word[0]) - 'A') * 46) + (strlen(word) - 1);
     }
-    printf("%i\n", index);
+
 
     return index;
 }
