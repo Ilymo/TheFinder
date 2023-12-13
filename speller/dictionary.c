@@ -46,6 +46,7 @@ unsigned int hash(const char *word)
     {
         index = ((toupper(word[0]) - 'A') * 45) + (strlen(word) - 1);
     }
+    printf("%i\n", index);
 
     return index;
 }
@@ -66,7 +67,7 @@ bool load(const char *dictionary)
     do
     {
         //read word and store in holder
-        int fscanf(dico, "%s", holder);
+        fscanf(dico, "%s", holder);
 
         //creat new node
         node *n = malloc(sizeof(node));
@@ -107,7 +108,7 @@ bool unload(void)
 
 bool is_apost (const char *word)
 {
-    for (int i = 0, len = strlen(word); i < strlen; i++)
+    for (int i = 0, len = strlen(word); i < len; i++)
     {
         if(word[i] == 39)
         {
