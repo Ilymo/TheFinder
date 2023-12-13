@@ -8,6 +8,9 @@
 
 #include "dictionary.h"
 
+// Prototype for apostrophe check
+bool apost (const char *word);
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -33,18 +36,6 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // Creat function to check if there is "'"
-    bool apost (const char *word)
-    {
-        
-    }
-    for (int i = 0, len = strlen(word); i < strlen; i++)
-    {
-
-    }
-
-
-
-
 
     int index = ((toupper(word[0]) - 'A') * 45) + (strlen(word) - 1);
 
@@ -105,4 +96,12 @@ bool unload(void)
 {
     // TODO
     return false;
+}
+
+bool apost (const char *word)
+{
+    for (int i = 0, len = strlen(word); i < strlen; i++)
+    {
+        if(word[i] - ''' == )
+    }
 }
