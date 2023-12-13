@@ -64,13 +64,10 @@ bool load(const char *dictionary)
 
     // for each word in dico
     char holder[LENGTH];
-    do
+
+    while(fscanf(dico, "%s", holder) != EOF)
     {
-
-        // !!!!!!!!!!!!!!!!! bug 2 fois scanf !!!!!!!!!!!!
-
-        //read word and store in holder
-        fscanf(dico, "%s", holder);
+        // store in holder
         printf("%s\n", holder);
 
         //creat new node
@@ -91,7 +88,7 @@ bool load(const char *dictionary)
         n->next = table[index];
         table[index] = n;
     }
-    while(fscanf(dico, "%s", holder) != EOF);
+
 
     return true;
 }
