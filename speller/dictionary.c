@@ -47,9 +47,10 @@ bool load(const char *dictionary)
     // Read strings from dico
     char *word = NULL;
     fscanf(dico, "%s", word);
+    printf("%s\n", word);
 
 
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
