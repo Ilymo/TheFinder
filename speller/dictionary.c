@@ -102,6 +102,6 @@ bool apost (const char *word)
 {
     for (int i = 0, len = strlen(word); i < strlen; i++)
     {
-        if(word[i] - ''' == )
+        if(word[i] == )
     }
 }
