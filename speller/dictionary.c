@@ -45,7 +45,7 @@ bool load(const char *dictionary)
     }
 
     // Read strings from dico
-    char *word = NULL;
+    char word[LENGTH];
     fscanf(dico, "%s", word);
     printf("%s\n", word);
 
