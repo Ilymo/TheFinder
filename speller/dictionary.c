@@ -72,9 +72,7 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     while(fscanf(dico, "%s", holder) != EOF);
-
-
-
+    
     return true;
 }
 
