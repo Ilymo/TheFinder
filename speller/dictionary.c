@@ -66,6 +66,9 @@ bool load(const char *dictionary)
     char holder[LENGTH];
     do
     {
+
+        // !!!!!!!!!!!!!!!!! bug 2 fois scanf !!!!!!!!!!!!
+
         //read word and store in holder
         fscanf(dico, "%s", holder);
         printf("%s\n", holder);
