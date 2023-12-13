@@ -33,7 +33,10 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     //check if there is "'"
-    for (int i = 0, len = strlen(word); i < strlen)
+    for (int i = 0, len = strlen(word); i < strlen; i++)
+    {
+        
+    }
     int index = ((toupper(word[0]) - 'A') * 45) + (strlen(word) - 1);
 
 
