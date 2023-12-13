@@ -36,12 +36,15 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dic = fopen(char *dictionary, "r")
-    if (dic == NULL)
+    // Open dictionary
+    FILE *dico = fopen(char *dictionary, "r")
+    if (dico == NULL)
     {
-        
+        return false;
     }
-    return false;
+
+    // Read strings from dico
+    fscanf(dico, "%s", word)
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
