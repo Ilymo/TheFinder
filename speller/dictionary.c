@@ -46,20 +46,28 @@ bool load(const char *dictionary)
         return false;
     }
 
-    // Read strings from dico
+    // for each word in dico
     char holder[LENGTH];
     do
     {
+        //read word and store in holder
         fscanf(dico, "%s", holder);
-        printf("%s\n", holder);
+
+        //creat new node
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
             return false;
         }
+
+        //copy holder into the node
         strcpy(n->word, holder);
         n->next = NULL;
+
+        //get index for this word
         int index = hash(n->word);
+
+        //store the node in hash table
         n->next = table[index];
         table[index] = n;
     }
