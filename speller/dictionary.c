@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     do
     {
         //read word and store in holder
-        fscanf(dico, "%s", holder);
+        int fscanf(dico, "%s", holder);
 
         //creat new node
         node *n = malloc(sizeof(node));
@@ -72,7 +72,7 @@ bool load(const char *dictionary)
         table[index] = n;
     }
     while(fscanf(dico, "%s", holder) != EOF);
-    
+
     return true;
 }
 
