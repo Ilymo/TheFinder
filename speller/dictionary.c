@@ -40,11 +40,11 @@ unsigned int hash(const char *word)
     // use is_apost to check for apostrophe
     if (is_apost(word) == true)
     {
-        index = ((toupper(word[0]) - 'A') * 45) + 45;
+        index = ((toupper(word[0]) - 'A') * 46) + 45;
     }
     else
     {
-        index = ((toupper(word[0]) - 'A') * 45) + (strlen(word) - 1);
+        index = ((toupper(word[0]) - 'A') * 46) + (strlen(word) - 1);
     }
     printf("%i\n", index);
 
