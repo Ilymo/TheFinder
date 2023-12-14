@@ -128,7 +128,20 @@ bool unload(void)
     // TODO
 
     // Creat 2 pointer
-    node *cursor =
+    node *cursor = NULL;
+    node *holder = NULL;
+
+    // For each case in hash table
+    for (int i = 0; i < N; i++)
+    {
+        cursor = table[i];
+        holder = cursor;
+        
+    }
+
+
+
+
     return false;
 }
 
