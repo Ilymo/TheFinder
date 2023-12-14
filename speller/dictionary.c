@@ -39,7 +39,7 @@ bool check(const char *word)
     node *cursor = table[index];
 
     // Check each node and strcmp, break if strcmp true or cursor->next == NULL
-    while (cursor->next !== NULL)
+    if (cursor->next != NULL)
     {
         if (strcasecmp(word, cursor->word) == 0)
         {
