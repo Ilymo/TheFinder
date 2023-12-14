@@ -126,6 +126,9 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+
+    // Creat 2 pointer
+    node *cursor =
     return false;
 }
 
