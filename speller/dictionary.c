@@ -10,7 +10,7 @@
 #include "dictionary.h"
 
 // Prototype for apostrophe check
-bool is_apost (const char *word);
+bool is_apost(const char *word);
 
 // Int size counter
 int size_count = 0;
@@ -87,11 +87,11 @@ bool load(const char *dictionary)
     char holder[LENGTH];
 
     // Check each word until EOF and tmp store in holder
-    while(fscanf(dico, "%s", holder) != EOF)
+    while (fscanf(dico, "%s", holder) != EOF)
     {
         // Creat new node
         node *n = malloc(sizeof(node));
-        if(n == NULL)
+        if (n == NULL)
         {
             return false;
         }
@@ -108,10 +108,10 @@ bool load(const char *dictionary)
         table[index] = n;
 
         // increase size_count
-        size_count ++;
+        size_count++;
     }
     fclose(dico);
-    
+
     return true;
 }
 
@@ -147,11 +147,11 @@ bool unload(void)
     return true;
 }
 
-bool is_apost (const char *word)
+bool is_apost(const char *word)
 {
     for (int i = 0, len = strlen(word); i < len; i++)
     {
-        if(word[i] == 39)
+        if (word[i] == 39)
         {
             return true;
         }
