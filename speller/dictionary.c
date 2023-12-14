@@ -110,8 +110,8 @@ bool load(const char *dictionary)
         // increase size_count
         size_count ++;
     }
-
-
+    fclose(dico);
+    
     return true;
 }
 
