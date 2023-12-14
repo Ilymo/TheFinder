@@ -11,6 +11,9 @@
 // Prototype for apostrophe check
 bool is_apost (const char *word);
 
+// Int size counter
+int size_count = 0;
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -67,26 +70,29 @@ bool load(const char *dictionary)
 
     while(fscanf(dico, "%s", holder) != EOF)
     {
-        // store in holder
+        // Store in holder
         printf("%s\n", holder);
 
-        //creat new node
+        // Creat new node
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
             return false;
         }
 
-        //copy holder into the node
+        // Copy holder into the node
         strcpy(n->word, holder);
         n->next = NULL;
 
-        //get index for this word
+        // Get index for this word
         int index = hash(n->word);
 
-        //store the node in hash table
+        // Store the node in hash table
         n->next = table[index];
         table[index] = n;
+
+        // increase size_count
+        size_count ++;
     }
 
 
@@ -97,7 +103,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return size_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
