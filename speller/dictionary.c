@@ -136,13 +136,15 @@ bool unload(void)
     {
         cursor = table[i];
         holder = cursor;
-        
+
+        while (cursor != NULL)
+        {
+            cursor = cursor->next;
+            free(holder);
+            holder = cursor;
+        }
     }
-
-
-
-
-    return false;
+    return true;
 }
 
 bool is_apost (const char *word)
