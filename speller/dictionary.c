@@ -101,7 +101,6 @@ unsigned int size(void)
 {
     // TODO
     return size_count;
-    printf("%i\n", size_count);
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
