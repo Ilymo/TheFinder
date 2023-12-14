@@ -49,7 +49,6 @@ unsigned int hash(const char *word)
     {
         index = ((toupper(word[0]) - 'A') * 46) + (strlen(word) - 1);
     }
-    printf("%i\n", index);
 
     return index;
 }
@@ -68,11 +67,9 @@ bool load(const char *dictionary)
     // for each word in dico
     char holder[LENGTH];
 
+    // Check each word until EOF and tmp store in holder
     while(fscanf(dico, "%s", holder) != EOF)
     {
-        // Store in holder
-        printf("%s\n", holder);
-
         // Creat new node
         node *n = malloc(sizeof(node));
         if(n == NULL)
@@ -104,6 +101,7 @@ unsigned int size(void)
 {
     // TODO
     return size_count;
+    printf("%i\n", size_count);
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
