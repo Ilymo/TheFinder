@@ -31,6 +31,13 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    // Get index of the word
+    int index = hash(word);
+
+    // Creat a cursor and take adress of the first node at this index
+    int cursor = table[index];
+
+    
     return false;
 }
 
