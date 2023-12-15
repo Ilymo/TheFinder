@@ -9,8 +9,8 @@ height = get_int("height: ")
 #print space
 row = height
 for i in range(height):
-    print('' * (row - 1), end='')
-    print('#' * (i + 1))
+    print((' ' * (row - 1)), ('#' * (i + 1)))
+    row -= 1
 
 
 
