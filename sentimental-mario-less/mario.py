@@ -11,5 +11,5 @@ for i in range(height):
     while height > i:
         print('', end='')
         height -= 1
-    print("#")
-    print()
+    print("#" * i)
+
