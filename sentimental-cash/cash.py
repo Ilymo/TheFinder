@@ -18,15 +18,14 @@ def nb_coin(i):
     #calcul dimes
     d = i / 0.10
     nb += d
-    i -= d * 10
+    i -= d * 0.10
     #calcul nickels
     n = i / 0.05
     nb += n
-    i -= n * 5
+    i -= n * 0.05
     #calcul pennies
     p = i / 0.01
     nb += p
-    i -= p
 
     return nb
 
