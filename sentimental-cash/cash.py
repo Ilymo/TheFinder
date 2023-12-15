@@ -12,19 +12,19 @@ def main():
 def nb_coin(i):
     nb = 0
     #calcul quarters and remaining change
-    q = i / 0.25
+    q = int(i / 0.25)
     nb += q
     i -= q * 0.25
     #calcul dimes
-    d = i / 0.10
+    d = int(i / 0.10)
     nb += d
     i -= d * 0.10
     #calcul nickels
-    n = i / 0.05
+    n = int(i / 0.05)
     nb += n
     i -= n * 0.05
     #calcul pennies
-    p = i / 0.01
+    p = int(i / 0.01)
     nb += p
 
     return nb
