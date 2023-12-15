@@ -14,17 +14,18 @@ def main():
 
 def nb_coin(i):
     nb = 0
+    i = i * 100
     #calcul quarters and remaining change
-    q = floor(i / 0.25)
-    i += q * 0.25
+    q = i / 25
+    i -= q * 25
     #calcul dimes
-    d = floor(i / 0.10)
-    i -= d * 0.10
+    d = i / 10
+    i -= d * 10
     #calcul nickels
-    n = floor(i / 0.05)
-    i -= n * 0.05
+    n = i / 5
+    i -= n * 5
     #calcul pennies
-    p = floor(i / 0.01)
+    p = i / 1
 
     nb += p + n + d + q
     return nb
