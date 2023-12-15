@@ -29,7 +29,7 @@ def main():
     for i in range(N):
         winner = simulate_tournament(teams)
 
-
+    print(f')
 
 
 
@@ -67,10 +67,7 @@ def simulate_tournament(teams):
 
     for i in range(math.isqrt(len(teams))):
         teams = simulate_round(teams)
-
-
-    print(f"{teams[0]['team']}")
-    return teams
+    return teams[0]['team']
 
 
 if __name__ == "__main__":
