@@ -3,7 +3,7 @@
 import csv
 import sys
 import random
-from math import isqrt()
+from math import isqrt
 
 # Number of simluations to run
 N = 1000
