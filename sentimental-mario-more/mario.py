@@ -13,7 +13,7 @@ def main():
 def printp(n):
     row = n
     for i in range(n):
-        print(" " * (row - 1), "#" * (i + 1))
+        print(" " * (row - 1), end="")
         print("#" * (i + 1), end="")
         print("  ", end="")
         print("#" * (i + 1), end="")
