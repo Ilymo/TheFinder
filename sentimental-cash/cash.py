@@ -14,7 +14,7 @@ def nb_coin(i):
     nb = 0
     #calcul quarters and remaining change
     q = floor(i / 0.25)
-    i -= q * 0.25
+    i -= (1 * 0.25)
     #calcul dimes
     d = floor(i / 0.10)
     i -= d * 0.10
