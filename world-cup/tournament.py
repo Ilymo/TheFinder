@@ -3,6 +3,7 @@
 import csv
 import sys
 import random
+from math import isqrt()
 
 # Number of simluations to run
 N = 1000
@@ -58,7 +59,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    for i in range(sqr(teams)):
+    for i in range(math.isqrt(teams)):
         teams = simulate_round(teams)
 
 
