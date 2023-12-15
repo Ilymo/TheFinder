@@ -16,8 +16,7 @@ def printp(n):
         print(" " * (row - 1), end="")
         print("#" * (i + 1), end="")
         print("  ", end="")
-        print("#" * (i + 1), end="")
-        print(" " * (row - 1))
+        print("#" * (i + 1))
         row -= 1
 
 
