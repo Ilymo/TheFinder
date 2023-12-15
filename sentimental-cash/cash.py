@@ -5,26 +5,26 @@ from cs50 import get_float
 
 def main():
     change = get_change()
-    coin = nb_coin(change)
+    coin = int(nb_coin(change))
     print(f"{coin}")
 
 
 def nb_coin(i):
     nb = 0
     #calcul quarters and remaining change
-    q = i / 25
+    q = i / 0.25
     nb += q
-    i -= q * 25
+    i -= q * 0.25
     #calcul dimes
-    d = i / 10
+    d = i / 0.10
     nb += d
     i -= d * 10
     #calcul nickels
-    n = i / 5
+    n = i / 0.05
     nb += n
     i -= n * 5
     #calcul pennies
-    p = i /1
+    p = i / 0.01
     nb += p
     i -= p
 
