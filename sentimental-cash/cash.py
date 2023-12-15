@@ -1,6 +1,7 @@
 # TODO
 
 from cs50 import get_float
+from math import floor
 
 
 def main():
@@ -12,16 +13,16 @@ def main():
 def nb_coin(i):
     nb = 0
     #calcul quarters and remaining change
-    q = round(i / 0.25)
+    q = floor(i / 0.25)
     i -= q * 0.25
     #calcul dimes
-    d = round(i / 0.10)
+    d = floor(i / 0.10)
     i -= d * 0.10
     #calcul nickels
-    n = round(i / 0.05)
+    n = floor(i / 0.05)
     i -= n * 0.05
     #calcul pennies
-    p = round(i / 0.01)
+    p = floor(i / 0.01)
 
     nb += p + n + d + q
     return nb
