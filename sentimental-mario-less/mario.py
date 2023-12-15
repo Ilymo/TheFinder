@@ -3,7 +3,11 @@
 from cs50 import get_int
 
 #get height
-height = get_int("height: ")
+def main():
+    def get_height():
+
+
+height = get_height
 
 #print space
 row = height
@@ -14,5 +18,12 @@ for i in range(height):
 
 
 
+get_height():
+    while true:
+        n = get_int("height: ")
+        if n > 0 and n < 9:
+            return n
 
 
+
+main()
