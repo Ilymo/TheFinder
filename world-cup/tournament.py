@@ -19,7 +19,7 @@ def main():
     with open(sys.argv[1]) as file:
             reader = csv.DictReader(file)
             teams.append(reader)
-            print(teams}")
+            print(teams)
 
 
 
