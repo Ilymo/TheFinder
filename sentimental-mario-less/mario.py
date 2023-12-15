@@ -7,11 +7,12 @@ from cs50 import get_int
 height = get_int("height: ")
 
 #print space
+row = height
 for i in range(height):
-    while (n < (height - 1)):
-        print('', end='')
-        n += 1
-        print("#" * i)
+    print('' * (row - 1), end='')
+    print('#' * (i + 1))
+
+
 
 
 
