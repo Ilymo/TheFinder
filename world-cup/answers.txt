@@ -1,15 +1,17 @@
 Times:
 
-10 simulations: TODO (record time using 0m0,030s format)
-100 simulations: TODO (record time using 0m0,032s format)
-1000 simulations: TODO (record time using 0m0,039s format)
-10000 simulations: TODO (record time using 0m0,128s format)
-100000 simulations: TODO (record time using 0m1,030s format)
-1000000 simulations: TODO (record time using 0m9,957s format)
+10 simulations: TODO (record time using 0m0.030s format)
+100 simulations: TODO (record time using 0m0.032s format)
+1000 simulations: TODO (record time using 0m0.039s format)
+10000 simulations: TODO (record time using 0m0.128s format)
+100000 simulations: TODO (record time using 0m1.030s format)
+1000000 simulations: TODO (record time using 0m9.957s format)
 
 Questions:
 
-Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+Smallest amount of simulation
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?:
+around 1000 simulations
