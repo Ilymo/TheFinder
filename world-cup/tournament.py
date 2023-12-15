@@ -3,7 +3,7 @@
 import csv
 import sys
 import random
-from math import isqrt
+import math
 
 # Number of simluations to run
 N = 1000
@@ -26,7 +26,8 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    simulate_tournament(teams)
+    for i in N:
+        simulate_tournament(teams)
 
 
     # Print each team's chances of winning, according to simulation
@@ -59,12 +60,8 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    for i in range(math.isqrt(teams)):
+    for i in range(math.isqrt(len(teams))):
         teams = simulate_round(teams)
-
-
-
-    print(f"{teams}")
     return teams
 
 
