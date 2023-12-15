@@ -58,7 +58,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    for i in range():
+    for i in range(root(teams)):
         teams = simulate_round(teams)
 
 
