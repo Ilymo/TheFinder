@@ -2,6 +2,7 @@
 
 from cs50 import get_float
 from math import floor
+from decimal import *
 
 
 def main():
