@@ -30,7 +30,7 @@ def main():
         winner = simulate_tournament(teams)
 
 
-    print(f"{winner}")
+    print(f"{winner{team}}")
 
 
 
