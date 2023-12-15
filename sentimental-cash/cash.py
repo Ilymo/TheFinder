@@ -2,8 +2,6 @@
 
 from cs50 import get_float
 from math import floor
-from decimal import *
-getcontext().prec = 6
 
 
 def main():
@@ -16,16 +14,16 @@ def nb_coin(i):
     nb = 0
     i = i * 100
     #calcul quarters and remaining change
-    q = i / 25
+    q = floor(i / 25)
     i -= q * 25
     #calcul dimes
-    d = i / 10
+    d = floor(i / 10)
     i -= d * 10
     #calcul nickels
-    n = i / 5
+    n = floor(i / 5)
     i -= n * 5
     #calcul pennies
-    p = i / 1
+    p = floor(i / 1)
 
     nb += p + n + d + q
     return nb
