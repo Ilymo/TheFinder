@@ -8,8 +8,8 @@ height = get_int("height: ")
 
 #print space
 for i in range(height):
-    while height > i:
+    for i 
         print('', end='')
-        height -= 1
+
     print("#" * i)
 
