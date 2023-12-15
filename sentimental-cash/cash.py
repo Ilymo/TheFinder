@@ -3,6 +3,7 @@
 from cs50 import get_float
 from math import floor
 from decimal import *
+getcontext().prec = 6
 
 
 def main():
