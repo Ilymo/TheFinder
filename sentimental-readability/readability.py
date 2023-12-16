@@ -40,11 +40,15 @@ def count_letter(text):
 
 
 # func count word
-def count_word():
+def count_word(text):
     nb = 0
-    
+
+    if text[0].isalpha:
+        nb += 1
+
     for char in text:
-        if char.isalpha():
+        if char.isspace():
             nb += 1
+    return nb
 
 # func count sentence
