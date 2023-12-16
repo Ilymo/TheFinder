@@ -31,6 +31,8 @@ def print_grade(grade):
         print(grade)
 
 # func count letter
+def count_letter(text):
+    nb = 
 
 # func count word
 
