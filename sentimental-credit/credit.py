@@ -20,11 +20,9 @@ def get_card_nb():
             return n
 
 
-
-
-
 #check if valid
-#def check_valid(n):
+def check_valid(n):
+    
 
 
 #if valid, check if AMEX, MASTERCARD or VISA
