@@ -2,11 +2,16 @@
 text = "oliVier Mor elLi"
 nb = 0
 
+#count letter
+for char in text:
+    if char.isalpha():
+        letters += 1
+    eli char.isblank():
+    
 
-if text[0].isalpha():
-    nb += 1
-    for char in text:
-        if char.isalpha:
-            nb += 1
+#count space
+for char in text:
+
+
 
 print(nb)
