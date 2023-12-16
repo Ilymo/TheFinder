@@ -12,7 +12,7 @@ for i in range(0, length, 2):
 
     #multi other by 2 and add to sum
 j = 1
-for j in range(length - 1):
+for j in range(0, length, 2):
     sum += int(n[j])
     j += 2
 
