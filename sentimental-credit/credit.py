@@ -34,7 +34,7 @@ def check_valid(n):
                     return INVALID
     #check MASTER
     if n[0] == 5:
-        if n[1] in [1, 2, 3, 4, 5]:
+        if n[1] in range(1, 5):
             if len(n) == 16:
                 master = luhn(n)
                 if master == 0:
