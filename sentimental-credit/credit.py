@@ -5,7 +5,7 @@ import re
 
 txt = "378282246310005"
 
-x = re.match('^37', txt)
+x = re.match('(37)', txt)
 
 print(x)
 
