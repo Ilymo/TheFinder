@@ -11,10 +11,7 @@ def main():
 
 #prompt for credit card nb and check length
 def get_card_nb():
-    while True:
-        n = input("number: ")
-        if len(n) in [15, 16, 13]:
-            return n
+    n = input("number: ")
 
 
 #check if valid, if yes return the type
