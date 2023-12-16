@@ -27,6 +27,24 @@ def check_valid(n):
         if n[1] in [4, 7]:
             if len(n) == 15:
                 amex = luhn(n)
+                if amex == 0:
+                    return True
+                else:
+                    return False
+    #check MASTER
+    if n[0] == 5:
+        if n[1] in [1, 2, 3, 4, 5]:
+            if len(n) == 16:
+                master = luhn(n)
+                if master == 0:
+                    return True
+                else:
+                    return False
+    #check VISA
+    if n[0] == 4:
+        if len(n) == 13 or len(n) == 16:
+            visa = luhn(n)
+            if visa == 0
 
 
 
