@@ -17,6 +17,7 @@ def get_text():
     n = get_string("text: ")
     return n
 
+
 # calculate grade
 def calcul_grade(letters, words, sentences):
     L = letters / words * 100
@@ -32,7 +33,8 @@ def print_grade(grade):
     elif grade < 1:
         print("Before Grade 1")
     else:
-        print(grade)
+        print(f"Grade: {grade}")
+
 
 # func count letter
 def count_letter(text):
