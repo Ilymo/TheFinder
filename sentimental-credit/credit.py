@@ -5,6 +5,7 @@ from cs50 import get_int
 
 def main():
     number = get_card_nb()
+    
     print(number)
 
 
@@ -44,7 +45,10 @@ def check_valid(n):
     if n[0] == 4:
         if len(n) == 13 or len(n) == 16:
             visa = luhn(n)
-            if visa == 0
+            if visa == 0:
+                return True
+            else:
+                return False
 
 
 
