@@ -21,5 +21,4 @@ for j in range(1, length, 2):
     j += 2
 
 #return last digit
-    
-print(sum)
+print(sum % 10)
