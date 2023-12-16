@@ -5,7 +5,7 @@ import re
 
 txt = "378282246310005"
 
-x = re.match('[0-9]{2}', txt)
+x = re.match('\A[34|37]', txt)
 
 print(x)
 
