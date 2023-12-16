@@ -1,13 +1,6 @@
 # TODO
+from cs50 import get_int
 
-import re
-
-
-txt = "378282246310005"
-
-x = re.match('\A[34|37]', txt)
-
-print(x)
 
 
 #def main():
@@ -21,7 +14,10 @@ print(x)
 
 
 #prompt for credit card nb
-#def get_card_nb():
+def get_card_nb():
+    n = get_int("number: ")
+    while True:
+        if n
 
 
 
