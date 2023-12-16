@@ -54,6 +54,8 @@ def check_valid(n):
 
 #Luhn's algo
 def luhn(n):
+    #multiply every 2 digit by 2
     
+
 
 main()
