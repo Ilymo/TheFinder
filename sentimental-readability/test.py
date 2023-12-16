@@ -1,18 +1,14 @@
 
-text = "oliVier Mor elLi"
+text = "oliVier Mor elLi "
 nb = 0
-letters = 0
-spaces = 0
+
+if text[0].isalpha:
+    nb += 1
 
 #count letter
 for char in text:
-    if char.isalpha():
-        letters += 1
-    elif char.isspace():
-        spaces += 1
+    if char.isspace():
+        nb += 1
 
 #calcul word
-nb = letters / spaces
-
-
 print(nb)
