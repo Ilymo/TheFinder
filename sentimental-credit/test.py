@@ -10,6 +10,8 @@ holder = 0
 for i in range(0, length, 2):
     holder = int(n[i]) * 2
     holder = str(holder)
+    for k in range(len(holder)):
+        sum += int(holder[k])
 
 
 
