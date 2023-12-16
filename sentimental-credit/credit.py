@@ -65,7 +65,8 @@ def luhn(n):
     #multi other by 2 and add to sum
     j = 1
     for j in range(length - 1):
-        
+        sum += n[j] * 2
+        j += 2
 
 
 
