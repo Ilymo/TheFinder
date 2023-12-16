@@ -20,31 +20,33 @@ def get_card_nb():
 #check if valid, if yes return the type
 def check_valid(n):
     #check AMEX
-    if n[0] == 3:
+    if n[0] == '3':
         if n[1] in [4, 7]:
             if len(n) == 15:
                 amex = luhn(n)
                 if amex == 0:
-                    return AMEX
+                    return 'AMEX'
                 else:
-                    return INVALID
+                    return 'INVALID'
     #check MASTER
-    if n[0] == 5:
+    elif n[0] == 5:
         if n[1] in range(1, 5):
             if len(n) == 16:
                 master = luhn(n)
                 if master == 0:
-                    return MASTERCARD
+                    return 'MASTERCARD'
                 else:
-                    return INVALID
+                    return 'INVALID'
     #check VISA
-    if n[0] == 4:
+    elif n[0] == 4:
         if len(n) == 13 or len(n) == 16:
             visa = luhn(n)
             if visa == 0:
-                return VISA
+                return 'VISA'
             else:
-                return INVALID
+                return 'INVALID'
+    else:
+        return 'INVALID'
 
 
 #Luhn's algo
