@@ -11,7 +11,6 @@ def main():
     print_grade(grade)
 
 
-
 # prompt user for text
 def get_text():
     n = get_string("text: ")
@@ -56,6 +55,7 @@ def count_word(text):
         if char.isspace():
             nb += 1
     return nb
+
 
 # func count sentence
 def count_sentence(text):
