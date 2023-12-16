@@ -36,7 +36,8 @@ def count_letter(text):
     length = len(text)
 
     for i in range(length):
-        if 
+        if text[i].isalpha:
+            nb += 1
 
 
 # func count word
