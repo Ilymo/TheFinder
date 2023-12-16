@@ -20,4 +20,6 @@ for j in range(1, length, 2):
     sum += int(n[j])
     j += 2
 
+#return last digit
+    
 print(sum)
