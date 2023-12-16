@@ -17,7 +17,9 @@ from cs50 import get_int
 def get_card_nb():
     n = get_int("number: ")
     while True:
-        if n
+        if n[0] == 3:
+            if n[1] == 4 or n[1] == 7:
+                
 
 
 
