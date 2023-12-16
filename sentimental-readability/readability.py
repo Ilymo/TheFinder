@@ -1,8 +1,10 @@
 # TODO
+from cs50 import get_string
 
 # prompt user for text
 
-# count letters, words, sentences
+
+# return letters, words, sentences
 
 # calculate grade
 
