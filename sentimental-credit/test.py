@@ -1,5 +1,5 @@
 
-n = "4003600000000014"
+n = "5555555555554444"
 
 
 sum = 0
@@ -7,7 +7,7 @@ length = len(n)
 holder = 0
 
 #add 0,2,4... to sum
-for i in range(0, length, 2):
+for i in range(length, 0, 2):
     holder = int(n[i]) * 2
     holder = str(holder)
     for k in range(len(holder)):
@@ -16,9 +16,9 @@ for i in range(0, length, 2):
 
 
 #multi other by 2 and add to sum
-for j in range(1, length, 2):
+for j in range(length, 0, 2):
     sum += int(n[j])
-    j += 2
+
 
 #return last digit
 print(sum % 10)
