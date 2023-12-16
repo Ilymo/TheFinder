@@ -21,7 +21,7 @@ def get_card_nb():
 def check_valid(n):
     #check AMEX
     if n[0] == '3':
-        if n[1] in [4, 7]:
+        if n[1] in ['4', '7']:
             if len(n) == 15:
                 amex = luhn(n)
                 if amex == 0:
@@ -30,7 +30,7 @@ def check_valid(n):
                     return 'INVALID'
     #check MASTER
     elif n[0] == 5:
-        if n[1] in range(1, 5):
+        if n[1] in range('1', '5'):
             if len(n) == 16:
                 master = luhn(n)
                 if master == 0:
