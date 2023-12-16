@@ -1,23 +1,27 @@
 # TODO
 from cs50 import get_string
 
+
+def main():
+    text = get_text()
+    letters = count_letter(text)
+    words = count_word(text)
+    sentences = count_sentence(text)
+    grade = calcul_grade(letters, words, sentences)
+    print_grade(grade)
+
+
+
 # prompt user for text
 def get_text():
     n = get_string("text: ")
     return n
 
-# return letters, words, sentences
-def lts(text):
-    letters = count_letter(text)
-    words = count_word(text)
-    sentences = count_sentence(text)
-    return(letters, words, sentences)
-
 # calculate grade
 def calcul_grade(letters, words, sentences):
     L = letters / words * 100
     S = sentences / words * 100
-    grade = in(0.0588 * L - 0.296 * S - 15.8)
+    grade = int(0.0588 * L - 0.296 * S - 15.8)
     return grade
 
 
@@ -52,5 +56,13 @@ def count_word(text):
     return nb
 
 # func count sentence
-def count_word():
-    
+def count_sentence(text):
+    nb = 0
+    nb += text.count(".")
+    nb += text.count("?")
+    nb += text.count("!")
+
+    return nb
+
+
+main()
