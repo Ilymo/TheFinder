@@ -5,12 +5,8 @@ from cs50 import get_int
 
 def main():
     number = get_card_nb()
-
-    print(number)
-
-
-
-
+    result = check_valid(number)
+    print(result)
 
 
 #prompt for credit card nb and check length
@@ -51,7 +47,6 @@ def check_valid(n):
                 return INVALID
 
 
-
 #Luhn's algo
 def luhn(n):
     sum = 0
@@ -71,7 +66,7 @@ def luhn(n):
         j += 2
 
     #return last digit
-    print(sum % 10)
+    return(sum % 10)
 
 
 main()
