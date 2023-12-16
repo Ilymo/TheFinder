@@ -29,7 +29,7 @@ def check_valid(n):
                 else:
                     return 'INVALID'
     #check MASTER
-    elif n[0] == 5:
+    elif n[0] == '5':
         if n[1] in range('1', '5'):
             if len(n) == 16:
                 master = luhn(n)
@@ -38,7 +38,7 @@ def check_valid(n):
                 else:
                     return 'INVALID'
     #check VISA
-    elif n[0] == 4:
+    elif n[0] == '4':
         if len(n) == 13 or len(n) == 16:
             visa = luhn(n)
             if visa == 0:
