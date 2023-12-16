@@ -55,9 +55,18 @@ def check_valid(n):
 #Luhn's algo
 def luhn(n):
     sum = 0
-    n = len(n)
-    #multiply every 2 digit by 2
-    for i in range(n)
+    length = len(n)
+    n = int(n)
+    #add 0,2,4... to sum
+    for i in range(length - 1):
+        sum += n[i]
+        i += 2
+
+    #multi other by 2 and add to sum
+    j = 1
+    for j in range(length - 1):
+        
+
 
 
 
