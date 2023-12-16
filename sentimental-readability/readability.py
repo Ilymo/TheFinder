@@ -52,3 +52,5 @@ def count_word(text):
     return nb
 
 # func count sentence
+def count_word():
+    
