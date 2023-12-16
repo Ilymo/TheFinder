@@ -5,7 +5,7 @@ import re
 
 txt = "378282246310005"
 
-x = re.match('\A3', txt)
+x = re.match('[0-9]{2}', txt)
 
 print(x)
 
