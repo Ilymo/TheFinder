@@ -6,12 +6,11 @@ nb = 0
 for char in text:
     if char.isalpha():
         letters += 1
-    eli char.isblank():
-    
+    elif char.isspace():
+        spaces += 1
 
-#count space
-for char in text:
-
+#calcul word
+   nb = letters / spaces
 
 
 print(nb)
