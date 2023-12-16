@@ -43,8 +43,8 @@ def check_valid(n):
                 return 'VISA'
             else:
                 return 'INVALID'
-    else:
-        return 'INVALID'
+
+    return 'INVALID'
 
 
 #Luhn's algo
