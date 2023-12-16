@@ -15,7 +15,7 @@ def main():
 #prompt for credit card nb and check length
 def get_card_nb():
     while True:
-        n = get_int("number: ")
+        n = input("number: ")
         if len(n) in [15, 16, 13]:
             return n
 
