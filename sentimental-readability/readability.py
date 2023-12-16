@@ -33,13 +33,17 @@ def print_grade(grade):
 # func count letter
 def count_letter(text):
     nb = 0
-    length = len(text)
-
-    for i in range(length):
-        if text[i].isalpha:
+    for char in text:
+        if char.isalpha():
             nb += 1
+    return nb
 
 
 # func count word
+def count_word():
+    nb = 0
+    for char in text:
+        if char.isalpha():
+            nb += 1
 
 # func count sentence
