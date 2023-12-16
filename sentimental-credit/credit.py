@@ -21,7 +21,7 @@ def get_card_nb():
             return n
 
 
-#check if valid
+#check if valid, if yes return the type
 def check_valid(n):
     #check AMEX
     if n[0] == 3:
@@ -52,12 +52,8 @@ def check_valid(n):
 
 
 
-
-
-#if valid, check if AMEX, MASTERCARD or VISA
-#def check_type(n):
-
 #Luhn's algo
 def luhn(n):
+    
 
 main()
