@@ -3,23 +3,23 @@ from cs50 import get_int
 
 
 
-#def main():
+def main():
+    number = get_card_nb()
+    print(number)
 
 
 
 
 
 
-
-
-
-#prompt for credit card nb
+#prompt for credit card nb and check length
 def get_card_nb():
-    n = get_int("number: ")
     while True:
-        if n[0] == 3:
-            if n[1] == 4 or n[1] == 7:
-                
+        n = get_int("number: ")
+        if len(n) in [15, 16, 13]:
+            return n
+
+
 
 
 
@@ -30,5 +30,4 @@ def get_card_nb():
 #if valid, check if AMEX, MASTERCARD or VISA
 #def check_type(n):
 
-
-# main()
+main()
