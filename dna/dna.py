@@ -37,7 +37,8 @@ def main():
                 break
         if match:
             print(row["name"])
-    return
+            return
+    print("No match")
 
 
 def longest_match(sequence, subsequence):
