@@ -26,10 +26,10 @@ def main():
         print(key, STR)
 
     # TODO: Check database for matching profiles
-    for key in database[0].keys():
-        STR = longest_match(sequence, key)
-        if STR in database:
-            print(database[key])
+        for key in database[0].keys():
+            STR = longest_match(sequence, key)
+            if STR in database:
+                print(database[key])
 
     return
 
