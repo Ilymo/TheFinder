@@ -25,12 +25,11 @@ def main():
     for key in database[0].keys():
         if key == "name":
             continue
-
-        STR[key]longest_match(sequence, key))
+        STR[key] = longest_match(sequence, key)
     print(STR)
 
     # TODO: Check database for matching profiles
-    holder = []
+    for r
 
 
 
