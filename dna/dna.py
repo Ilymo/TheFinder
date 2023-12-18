@@ -26,9 +26,9 @@ def main():
         print(key, STR)
 
     # TODO: Check database for matching profiles
-    for sub in database:
-        if sub['TATC'] == STR:
-            print(sub)
+        for sub in database:
+            if sub == STR:
+                print(sub['name'])
 
 
     return
