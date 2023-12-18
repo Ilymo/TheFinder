@@ -27,8 +27,9 @@ def main():
 
     # TODO: Check database for matching profiles
     for key in database[0].keys():
-        STR = longest_match(database, key)
-        print(key, STR)
+        STR = longest_match(sequence, key)
+        if STR in database:
+            print(database[key])
 
     return
 
