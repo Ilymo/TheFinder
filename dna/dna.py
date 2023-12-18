@@ -27,8 +27,8 @@ def main():
 
     # TODO: Check database for matching profiles
         for i in range(len(database)):
-            if STR == database[i]['AGATC']:
-                print(database[i]["name"])
+            if STR == database[i]:
+                    print(database[i])
 
 
     return
