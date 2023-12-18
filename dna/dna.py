@@ -24,12 +24,12 @@ def main():
     STR = {}
     for key in database[0].keys():
         STR[key] = longest_match(sequence, key)
-        print(STR[key])
+    print(STR)
 
     # TODO: Check database for matching profiles
-        for i in range(len(database)):
-            if STR[key] == database[i]['TATC']:
-                print("oui")
+    for i in range(len(database)):
+        if STR[key] == database[i]['TATC']:
+            print("oui")
 
 
 
