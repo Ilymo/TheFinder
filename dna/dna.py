@@ -26,9 +26,9 @@ def main():
         print(key, STR)
 
     # TODO: Check database for matching profiles
-        for name in database:
-            if STR == database[1]:
-                print()
+        for i in range(len(database)):
+            for name in database[i]:
+
 
     return
 
