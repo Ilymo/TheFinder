@@ -16,7 +16,10 @@ def main():
             database.append(name)
 
     # TODO: Read DNA sequence file into a variable
-    sequence = open(sys.argv[2], "a")
+    sequence = []
+    with open(sys.argv[2]) as seq:
+        sequence = seq.read()
+
 
     print(sequence)
 
