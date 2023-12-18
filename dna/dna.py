@@ -27,6 +27,8 @@ def main():
     print(STR)
 
     # TODO: Check database for matching profiles
+    holder = []
+    
 
 
 
