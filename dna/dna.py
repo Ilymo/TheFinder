@@ -12,7 +12,7 @@ def main():
     with open(sys.argv[1]) as data:
         reader = csv.DictReader(data)
         database = [row for row in reader]
-    print(database[0])
+
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as seq:
@@ -24,13 +24,19 @@ def main():
         if key == "name":
             continue
         STR[key] = longest_match(sequence, key)
-    print(STR)
+
 
     # TODO: Check database for matching profiles
-
-
-
-
+    for row in database:
+        match = True
+        for key in row.keys():
+            if key == "name":
+                continue
+            if int(row[key]) != STR[key]:
+                match = False
+                break
+        if match:
+            print(row["name"])
     return
 
 
