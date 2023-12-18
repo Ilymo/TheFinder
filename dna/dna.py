@@ -27,7 +27,8 @@ def main():
 
     # TODO: Check database for matching profiles
         for name in database:
-            if STR = 
+            if STR in database:
+                
 
     return
 
