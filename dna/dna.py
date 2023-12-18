@@ -26,6 +26,7 @@ def main():
         print(key, STR)
 
     # TODO: Check database for matching profiles
+        if 
 
     return
 
