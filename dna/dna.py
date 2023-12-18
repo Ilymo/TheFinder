@@ -21,9 +21,9 @@ def main():
         sequence = seq.read()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for STR in database:
-        STR = longest_match(sequence, 'AGATC')
-    print(STR)
+    for key in database[0].keys():
+        STR = longest_match(sequence, key)
+        print(STR)
 
     # TODO: Check database for matching profiles
 
