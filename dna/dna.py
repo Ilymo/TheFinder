@@ -27,6 +27,8 @@ def main():
     print(STR)
 
     # TODO: Check database for matching profiles
+    if STR['AGATC'] == database[2]['AGATC']:
+        print("oui")
 
 
 
