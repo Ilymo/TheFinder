@@ -3,7 +3,6 @@ import sys
 
 
 def main():
-
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         print("Usage: python dna.py data.csv sequence.txt")
@@ -12,7 +11,6 @@ def main():
     with open(sys.argv[1]) as data:
         reader = csv.DictReader(data)
         database = [row for row in reader]
-
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2]) as seq:
@@ -24,7 +22,6 @@ def main():
         if key == "name":
             continue
         STR[key] = longest_match(sequence, key)
-
 
     # TODO: Check database for matching profiles
     for row in database:
@@ -51,7 +48,6 @@ def longest_match(sequence, subsequence):
 
     # Check each character in sequence for most consecutive runs of subsequence
     for i in range(sequence_length):
-
         # Initialize count of consecutive runs
         count = 0
 
@@ -59,7 +55,6 @@ def longest_match(sequence, subsequence):
         # If a match, move substring to next potential match in sequence
         # Continue moving substring and checking for matches until out of consecutive matches
         while True:
-
             # Adjust substring start and end
             start = i + count * subsequence_length
             end = start + subsequence_length
