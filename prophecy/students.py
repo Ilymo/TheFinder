@@ -17,8 +17,13 @@ with open("students.csv", "r") as file:
         #db.execute("INSERT INTO students(id, student_name) VALUES(?, ?)", row["id"], row["student_name"])
 
         # insert id, house_name and house_head into houses table
-        db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
-        id += 1
+        house = row["house"]
+        try:
+            db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
+            id += 1
+        except:
+            if "UNIQUE constraint failed" in 
+
 
 
 
