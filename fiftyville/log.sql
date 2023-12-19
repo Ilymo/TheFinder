@@ -29,7 +29,22 @@
    --)
 
 
---check atm_transactions for this day and save 
+--check atm_transactions for this day and save
+--SELECT *
+--FROM atm_transactions
+--WHERE year = "2021" AND month = "7" AND day = "28" AND atm_location = "Leggett Street"
+
+--check those bank acount
+--SELECT *
+--FROM bank_accounts
+--WHERE account_number IN
+    --(
+    --SELECT account_number
+    --FROM atm_transactions
+    --WHERE year = "2021" AND month = "7" AND day = "28" AND atm_location = "Leggett Street"
+    --)
+
+--Take id check those in people and save
 SELECT *
-FROM atm_transactions
-WHERE year = "2021" AND month = "7" AND day = "28" AND atm_location = "Leggett Street"
+FROM people
+WHERE
