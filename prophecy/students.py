@@ -19,6 +19,8 @@ with open("students.csv", "r") as file:
         # insert id, house_name and house_head into houses table
         print(row['house'])
         print(db.execute("SELECT house_name FROM houses"))
+        holder = db.execute("SELECT house_name FROM houses")
+        for i in range()
         if row['house'] in db.execute("SELECT house_name FROM houses"):
             break
         else:
