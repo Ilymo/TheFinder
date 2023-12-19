@@ -19,9 +19,7 @@ with open("students.csv", "r") as file:
         # insert id, house_name and house_head into houses table
         house = row["house"]
         print(house)
-        holder = db.execute("SELECT house_name FROM houses")
-        print(holder)
-        if house in holder[0]['house_name']:
+        if house in db.execute("SELECT house_name FROM houses"):
             pass
         else:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
