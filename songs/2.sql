@@ -1,0 +1,1 @@
+SELECT tempo FROM songs ORDER BY ASC;
