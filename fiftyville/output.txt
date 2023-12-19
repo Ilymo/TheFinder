@@ -1,20 +1,102 @@
-+-----+------+-------+-----+------+--------+----------+---------------+
-| id  | year | month | day | hour | minute | activity | license_plate |
-+-----+------+-------+-----+------+--------+----------+---------------+
-| 231 | 2021 | 7     | 28  | 8    | 18     | entrance | L93JTIZ       |
-| 232 | 2021 | 7     | 28  | 8    | 23     | entrance | 94KL13X       |
-| 240 | 2021 | 7     | 28  | 8    | 36     | entrance | 322W7JE       |
-| 243 | 2021 | 7     | 28  | 8    | 42     | entrance | 0NTHK55       |
-| 254 | 2021 | 7     | 28  | 9    | 14     | entrance | 4328GD8       |
-| 255 | 2021 | 7     | 28  | 9    | 15     | entrance | 5P2BI95       |
-| 256 | 2021 | 7     | 28  | 9    | 20     | entrance | 6P58WS2       |
-| 257 | 2021 | 7     | 28  | 9    | 28     | entrance | G412CB7       |
-| 260 | 2021 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       |
-| 261 | 2021 | 7     | 28  | 10   | 18     | exit     | 94KL13X       |
-| 262 | 2021 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       |
-| 263 | 2021 | 7     | 28  | 10   | 19     | exit     | 4328GD8       |
-| 264 | 2021 | 7     | 28  | 10   | 20     | exit     | G412CB7       |
-| 265 | 2021 | 7     | 28  | 10   | 21     | exit     | L93JTIZ       |
-| 266 | 2021 | 7     | 28  | 10   | 23     | exit     | 322W7JE       |
-| 267 | 2021 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       |
-+-----+------+-------+-----+------+--------+----------+---------------+
++-----+----------------+------+-------+-----+----------------------+------------------+--------+
+| id  | account_number | year | month | day |     atm_location     | transaction_type | amount |
++-----+----------------+------+-------+-----+----------------------+------------------+--------+
+| 245 | 90209473       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 45     |
+| 246 | 28500762       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 48     |
+| 247 | 41935128       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 15     |
+| 248 | 94973060       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 50     |
+| 249 | 21004503       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 40     |
+| 250 | 45468795       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 15     |
+| 251 | 57029719       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 80     |
+| 252 | 93622979       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 15     |
+| 253 | 66454844       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 60     |
+| 254 | 16113845       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 55     |
+| 255 | 66344537       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 55     |
+| 256 | 97773635       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 85     |
+| 257 | 45096649       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 65     |
+| 258 | 92647903       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 5      |
+| 259 | 85274751       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 70     |
+| 260 | 99835463       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 40     |
+| 261 | 67735369       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 20     |
+| 262 | 40665580       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 35     |
+| 263 | 19531272       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 55     |
+| 264 | 28296815       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 20     |
+| 265 | 96336648       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 20     |
+| 266 | 76054385       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 60     |
+| 267 | 49610011       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 50     |
+| 268 | 92206742       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 30     |
+| 269 | 16153065       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 80     |
+| 270 | 24133830       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 5      |
+| 271 | 20774848       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 40     |
+| 272 | 21656307       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 10     |
+| 273 | 69638157       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 20     |
+| 274 | 27952274       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 95     |
+| 275 | 86363979       | 2021 | 7     | 28  | Leggett Street       | deposit          | 10     |
+| 276 | 13156006       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 15     |
+| 277 | 89843009       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 40     |
+| 278 | 69278040       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 45     |
+| 279 | 98353484       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 95     |
+| 280 | 92647903       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 40     |
+| 281 | 57022441       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 55     |
+| 282 | 32179718       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 20     |
+| 283 | 75571594       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 40     |
+| 284 | 32212020       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 20     |
+| 285 | 71305903       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 35     |
+| 286 | 16654966       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 100    |
+| 287 | 38010758       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 85     |
+| 288 | 25506511       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 20     |
+| 289 | 62690806       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 45     |
+| 290 | 79165736       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 5      |
+| 291 | 76849114       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 10     |
+| 292 | 56171033       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 70     |
+| 293 | 27482737       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 85     |
+| 294 | 66254725       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 70     |
+| 295 | 74812642       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 60     |
+| 296 | 96352349       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 10     |
+| 297 | 26017967       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 85     |
+| 298 | 70992522       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 25     |
+| 299 | 37543139       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 85     |
+| 300 | 66344537       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 60     |
+| 301 | 55656186       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 95     |
+| 302 | 50380485       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 100    |
+| 303 | 54824866       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 15     |
+| 304 | 26249951       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 70     |
+| 305 | 93401152       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 65     |
+| 306 | 34939061       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 10     |
+| 307 | 24064261       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 25     |
+| 308 | 69638157       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 85     |
+| 309 | 46222318       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 60     |
+| 310 | 58673910       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 10     |
+| 311 | 95773068       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 70     |
+| 312 | 93903397       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 35     |
+| 313 | 81061156       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 30     |
+| 314 | 73183211       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 80     |
+| 315 | 79127781       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 65     |
+| 316 | 95773068       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 45     |
+| 317 | 11605357       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 40     |
+| 318 | 40981669       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 85     |
+| 319 | 57022441       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 85     |
+| 320 | 15452229       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 25     |
+| 321 | 40231842       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 5      |
+| 322 | 26797365       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 35     |
+| 323 | 18363023       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 5      |
+| 324 | 13156006       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 15     |
+| 325 | 87859883       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 5      |
+| 326 | 91814087       | 2021 | 7     | 28  | Daboin Sanchez Drive | deposit          | 45     |
+| 327 | 40665580       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 65     |
+| 328 | 47306903       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 90     |
+| 329 | 34939061       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 100    |
+| 330 | 26191313       | 2021 | 7     | 28  | Daboin Sanchez Drive | withdraw         | 90     |
+| 331 | 59116006       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 40     |
+| 332 | 96352349       | 2021 | 7     | 28  | Carvalho Road        | deposit          | 65     |
+| 333 | 65190958       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 50     |
+| 334 | 99031604       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 20     |
+| 335 | 32134232       | 2021 | 7     | 28  | Humphrey Lane        | deposit          | 70     |
+| 336 | 26013199       | 2021 | 7     | 28  | Leggett Street       | withdraw         | 35     |
+| 337 | 58552019       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 30     |
+| 338 | 17171330       | 2021 | 7     | 28  | Blumberg Boulevard   | withdraw         | 15     |
+| 339 | 14180174       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 95     |
+| 340 | 86850293       | 2021 | 7     | 28  | Blumberg Boulevard   | deposit          | 60     |
+| 341 | 97338436       | 2021 | 7     | 28  | Carvalho Road        | withdraw         | 60     |
+| 342 | 55322348       | 2021 | 7     | 28  | Humphrey Lane        | withdraw         | 5      |
++-----+----------------+------+-------+-----+----------------------+------------------+--------+

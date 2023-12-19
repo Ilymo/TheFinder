@@ -19,11 +19,17 @@
 -- id of interviewed are 161, 162, 163
 
 --take plate that left within 10min and save entrance/exit
- SELECT *
- FROM bakery_security_logs
- WHERE license_plate IN
-    (
-    SELECT license_plate
-    FROM bakery_security_logs
-    WHERE year = "2021" AND month = "7" AND day = "28" AND hour = "10" AND minute >= "15" AND minute <= "30"
-    )
+--SELECT *
+--FROM bakery_security_logs
+--WHERE license_plate IN
+   --(
+   --SELECT license_plate
+   --FROM bakery_security_logs
+   --WHERE year = "2021" AND month = "7" AND day = "28" AND hour = "10" AND minute >= "15" AND minute <= "30"
+   --)
+
+
+--check atm_transactions
+SELECT *
+FROM atm_transactions
+WHERE year = "2021" AND month = "7" AND day = "28"
