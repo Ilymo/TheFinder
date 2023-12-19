@@ -13,9 +13,10 @@ with open("students.csv", "r") as file:
     existing_house = []
     reader = csv.DictReader(file)
 
+    db.execute("DELETE FROM assignements")
     db.execute("DELETE FROM students")
     db.execute("DELETE FROM houses")
-    db.execute("DELETE FROM assignements")
+
 
     for row in reader:
         print(row)
@@ -32,7 +33,6 @@ with open("students.csv", "r") as file:
 
         # insert match in assignements
         holder = db.execute("SELECT id FROM houses WHERE house_name = ?", row["house"])
-        print(house_id)
         db.execute("INSERT INTO assignements(student_id, house_id) VALUES (?, ?)", row["id"], holder[0]['id'])
 
 
