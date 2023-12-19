@@ -13,7 +13,7 @@ with open("students.csv", "r") as file:
     for row in reader:
         print(row)
         # insert ID in student table
-        db.execute("INSERT )
+        db.execute("INSERT INTO students(id) VALUES (?)", row["id"])
 
 
 
