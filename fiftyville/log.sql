@@ -29,7 +29,7 @@
    --)
 
 
---check atm_transactions
+--check atm_transactions for this day and save 
 SELECT *
 FROM atm_transactions
-WHERE year = "2021" AND month = "7" AND day = "28"
+WHERE year = "2021" AND month = "7" AND day = "28" AND atm_location = "Leggett Street"
