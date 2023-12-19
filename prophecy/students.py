@@ -31,9 +31,9 @@ with open("students.csv", "r") as file:
             existing_house.append(row['house'])
 
         # insert match in assignements
-        house_id = db.execute("SELECT id FROM houses WHERE house_name = ?", row["house"])
+        holder = db.execute("SELECT id FROM houses WHERE house_name = ?", row["house"])
         print(house_id)
-        db.execute("INSERT INTO assignements(student_id, house_id) VALUES (?, ?)", row["id"], house_id[0]['id'])
+        db.execute("INSERT INTO assignements(student_id, house_id) VALUES (?, ?)", row["id"], holder[0]['id'])
 
 
 
