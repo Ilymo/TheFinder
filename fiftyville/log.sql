@@ -9,11 +9,11 @@
 -- check bakery_security_logs
 --SELECT *
 --FROM bakery_security_logs
---WHERE year = "2021" AND month = "7" AND day = "28"
+--WHERE year = "2021" AND month = "7" AND day = "28" AND hour = "10"
 
 -- check interviews
-SELECT *
-FROM interviews
-WHERE year = "2021" AND month = "7" AND day = "28"
+--SELECT *
+--FROM interviews
+--WHERE year = "2021" AND month = "7" AND day = "28"
 -- id of interviewed are 161, 162, 163
 
