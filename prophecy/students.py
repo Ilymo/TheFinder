@@ -15,18 +15,18 @@ with open("students.csv", "r") as file:
     for row in reader:
         print(row)
         # insert ID and name into students table
-        #db.execute("INSERT INTO students(id, student_name) VALUES(?, ?)", row["id"], row["student_name"])
+        db.execute("INSERT INTO students(id, student_name) VALUES(?, ?)", row["id"], row["student_name"])
 
         # insert id, house_name and house_head into houses table
-        print(row['house'])
-        holder = db.execute("SELECT house_name FROM houses WHERE house_name = ?", row['house'])
-        print(holder)
         if row['house'] in existing_house:
             pass
         else:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
             id += 1
             existing_house.append(row['house'])
+
+        # insert match in assignements
+        db.execute("INSERT INTO assignements(student_id) VALUE (SELECT id FROM students)")
 
 
 
