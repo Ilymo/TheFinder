@@ -15,4 +15,5 @@
 SELECT *
 FROM interviews
 WHERE year = "2021" AND month = "7" AND day = "28"
--- id of interviewed are 
+-- id of interviewed are 161, 162, 163
+
