@@ -3,5 +3,5 @@
 -- check what it look's like
 SELECT *
 FROM crime_scene_reports
-WHERE 
+WHERE year = "2021" AND month = "7" AND day = "28" AND street = "Humphrey Street"
 
