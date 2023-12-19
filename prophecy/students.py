@@ -20,7 +20,7 @@ with open("students.csv", "r") as file:
         print(row['house'])
         print(db.execute("SELECT house_name FROM houses"))
         if row['house'] in db.execute("SELECT house_name FROM houses"):
-            pass
+            break
         else:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
             id += 1
