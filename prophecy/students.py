@@ -9,7 +9,7 @@ with open("students.csv", "r") as file:
 
 
     #creat dict reader
-    id = 2
+    id = 1
     n = 0
     reader = csv.DictReader(file)
     for row in reader:
@@ -21,7 +21,7 @@ with open("students.csv", "r") as file:
         print(row['house'])
         holder = db.execute("SELECT house_name FROM houses")
         print(holder)
-        if row['house'] == holder[n]['house_name']:
+        if row['house'] in holder:
             pass
         else:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
