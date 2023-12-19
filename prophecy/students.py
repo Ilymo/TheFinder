@@ -18,13 +18,15 @@ with open("students.csv", "r") as file:
 
         # insert id, house_name and house_head into houses table
         print(row['house'])
-        print(db.execute("SELECT house_name FROM houses"))
         holder = db.execute("SELECT house_name FROM houses")
-        if row['house'] == holder[0]['house_name']:
+        print(holder)
+        n = 0
+        if row['house'] == holder[n]['house_name']:
             pass
         else:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
             id += 1
+            n += 1
 
 
 
