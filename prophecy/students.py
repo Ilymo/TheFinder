@@ -16,7 +16,7 @@ with open("students.csv", "r") as file:
     db.execute("DELETE FROM students")
     db.execute("DELETE FROM houses")
     db.execute("DELETE FROM assignements")
-    
+
     for row in reader:
         print(row)
         # insert ID and name into students table
@@ -31,7 +31,7 @@ with open("students.csv", "r") as file:
             existing_house.append(row['house'])
 
         # insert match in assignements
-        #db.execute("INSERT INTO assignements(student_id, house_id) VALUES (?, ?)", row["id"], ("SELECT house FROM houses WHERE house = ?", row["house"]))
+        db.execute("INSERT INTO assignements(student_id, house_id) VALUES (?, ?)", row["id"], ("SELECT house FROM houses WHERE house = ?", row["house"]))
 
 
 
