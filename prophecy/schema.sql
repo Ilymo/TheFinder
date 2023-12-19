@@ -5,9 +5,9 @@ CREATE TABLE students (
 );
 
 CREATE TABLE houses (
-    id INTEGER,
-    house_name TEXT,
-    house_head TEXT,
+    id INTEGER UNIQUE,
+    house_name TEXT UNIQUE,
+    house_head TEXT UNIQUE,
     PRIMARY KEY(id)
 );
 
