@@ -10,6 +10,7 @@ with open("students.csv", "r") as file:
 
     #creat dict reader
     id = 2
+    n = 0
     reader = csv.DictReader(file)
     for row in reader:
         print(row)
@@ -20,7 +21,6 @@ with open("students.csv", "r") as file:
         print(row['house'])
         holder = db.execute("SELECT house_name FROM houses")
         print(holder)
-        n = 0
         if row['house'] == holder[n]['house_name']:
             pass
         else:
