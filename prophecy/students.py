@@ -23,7 +23,7 @@ with open("students.csv", "r") as file:
             id += 1
         except ValueError as e:
             if "UNIQUE constraint failed" in str(e):
-                continue
+                pass
 
 
 
