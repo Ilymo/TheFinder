@@ -21,8 +21,9 @@ with open("students.csv", "r") as file:
         try:
             db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
             id += 1
-        except:
-            if "UNIQUE constraint failed" in 
+        except ValueError as e:
+            if "UNIQUE constraint failed" in str(e):
+                continue
 
 
 
