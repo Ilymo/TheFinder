@@ -17,8 +17,11 @@ with open("students.csv", "r") as file:
         #db.execute("INSERT INTO students(id, student_name) VALUES(?, ?)", row["id"], row["student_name"])
 
         # insert id, house_name and house_head into houses table
-        if row["house"] != 
-        db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
+        house = db.execute("SELECT house_name FROM houses")
+        if row["house"] == house:
+            continue
+        else:
+            db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
         id += 1
 
 
