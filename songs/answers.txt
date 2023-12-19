@@ -1,1 +1,2 @@
-
+1: by taking the average of energy, valence and danceabilty of this top 100 songs
+2: 
