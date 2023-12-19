@@ -9,7 +9,7 @@ with open("students.csv", "r") as file:
 
 
     #creat dict reader
-    id = 1
+    house_id = 1
     existing_house = []
     reader = csv.DictReader(file)
     for row in reader:
@@ -21,8 +21,8 @@ with open("students.csv", "r") as file:
         if row['house'] in existing_house:
             pass
         else:
-            db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", id, row["house"], row["head"])
-            id += 1
+            db.execute("INSERT INTO houses(id, house_name, house_head) VALUES (?, ?, ?)", house_id, row["house"], row["head"])
+            house_id += 1
             existing_house.append(row['house'])
 
         # insert match in assignements
