@@ -65,7 +65,8 @@
     --WHERE year = "2021" AND month = "7" AND day = "28" AND hour = "10" AND minute >= "15" AND minute <= "30"
     --)
 
--- Check flight
+-- Check earliest flight next day
 SELECT *
 FROM flights
+WHERE year = "2021" AND month = "7" AND day = "29" ORDER BY hour, minute
 
