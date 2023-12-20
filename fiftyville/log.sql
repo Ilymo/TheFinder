@@ -138,3 +138,9 @@
     --)
     --)
 
+
+-- check id of the phone call receiver aka the complice
+--SELECT *
+--FROM people
+--WHERE phone_number = "(375) 555-8161"
+ -- it's 864400 | Robin
