@@ -82,3 +82,9 @@
 --SELECT *
 --FROM phone_calls
 --WHERE year = "2021" AND month = "7" AND day = "28" AND duration <= "60"
+
+
+-- check passenger
+SELECT *
+FROM passengers
+WHERE flight_id = "36"
