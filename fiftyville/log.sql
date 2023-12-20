@@ -143,4 +143,4 @@
 --SELECT *
 --FROM people
 --WHERE phone_number = "(375) 555-8161"
- -- it's 864400 | Robin
+-- it's 864400 | Robin
