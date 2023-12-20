@@ -66,9 +66,11 @@
     --)
 
 -- Check earliest flight next day
-SELECT *
-FROM flights
-WHERE year = "2021" AND month = "7" AND day = "29" ORDER BY hour, minute
+--SELECT *
+--FROM flights
+--WHERE year = "2021" AND month = "7" AND day = "29" ORDER BY hour, minute
+
+-- Flight ID = 36
 
 -- check airports
 --SELECT *
