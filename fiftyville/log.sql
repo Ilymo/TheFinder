@@ -76,7 +76,7 @@
 
 -- thief flight goes from fiftyville to LaGuardia Airport - New York City
 
--- check phone calls
+-- check phone calls where duration <= 60s
 SELECT *
 FROM phone_calls
-WHERE year = "2021" AND month = "7" AND day = "28"
+WHERE year = "2021" AND month = "7" AND day = "28" AND duration <= "60"
