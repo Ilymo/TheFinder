@@ -67,11 +67,16 @@
 
 -- Check earliest flight next day
 --SELECT *
-FROM flights
-WHERE year = "2021" AND month = "7" AND day = "29" ORDER BY hour, minute
+--FROM flights
+--WHERE year = "2021" AND month = "7" AND day = "29" ORDER BY hour, minute
 
 -- check airports
 --SELECT *
 --FROM airports
 
 -- thief flight goes from fiftyville to LaGuardia Airport - New York City
+
+-- check phone calls
+SELECT *
+FROM phone_calls
+WHERE year = "2021" AND month = "7" AND day = "28"
