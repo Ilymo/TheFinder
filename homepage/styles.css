@@ -15,4 +15,6 @@ body {
   h2{
     color: blue;
   }
-
+  div{
+    background-color: white
+  }
