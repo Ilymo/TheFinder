@@ -18,12 +18,14 @@
                 });
 
                 //when incorrect is clicked, turn red and print incorrect
-                let incorrect = document.querySelector('.incorrect');
-                incorrect.addEventListener('click', function() {
-                    incorrect.style.backgroundColor = 'red';
-                    feedback1.innerHTML = 'Incorrect :(';
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        feedback1.innerHTML = 'Incorrect :(';
+                    })
+                }
                 })
-            })
 
         </script>
     </head>
