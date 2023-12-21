@@ -6,13 +6,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
-        <script src="teapot.js">
+        <script>
             document.addEventListener('DOMContentLoaded', function(){
-
-                let button = document.querySelector('.surprise');
+                let button = document.querySelector('#surprise');
                 button.addEventListener('click', function(){
-                    button.style.backgroundColor = 'green'
-                    document.images("#rick").style.display = 'inline-block';
+                    if (rick.style.display == 'none'){
+                        rick.style.display = 'inline-block';
+                    }
+                    else {
+                        rick.style.display = 'none';
+                    }
                 })
             })
         </script>
@@ -37,7 +40,7 @@
           </nav>
           <p> On this website you will find few things about me, not really interresting but let's do it..</p>
           <div>
-            <button class="surprise">surprise</button>
+            <button id="surprise">surprise</button>
             <img id="rick" style="display: none" src="rickroll-roll.gif">
           </div>
     </body>
