@@ -7,6 +7,10 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            let button = document.querySelector('berlin');
+            document.querySelector('#Berlin').addEventListener('click', function() {
+                body.style.backgroundColor = 'red';
+            });
         </script>
     </head>
     <body>
@@ -20,7 +24,7 @@
                 <h3> What is the capital of France ?</h3>
                 <!-- TODO: Add multiple choice question here -->
                 <div>
-                    <button id="Berlin" style="background-color: red"> Berlin</button>
+                    <button id="Berlin"> Berlin</button>
                     <button id="Paris"> Paris</button>
                     <button id="Toulouse"> Toulouse</button>
                 </div>
