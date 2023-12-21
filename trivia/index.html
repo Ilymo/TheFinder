@@ -10,18 +10,18 @@
             // Wait for document to be loaded
             document.addEventListener('DOMContentLoaded', function() {
                 //when correct answer is click, turn to green and print correct
-
+                let feedback1 = document.querySelector('#feedback1');
                 let correct = document.querySelector('.correct');
                 correct.addEventListener('click', function() {
                     correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = 'Correct !';
+                    feedback1.innerHTML = 'Correct !';
                 });
 
                 //when incorrect is clicked, turn red and print incorrect
                 let incorrect = document.querySelector('.incorrect');
                 incorrect.addEventListener('click', function() {
                     incorrect.style.backgroundColor = 'red';
-                    document.querySelector('#feedback1').innerHTML = 'Incorrect :(';
+                    feedback1.innerHTML = 'Incorrect :(';
                 })
             })
 
