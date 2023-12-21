@@ -8,8 +8,8 @@
         <title>My Webpage</title>
         <script src="teapot.js">
             document.addEventListener('DOMContentLoaded', function(){
-                
-                let button = document.querySelector('#surprise');
+
+                let button = document.querySelector('.surprise');
                 button.addEventListener('click', function(){
                     button.style.backgroundColor = 'green'
                     document.images("#rick").style.display = 'inline-block';
@@ -37,7 +37,7 @@
           </nav>
           <p> On this website you will find few things about me, not really interresting but let's do it..</p>
           <div>
-            <button id="surprise">surprise</button>
+            <button class="surprise">surprise</button>
             <img id="rick" style="display: none" src="rickroll-roll.gif">
           </div>
     </body>
