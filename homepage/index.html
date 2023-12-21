@@ -9,16 +9,15 @@
         <script src="teapot.js">
             document.addEventListener('DOMContentLoaded', function(){
                 let button = document.querySelector('#surprise');
-                document.images['#rick'].style.visibility = hidden;
                 button.addEventListener('click', function(){
-                    if document.images['#rick'].style.visibility == hidden{
-                        document.images['#rick'].style.visibility = show;
+                    if document.images['rick'].style.display == 'none'{
+                        document.images['rick'].style.display = 'inline-block';
                     }
                     else{
-                        document.images['#rick'].style.visibility = hidden;
+                        document.images['rick'].style.display = 'none';
                     }
                 })
-            }
+            })
         </script>
     </head>
     <body style="text-align: center">
@@ -42,7 +41,7 @@
           <p> On this website you will find few things about me, not really interresting but let's do it..</p>
           <div>
             <button id="surprise">surprise</button>
-            <img id="rick" style="visibility: hidden" src="rickroll-roll.gif">
+            <img id="rick" style="display: none" src="rickroll-roll.gif">
           </div>
     </body>
 </html>
