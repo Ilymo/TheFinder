@@ -30,7 +30,7 @@
                 // for 2 (free) question
                 let feedback2 = document.querySelector('#feedback2');
                 let check = document.querySelector('#check');
-                let input = document.querySelector('input');
+                let input = document.querySelector('#test');
                 check.addEventListener('click', function() {
                     if (input.value == 'Tokyo') {
                         input.style.backgroundColor = 'green';
@@ -68,7 +68,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What is the capital of Japan ?</h3>
-                <input type="text"></input>
+                <input id="test" type="text"></input>
                 <button id="check">Check answer</button>
 
                 <p id="feedback2"></p>
