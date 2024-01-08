@@ -10,9 +10,12 @@ def index():
 
 @app.route("/register", methods=["POST"])
 def register():
-    if not request.form.get("name") or request.form.get("sport") not in SPORTS:
+    if not request.form.get("name"):
         return render_template("failure.html")
-    sport = request.form.get("sport")
+    for sport in request.form.getall("sport"):
+        if sport not in SPORTS:
+            return render_template("failure.html")
+    sport = request.form.getall("sport")
     name = request.form.get("name")
     return render_template("succes.html", name=name, sport=sport)
 
