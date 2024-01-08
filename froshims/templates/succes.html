@@ -6,10 +6,14 @@
     <br>
     name: {{ name }}
     <br>
-    {% for x in sport %}
-    sport: {{ sport }}
+    sport:
+    <br>
+    <section style="text-align: right 60px">
+    {% for sport in sport %}
+    {{ sport }}
     <br>
     {% endfor %}
+    </section>
 
 
 {% endblock %}

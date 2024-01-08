@@ -16,6 +16,6 @@ def register():
         if sport not in SPORTS:
             return render_template("failure.html")
     name = request.form.get("name")
-    sport = request.form.get("sport")
+    sport = request.form.getlist("sport")
     return render_template("succes.html", name=name, sport=sport)
 
