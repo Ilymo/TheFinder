@@ -10,5 +10,7 @@ def index():
 def register():
     if not request.form.get("name") or not request.form.get("sport"):
         return render_template("failure.html")
-    return render_template("succes.html")
+    sport = request.form.get("sport")
+    name = request.form.get("name")
+    return render_template("succes.html", name=name, sport=sport)
 
