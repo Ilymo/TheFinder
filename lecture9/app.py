@@ -2,7 +2,13 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/greet")
+@app.route("/")
 def index():
+    return render_template("index.html")
+
+
+@app.route("/greet")
+def greet():
     name = request.args.get("name", "weirdo")
-    return render_template("index.html", name=name)
+    return render_template("greet.html", name=name)
+
