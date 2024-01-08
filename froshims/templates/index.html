@@ -5,7 +5,12 @@
     <h1>register</h1>
     <form action="/register" method="post">
         <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-        <select
+        <select name="sport">
+            <option>Basketball</option>
+            <option>Soccer</option>
+            <option>Climbing</option>
+        </select>
+        <button type="submit">Register</button>
     </form>
 
 {% endblock %}
