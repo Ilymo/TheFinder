@@ -53,16 +53,16 @@ def buy():
         user = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
         print(user)
         # Check stock price
-        price = lookup(request.form.get("symbol"))
-        print(price)
+        stock = lookup(request.form.get("symbol"))
+        print(stock)
         #check if enought cash to buy price*shares
-        if price["price"] * request.form.get("shares") > user[0]["cash"]:
+        if stock["price"] * request.form.get("shares") > user[0]["cash"]:
             return apology("Not enought cash to buy", 403)
         # Add purchase to purchase table
         else:
-            db.execute(INSERT INTO purchase (user_id, symbol, price, shares)
-                       VALUES (?, ?, ?, ?), session["user_id"], request)
-
+            db.execute("INSERT INTO purchase (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+                       session["user_id"], stock["symbol"], stock["price"], request.form.get("shares"))
+            user[0]["cash"] - stock["price"] * request.form.get("shares")
         return redirect("/")
 
     else:
