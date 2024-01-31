@@ -39,7 +39,7 @@ def index():
     print(user_stocks)
     newprice = lookup(user_stocks[0]["symbol"])
     print(newprice)
-    user_stocks[0]["total"] = user_stocks[0]["shares"] * newprice
+    user_stocks[0]["total"] = user_stocks[0]["shares"] * newprice["price"]
     print(user_stocks)
     return render_template("index.html", user_stocks=user_stocks)
 
