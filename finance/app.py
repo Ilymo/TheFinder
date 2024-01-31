@@ -50,7 +50,8 @@ def buy():
             return apology("Invalid number of shares", 403)
 
         # Getting values
-        shares = request.form.get("shares")
+        shares = float(request.form.get("shares"))
+
 
 
         # Check user cash
@@ -60,7 +61,7 @@ def buy():
         stock = lookup(request.form.get("symbol"))
         print(stock)
         #check if enought cash to buy price*shares
-        if stock["price"] * shares > user[0]["cash"]:
+        if (stock["price"] * shares) > user[0]["cash"]:
             return apology("Not enought cash to buy", 403)
         # Add purchase to purchase table
         else:
