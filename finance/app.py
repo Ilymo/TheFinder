@@ -50,9 +50,10 @@ def buy():
             return apology("Invalid number of shares", 403)
 
         # Check user cash
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        print(cash)
+        user = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
+        print(user)
         price = lookup(request.form.get("symbol"))
+        print(price)
         return redirect("/")
 
     else:
