@@ -35,6 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    
     return apology("TODO")
 
 
@@ -71,7 +72,7 @@ def buy():
             # calcule new user cash and update users table
             newcash = user[0]["cash"] - (stock["price"] * shares)
             db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
-            
+
         return redirect("/")
 
     else:
