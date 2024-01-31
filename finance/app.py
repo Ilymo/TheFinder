@@ -44,6 +44,10 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         # Check if symbol exist
+        if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
+            return apology("Invalid symbol", 403)
+        elif request.form.get("shares") <= 0:
+            return apology(")
         return redirect("/")
     else:
         return render_template("buy.html")
