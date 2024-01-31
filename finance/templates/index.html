@@ -14,15 +14,9 @@
             <th class="text-end">TOTAL</th>
         </tr>
     </thead>
-   <tbody>
-
-            <tr>
-                <td class="text-start">USD</td>
-                <td class="text-end">3</td>
-                <td class="text-end">$66.14</td>
-                <td class="text-end">$198.42</td>
-            </tr>
-
+    <tbody>
+        {% for stock in user_stocks %}
+            <tr>{{ stock.symbol }}</tr>
     </tbody>
     <tfoot>
         <tr>
