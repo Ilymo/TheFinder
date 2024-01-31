@@ -10,6 +10,7 @@
         "cs50.extension-uninstaller",
         "inferrinizzard.prettier-sql-vscode",
         "mathematic.vscode-pdf",
+        "ms-azuretools.vscode-docker",
         "ms-ceintl.vscode-language-pack-bg",
         "ms-ceintl.vscode-language-pack-cs",
         "ms-ceintl.vscode-language-pack-de",
@@ -48,6 +49,12 @@
           "editor.defaultFormatter": "ms-python.autopep8"
         },
         "breadcrumbs.enabled": false,
+        "cs50.watchPorts": [
+          5000,
+          8080,
+          8082,
+          8787
+        ],
         "diffEditor.diffAlgorithm": "advanced",
         "diffEditor.ignoreTrimWhitespace": false,
         "editor.autoClosingQuotes": "never",
@@ -122,7 +129,7 @@
           {
             "default": true,
             "name": "JavaSE-21",
-            "path": "/opt/jdk-21.0.1"
+            "path": "/opt/jdk"
           }
         ],
         "java.debug.settings.enableRunDebugCodeLens": false,
@@ -145,18 +152,12 @@
         "terminal.integrated.gpuAcceleration": "off",
         "terminal.integrated.persistentSessionReviveProcess": "never",
         "terminal.integrated.profiles.linux": {
-          "JavaScript Debug Terminal": null,
-          "bash": {
-            "args": [
-              "--login"
-            ],
-            "icon": "terminal",
-            "path": "bash"
-          }
+          "JavaScript Debug Terminal": null
         },
         "terminal.integrated.sendKeybindingsToShell": true,
         "terminal.integrated.shellIntegration.decorationsEnabled": "never",
         "terminal.integrated.shellIntegration.enabled": true,
+        "terminal.integrated.showExitAlert": false,
         "terminal.integrated.tabs.description": "${task}${separator}${local}",
         "terminal.integrated.tabs.showActiveTerminal": "never",
         "window.autoDetectColorScheme": true,
@@ -211,10 +212,19 @@
     5900,
     6081,
     8080,
-    8082
+    8082,
+    8787
   ],
-  "image": "ghcr.io/cs50/codespace:da8d2bc8306dd13776b0f14ee1574c286f06572d",
+  "image": "ghcr.io/cs50/codespace:de941412390c8bef4de4a25afd9845a1eeb08fc3",
+  "mounts": [
+    {
+      "source": "/var/run/docker.sock",
+      "target": "/var/run/docker-host.sock",
+      "type": "bind"
+    }
+  ],
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
+  "postStartCommand": "/opt/cs50/bin/postStartCommand",
   "remoteEnv": {
     "CS50_GH_USER": "${localEnv:GITHUB_USER}",
     "GH_TOKEN": "${localEnv:CS50_TOKEN}",
