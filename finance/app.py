@@ -47,7 +47,7 @@ def buy():
         if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
             return apology("Invalid symbol", 403)
         elif request.form.get("shares") <= 0:
-            return apology(")
+            return apology("Invalid number of shares(as to be >0)", 403)
         return redirect("/")
     else:
         return render_template("buy.html")
