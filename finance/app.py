@@ -111,10 +111,15 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
-        stock = lookup(request.form.get("symbol"))
-        price = stock["price"]
-        symbol = stock["symbol"]
-        return render_template("quoted.html", symbol=symbol, price=price)
+
+        # Check valid input
+        if not request.form.get("symbol") or lookup(request.form.get("symbol") == NULL):
+            return apology("Invalid symbol", 403)
+        else:
+            stock = lookup(request.form.get("symbol"))
+            price = stock["price"]
+            symbol = stock["symbol"]
+            return render_template("quoted.html", symbol=symbol, price=price)
     else:
         return render_template("quote.html")
 
