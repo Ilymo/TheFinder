@@ -111,10 +111,11 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
+        print(lookup(request.form.get("symbol")))
 
         # Check valid input
-        if not request.form.get("symbol") or lookup(request.form.get("symbol") == NULL):
-            print(lookup(request.form.get("symbol")))
+        if not request.form.get("symbol") or lookup(request.form.get("symbol") == None):
+
             return apology("Invalid symbol", 403)
         else:
             stock = lookup(request.form.get("symbol"))
