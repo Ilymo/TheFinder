@@ -16,7 +16,14 @@
     </thead>
     <tbody>
         {% for stock in user_stocks %}
-            <tr>{{ stock.symbol }}</tr>
+            <tr>
+                <td class="text-start">{{ stock.symbol }}</td>
+                <td class="text-end">{{ stock.share }}</td>
+                <td class="text-end">{{ stock.price }}</td>
+                <td class="text-end">{{ stock.total }}</td>
+            </tr>
+        {% endfor %}
+        
     </tbody>
     <tfoot>
         <tr>
