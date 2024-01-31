@@ -48,6 +48,10 @@ def buy():
             return apology("Invalid symbol", 403)
         elif request.form.get("shares") <= "0":
             return apology("Invalid number of shares", 403)
+
+        # Check user cash
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        print(cash)
         price = lookup(request.form.get("symbol"))
         return redirect("/")
 
