@@ -43,6 +43,7 @@ def index():
 def buy():
     """Buy shares of stock"""
     if request.method == "POST":
+        
         return redirect("/")
     else:
         return render_template("buy.html")
