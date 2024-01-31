@@ -37,7 +37,8 @@ def index():
     """Show portfolio of stocks"""
     user_stocks = db.execute("SELECT * FROM purchase WHERE user_id = ?", session["user_id"])
     print(user_stocks)
-    user_stocks["price"] = user_stocks["shares"] * lookup(user_stocks["symbol"])
+    user_stocks[0][]
+    print(user_stocks[0]["shares"])
     return render_template("index.html", user_stocks=user_stocks)
 
 
