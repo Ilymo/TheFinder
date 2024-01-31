@@ -49,26 +49,29 @@ def buy():
         elif request.form.get("shares") <= "0":
             return apology("Invalid number of shares", 403)
 
-        # Getting values
+        # Get number of shares
         shares = float(request.form.get("shares"))
 
-
-
-        # Check user cash
+        # Get user info
         user = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
-        print(user)
-        # Check stock price
+
+        # Get stock price (symbol + price)
         stock = lookup(request.form.get("symbol"))
         print(stock)
-        #check if enought cash to buy price*shares
+
+        # Check if enought cash to buy price*shares
         if (stock["price"] * shares) > user[0]["cash"]:
             return apology("Not enought cash to buy", 403)
-        # Add purchase to purchase table
+
+        # If ok, execute purchase
         else:
+            # Write purchase in purchase table
             db.execute("INSERT INTO purchase (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                        session["user_id"], stock["symbol"], stock["price"], shares)
+            # calcule new user cash and update users table
             newcash = user[0]["cash"] - (stock["price"] * shares)
             db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
+            
         return redirect("/")
 
     else:
