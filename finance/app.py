@@ -221,22 +221,22 @@ def register():
 def sell():
     """Sell shares of stock"""
     # Get symbol holded in holding table
-    holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
-    shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
-    symbol = []
-    for rows in holding:
-        symbol.append(rows["symbol"])
+    user_holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
+    user_shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
+    user_symbol = []
+    for rows in user_holding:
+        user_symbol.append(rows["symbol"])
 
 
     if request.method == "POST":
         # Check if symbol provided and owned
-        if not request.form.get("symbol") or request.form.get("symbol") not in symbol:
+        if not request.form.get("symbol") or request.form.get("symbol") not in user_symbol:
             return apology("Don't have this symbol")
         # Check if shares input >= 0
         elif request.form.get("shares") < "0":
             return apology("Need positive number of shares")
         # Check if shares input not > shares owned
-        elif int(request.form.get("shares")) > shares[0]["shares"]:
+        elif int(request.form.get("shares")) > user_shares[0]["shares"]:
             return apology("Not enought shares owned")
 
         # Update history
