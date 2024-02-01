@@ -215,7 +215,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:de941412390c8bef4de4a25afd9845a1eeb08fc3",
+  "image": "ghcr.io/cs50/codespace:a82a65b2006aa7d4e33bd997d3410d5b9bd2b35c",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
@@ -227,7 +227,6 @@
   "postStartCommand": "/opt/cs50/bin/postStartCommand",
   "remoteEnv": {
     "CS50_GH_USER": "${localEnv:GITHUB_USER}",
-    "GH_TOKEN": "${localEnv:CS50_TOKEN}",
     "LANG": "${localEnv:CS50_LANG}",
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
     "TZ": "${localEnv:CS50_TZ}"
