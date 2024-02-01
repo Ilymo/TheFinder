@@ -232,6 +232,8 @@ def sell():
     if request.method == "POST":
         if not request.form.get("symbol") or request.form.get("symbol") not in symbol:
             return apology("Don't have this symbol")
-    #if request.form.get("shares") < 0 or request.form.get("shares") > 
+        elif request.form.get("shares") < 0:
+            return apology("Need positive number of shares")
+        elif request.form.get("shares") > 
     else:
         return render_template("sell.html", holding=holding)
