@@ -21,12 +21,14 @@
                 <td class="text-end">{{ stock.shares }}</td>
                 <td class="text-end">{{ stock.price }}</td>
                 <td class="text-end">{{ stock.total }}</td>
-                <td<form action="/buy" method="post">
-                    <div class="mb-3">
-                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
-                    </div>
-                    <button class="btn btn-primary" type="submit">Buy</button>
-                </form>
+                <td>
+                    <form action="/buy" method="post">
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" min="1" name="shares" placeholder="Shares" type="number">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </form>
+                </td>
             </tr>
         {% endfor %}
     </tbody>
