@@ -222,7 +222,7 @@ def sell():
     """Sell shares of stock"""
     holding = db.execute("SELECT symbol FROM holding WHERE user_id = ?", session["user_id"])
     print(holding)
-    print(holding[0]["symbol"])
+    print(holding[0])
     if request.method == "POST":
         return apology("to do")
     else:
