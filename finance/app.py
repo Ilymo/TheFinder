@@ -256,6 +256,13 @@ def sell():
             db.execute("DELETE FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
         else:
             db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, session["user_id"], stock["symbol"])
+
+        # calcule new user cash and update users table
+        
+        newcash = user[0]["cash"] - (stock["price"] * shares)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
+
+
         return redirect("/")
 
     else:
