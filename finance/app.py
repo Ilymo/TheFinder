@@ -220,10 +220,10 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
+    holding = db.execute("SELECT symbol FROM holding WHERE user_id = ?", session["user_id"])
     print(holding)
+    print(holding[0]["symbol"])
     if request.method == "POST":
         return apology("to do")
     else:
-
-        return render_template("sell.html")
+        return render_template("sell.html", symbol=holding[0]["symbol"])
