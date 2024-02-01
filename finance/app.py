@@ -71,11 +71,11 @@ def buy():
                        session["user_id"], stock["symbol"], stock["price"], shares)
 
             # Check if symbol already in holding with this user_id
-            holding = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
-            print(holding)
-            if stock["symbol"] in holding[0]["symbol"]:
-                db.execute("UPDATE holding SET shares = shares + ? WHERE user_id = ? AND symbol = ?",
-                        shares, session["user_id"], stock["symbol"])
+            holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
+            for rows in holding:
+                if stock["symbol"] in holding[0]["symbol"]:
+                    db.execute("UPDATE holding SET shares = shares + ? WHERE user_id = ? AND symbol = ?",
+                                shares, session["user_id"], stock["symbol"])
             else:
                 db.execute("INSERT INTO holding (user_id, symbol, shares) VALUES (?, ?, ?)",
                             session["user_id"], stock["symbol"], shares)
