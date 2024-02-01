@@ -220,10 +220,14 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # Get symbol holded
     holding = db.execute("SELECT symbol FROM holding WHERE user_id = ?", session["user_id"])
-    print(holding)
-    print(holding[1])
+    symbol = []
+    for rows in holding:
+        symbol.append(rows["symbol"])
+
+
     if request.method == "POST":
         return apology("to do")
     else:
-        return render_template("sell.html", symbol=holding[0])
+        return render_template("sell.html", symbol=symbol)
