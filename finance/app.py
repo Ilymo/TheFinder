@@ -72,6 +72,9 @@ def buy():
 
             # Check if symbol already in holding with this user_id
             holding = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
+            print(holding)
+            if stock["symbol"] in holding["symbol"]:
+                
 
             db.execute("INSERT INTO holding (user_id, symbol, shares) VALUES (?, ?, ?)",
                        session["user_id"], stock["symbol"], shares)
