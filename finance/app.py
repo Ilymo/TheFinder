@@ -239,6 +239,7 @@ def sell():
         elif int(request.form.get("shares")) > shares[0]["shares"]:
             return apology("Not enought shares owned")
 
+        # Update history
         
         return apology("to do")
 
