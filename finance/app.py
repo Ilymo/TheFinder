@@ -228,16 +228,19 @@ def sell():
         symbol.append(rows["symbol"])
     print("symbol owned:", symbol)
 
-    test = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
-    print(test)
+    shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
+    print(shares)
 
 
     if request.method == "POST":
+        # Check if symbol provided and owned
         if not request.form.get("symbol") or request.form.get("symbol") not in symbol:
             return apology("Don't have this symbol")
+        # Check if shares input >= 0
         elif request.form.get("shares") < "0":
             return apology("Need positive number of shares")
-        elif int(request.form.get("shares")) > test[0]["shares"]:
+        # Check if shares input not > shares owned
+        elif int(request.form.get("shares")) > shares[0]["shares"]:
             return apology("Not enought shares owned")
 
         return apology("to do")
