@@ -238,7 +238,7 @@ def sell():
             return apology("Need positive number of shares")
         #elif request.form.get("shares") >
 
-        
+        return apology("to do")
 
 
 
