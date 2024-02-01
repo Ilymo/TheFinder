@@ -247,7 +247,7 @@ def sell():
 
         # Update history table
         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-                    session["user_id"], stock["symbol"], stock["price"], shares)
+                    session["user_id"], stock["symbol"], stock["price"], -shares)
 
         # Update holding table (delete if no shares remain)
         new_shares = user_shares[0]["shares"] - shares
@@ -262,8 +262,6 @@ def sell():
         # calcule new user cash and update users table
         newcash = user[0]["cash"] + (stock["price"] * shares)
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
-
-
         return redirect("/")
 
     else:
