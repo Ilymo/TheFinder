@@ -240,7 +240,9 @@ def sell():
             return apology("Not enought shares owned")
 
         # Update history
-        
+         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+                       session["user_id"], stock["symbol"], stock["price"], shares)
+
         return apology("to do")
 
 
