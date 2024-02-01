@@ -251,7 +251,7 @@ def sell():
                     session["user_id"], stock["symbol"], stock["price"], shares)
 
         # Update holding table
-        new_share = user_shares + shares
+        new_share = user_shares[0]["shares"] + shares
         db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_share, session["user_id"], stock["symbol"])
 
         return redirect("/")
