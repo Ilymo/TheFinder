@@ -223,7 +223,6 @@ def sell():
     # Get symbol holded/shares in holding table
     user_holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
     user_shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
-    print(user_shares)
     user_symbol = []
     for rows in user_holding:
         user_symbol.append(rows["symbol"])
@@ -244,15 +243,18 @@ def sell():
         # Get symbol/negative shares from input
         stock = lookup(request.form.get("symbol"))
         shares = -abs(int(request.form.get("shares")))
-        print("stock:", stock, "shares:", shares)
 
         # Update history table
         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                     session["user_id"], stock["symbol"], stock["price"], shares)
 
         # Update holding table
-        new_share = user_shares[0]["shares"] + shares
-        db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_share, session["user_id"], stock["symbol"])
+        new_shares = user_shares[0]["shares"] + shares
+        print(new_shares)
+        if new_shares <= 0:
+            db.execute()
+        else:
+            db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, session["user_id"], stock["symbol"])
 
         return redirect("/")
 
