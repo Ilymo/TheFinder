@@ -241,7 +241,7 @@ def sell():
 
 
         # Get symbol/negative shares from input
-        stock = lookup("request.form.get("symbol")")
+        stock = lookup(request.form.get("symbol"))
         shares -= request.form.get("shares")
         print("stock:", stock, "shares:", shares)
 
