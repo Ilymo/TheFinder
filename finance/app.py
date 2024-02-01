@@ -252,7 +252,7 @@ def sell():
         new_shares = user_shares[0]["shares"] + shares
         print(new_shares)
         if new_shares <= 0:
-            db.execute()
+            db.execute("DELETE FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
         else:
             db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, session["user_id"], stock["symbol"])
 
