@@ -35,12 +35,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    user_stocks = db.execute("SELECT *, SUM(shares) FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    print(user_stocks)
-    newprice = lookup(user_stocks[0]["symbol"])
-    print(newprice)
-    user_stocks[0]["total"] = user_stocks[0]["shares"] * newprice["price"]
-    print(user_stocks)
+    user_stocks = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
     return render_template("index.html", user_stocks=user_stocks)
 
 
