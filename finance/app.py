@@ -36,16 +36,11 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     user_stocks = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
-    print("first:", user_stocks)
     for rows in user_stocks:
-        print("original:",rows)
         price = lookup(rows["symbol"])
-        print(rows["shares"])
-        total = rows["shares"] * price
+        total = rows["shares"] * price["price"]
         rows["price"] = price["price"]
         rows["total"] = total
-        print("add:",rows)
-    print("second:", user_stocks)
 
     return render_template("index.html", user_stocks=user_stocks)
 
