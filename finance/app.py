@@ -220,11 +220,12 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    # Get symbol holded
-    holding = db.execute("SELECT symbol FROM holding WHERE user_id = ?", session["user_id"])
+    # Get symbol holded in holding table
+    holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
     symbol = []
     for rows in holding:
         symbol.append(rows["symbol"])
+    print(symbol)
 
 
     if request.method == "POST":
