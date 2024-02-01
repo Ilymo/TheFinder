@@ -227,6 +227,7 @@ def sell():
     for rows in holding:
         symbol.append(rows["symbol"])
     print("symbol owned:", symbol)
+    print(holding["request.form.get("symbol")"])
 
 
     if request.method == "POST":
@@ -234,6 +235,9 @@ def sell():
             return apology("Don't have this symbol")
         elif request.form.get("shares") < 0:
             return apology("Need positive number of shares")
-        elif request.form.get("shares") > 
+        elif request.form.get("shares") >
+
+
+
     else:
         return render_template("sell.html", holding=holding)
