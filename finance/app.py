@@ -242,12 +242,12 @@ def sell():
 
         # Get symbol/negative shares from input
         stock = lookup(request.form.get("symbol"))
-        shares -= request.form.get("shares")
+        shares = request.form.get("shares")
         print("stock:", stock, "shares:", shares)
 
         # Update history
-         #db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-                       #session["user_id"], stock["symbol"], stock["price"], shares)
+        db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+                    session["user_id"], stock["symbol"], stock["price"], shares)
 
         return apology("to do")
 
