@@ -234,7 +234,7 @@ def sell():
         if not request.form.get("symbol") or request.form.get("symbol") not in user_symbol:
             return apology("Don't have this symbol")
         # Check if shares input >= 0
-        elif request.form.get("shares") < "0":
+        elif request.form.get("shares") < "0" or request.form.get("shares") is not int:
             return apology("Need positive number of shares")
         # Check if shares input not > shares owned
         elif int(request.form.get("shares")) > user_shares[0]["shares"]:
