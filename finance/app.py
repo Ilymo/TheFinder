@@ -73,7 +73,7 @@ def buy():
             # Check if symbol already in holding with this user_id
             holding = db.execute("SELECT symbol FROM holding WHERE user_id = ?", session["user_id"])
             print(holding)
-            if stock["symbol"] in holding[0]["symbol"]:
+            if stock["symbol"] in holding:
                 db.execute("UPDATE holding SET shares = shares + ? WHERE user_id = ? AND symbol = ?",
                             shares, session["user_id"], stock["symbol"])
             else:
