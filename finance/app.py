@@ -221,10 +221,10 @@ def register():
 def sell():
     """Sell shares of stock"""
     # Get symbol holded in holding table
-    holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
+    user_holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
     symbol = []
     shares = []
-    for rows in holding:
+    for rows in user_holding:
         symbol.append(rows["symbol"])
         shares.append(rows["shares"])
     print(symbol, shares)
