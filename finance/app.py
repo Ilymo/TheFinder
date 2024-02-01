@@ -40,7 +40,9 @@ def index():
     for rows in user_stocks:
         print("original:",rows)
         price = lookup(rows["symbol"])
+        total = rows["shares"] * price
         rows["price"] = price["price"]
+        rows["total"] = total
         print("add:",rows)
     print("second:", user_stocks)
 
