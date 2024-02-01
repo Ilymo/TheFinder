@@ -21,17 +21,19 @@
                 <td class="text-end">{{ stock.shares }}</td>
                 <td class="text-end">{{ stock.price }}</td>
                 <td class="text-end">{{ stock.total }}</td>
-                <td>
-                    <form action="/buy" method="post">
-                        <div hidden>
+                <form action="/buy" method="post">
+                    <td>
+                        <div hidden class="mb-3">
                             <input autocomplete="off" name="symbol" type="text" value="{{ stock.symbol }}">
                         </div>
                         <div class="mb-3">
-                            <input autocomplete="off" min="1" name="shares" width="12px" placeholder="Shares" type="number">
+                            <input autocomplete="off" min="1" name="shares" style="width: 80px; height: 25px" placeholder="Shares" type="number">
                         </div>
+                    </td>
+                    <td>
                         <button class="btn btn-primary" type="submit">Buy</button>
-                    </form>
-                </td>
+                    </td>
+                </form>
             </tr>
         {% endfor %}
     </tbody>
