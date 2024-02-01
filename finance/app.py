@@ -39,11 +39,11 @@ def index():
     for rows in user_stocks:
         price = lookup(rows["symbol"])
         total = rows["shares"] * price["price"]
-        rows["price"] = price["price"]
-        rows["total"] = total
+        rows["price"] = usd(price["price"])
+        rows["total"] = usd(total)
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-    print(user_cash)
-    return render_template("index.html", user_stocks=user_stocks, user_cash=round(user_cash[0]["cash"]),)
+
+    return render_template("index.html", user_stocks=user_stocks, user_cash=usd(user_cash[0]["cash"]),)
 
 
 @app.route("/buy", methods=["GET", "POST"])
