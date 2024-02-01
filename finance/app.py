@@ -222,16 +222,15 @@ def sell():
     """Sell shares of stock"""
     # Get symbol holded in holding table
     holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
-    print(holding)
+    print("user holding:", holding)
     symbol = []
-    shares = []
     for rows in holding:
         symbol.append(rows["symbol"])
-        shares.append(rows["shares"])
-    print(symbol, shares)
+    print("symbol owned:", symbol)
 
 
     if request.method == "POST":
-        return apology("to do")
+        if not request.form.get("symbol") or request.form.get("symbol") not in symbol:
+            return apology("Don't have this symbol")
     else:
         return render_template("sell.html", holding=holding)
