@@ -58,7 +58,7 @@ def buy():
         input_shares = request.form.get("shares")
         if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
             return apology("Invalid symbol", 403)
-        elif request.form.get("shares") <= "0" or not input_shares.isnumeric():
+        elif input_shares <= "0" or not input_shares.isnumeric():
             return apology("Invalid number of shares", 403)
 
         # Get number of shares
@@ -229,13 +229,13 @@ def sell():
     for rows in user_holding:
         user_symbol.append(rows["symbol"])
 
-
+    input_shares = request.form.get("shares")
     if request.method == "POST":
         # Check if symbol provided and owned
         if not request.form.get("symbol") or request.form.get("symbol") not in user_symbol:
             return apology("Don't have this symbol")
         # Check if shares input >= 0
-        elif request.form.get("shares") < "0" or request.form.get("shares") is not int:
+        elif input_shares < "0" or not input_shares.isnumeric():
             return apology("Need positive number of shares")
         # Check if shares input not > shares owned
         elif int(request.form.get("shares")) > user_shares[0]["shares"]:
