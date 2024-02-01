@@ -254,4 +254,4 @@ def sell():
 
 
     else:
-        return render_template("sell.html", holding=holding)
+        return render_template("sell.html", holding=user_holding)
