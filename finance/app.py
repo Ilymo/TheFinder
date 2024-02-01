@@ -39,7 +39,9 @@ def index():
     print(user_stocks)
     for rows in user_stocks:
         print(rows)
-        rows.append(price = "lookup(rows["symbol"]))
+        price = lookup(rows["symbol"])
+        rows.append(price)
+        print(rows)
 
     return render_template("index.html", user_stocks=user_stocks)
 
