@@ -220,7 +220,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    # Get symbol holded in holding table
+    # Get symbol holded/shares in holding table
     user_holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
     user_shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
     user_symbol = []
@@ -239,9 +239,15 @@ def sell():
         elif int(request.form.get("shares")) > user_shares[0]["shares"]:
             return apology("Not enought shares owned")
 
+
+        # Get symbol/negative shares from input
+        stock = lookup("request.form.get("symbol")")
+        shares -= request.form.get("shares")
+        print("stock:", stock, "shares:", shares)
+
         # Update history
-         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-                       session["user_id"], stock["symbol"], stock["price"], shares)
+         #db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+                       #session["user_id"], stock["symbol"], stock["price"], shares)
 
         return apology("to do")
 
