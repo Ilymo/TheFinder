@@ -57,9 +57,9 @@ def buy():
         # Check if symbol exist
         input_shares = request.form.get("shares")
         if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
-            return apology("Invalid symbol", 403)
+            return apology("Invalid symbol", 400)
         elif input_shares <= "0" or not input_shares.isnumeric():
-            return apology("Invalid number of shares", 403)
+            return apology("Invalid number of shares", 400)
 
         # Get number of shares
         shares = float(request.form.get("shares"))
@@ -73,7 +73,7 @@ def buy():
 
         # Check if enought cash to buy price*shares
         if (stock["price"] * shares) > user[0]["cash"]:
-            return apology("Not enought cash to buy", 403)
+            return apology("Not enought cash to buy", 400)
 
         # If ok, execute purchase
         else:
@@ -165,7 +165,7 @@ def quote():
 
         # Check valid input
         if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
-            return apology("Invalid symbol", 403)
+            return apology("Invalid symbol", 400)
         else:
             stock = lookup(request.form.get("symbol"))
             price = stock["price"]
@@ -187,23 +187,23 @@ def register():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure username doesn't already exist
         elif request.form.get("username") in usernames:
-            return apology("username already exist", 403)
+            return apology("username already exist", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Ensure confirmation was submitted
         elif not request.form.get("confirmation"):
-            return apology("must provide confirmation", 403)
+            return apology("must provide confirmation", 400)
 
         # Ensure password and confirmation match
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("password and confirmation do not match", 403)
+            return apology("password and confirmation do not match", 400)
 
         # Insert new user in users table
         username = request.form.get("username")
