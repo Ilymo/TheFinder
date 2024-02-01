@@ -79,7 +79,7 @@ def buy():
         else:
             # Write purchase in history table
             db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-                       session["user_id"], stock["symbol"], stock["price"], shares)
+                       session["user_id"], stock["symbol"], usd(stock["price"]), shares)
 
             # Check if symbol already in holding with this user_id (update if exist else insert)
             holding = db.execute("SELECT symbol FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
@@ -104,7 +104,7 @@ def buy():
 def history():
     """Show history of transactions"""
     history = db.execute("SELECT * FROM history WHERE user_id = ? ORDER BY datetime DESC", session["user_id"])
-    
+
     return render_template("history.html", history=history)
 
 
@@ -249,7 +249,7 @@ def sell():
 
         # Update history table
         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
-                    session["user_id"], stock["symbol"], stock["price"], -shares)
+                    session["user_id"], stock["symbol"], usd(stock["price"]), -shares)
 
         # Update holding table (delete if no shares remain)
         new_shares = user_shares[0]["shares"] - shares
