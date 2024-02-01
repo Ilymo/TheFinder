@@ -24,7 +24,7 @@
                 <td>
                     <form action="/buy" method="post">
                         <div hidden>
-                            <input autocomplete="off" name="symbol" placeholder="Symbol" type="text">
+                            <input autocomplete="off" name="symbol" placeholder="Symbol" type="text" value="{{ stock.symbol }}">
                         </div>
                         <div class="mb-3">
                             <input autocomplete="off" min="1" name="shares" placeholder="Shares" type="number">
