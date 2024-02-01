@@ -223,9 +223,11 @@ def sell():
     # Get symbol holded in holding table
     holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
     symbol = []
+    shares = []
     for rows in holding:
         symbol.append(rows["symbol"])
-    print(symbol)
+        shares.append(rows["shares"])
+    print(symbol, shares)
 
 
     if request.method == "POST":
