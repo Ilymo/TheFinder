@@ -234,4 +234,4 @@ def sell():
     if request.method == "POST":
         return apology("to do")
     else:
-        return render_template("sell.html", symbol=symbol, shares=shares)
+        return render_template("sell.html", holding=holding)
