@@ -76,8 +76,8 @@ def buy():
                        session["user_id"], stock["symbol"], stock["price"], shares)
 
             # Check if symbol already in holding with this user_id
-            holding = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
-            
+            holding = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
+
             db.execute("INSERT INTO holding (user_id, symbol, shares) VALUES (?, ?, ?)",
                        session["user_id"], stock["symbol"], shares)
             # calcule new user cash and update users table
