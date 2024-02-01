@@ -41,9 +41,9 @@ def index():
         total = rows["shares"] * price["price"]
         rows["price"] = price["price"]
         rows["total"] = total
-    user_cash = round(user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"]))
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     print(user_cash)
-    return render_template("index.html", user_stocks=user_stocks, user_cash=user_cash[0]["cash"],)
+    return render_template("index.html", user_stocks=user_stocks, user_cash=round(user_cash[0]["cash"]),)
 
 
 @app.route("/buy", methods=["GET", "POST"])
