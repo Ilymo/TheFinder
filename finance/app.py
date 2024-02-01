@@ -248,17 +248,14 @@ def sell():
         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                     session["user_id"], stock["symbol"], stock["price"], shares)
 
-        # Update holding table
+        # Update holding table (delete if no shares remain)
         new_shares = user_shares[0]["shares"] + shares
         print(new_shares)
         if new_shares <= 0:
             db.execute("DELETE FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
         else:
             db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, session["user_id"], stock["symbol"])
-
         return redirect("/")
-
-
-
+    
     else:
         return render_template("sell.html", holding=user_holding)
