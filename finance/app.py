@@ -222,14 +222,10 @@ def sell():
     """Sell shares of stock"""
     # Get symbol holded in holding table
     holding = db.execute("SELECT symbol, shares FROM holding WHERE user_id = ?", session["user_id"])
-    print("user holding:", holding)
+    shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
     symbol = []
     for rows in holding:
         symbol.append(rows["symbol"])
-    print("symbol owned:", symbol)
-
-    shares = db.execute("SELECT shares FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], request.form.get("symbol"))
-    print(shares)
 
 
     if request.method == "POST":
@@ -243,6 +239,7 @@ def sell():
         elif int(request.form.get("shares")) > shares[0]["shares"]:
             return apology("Not enought shares owned")
 
+        
         return apology("to do")
 
 
