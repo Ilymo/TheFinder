@@ -10,12 +10,12 @@
             <option disabled selected>Symbol</option>
 
             {% for symbol in holding %}
-            <option value="{{ symbol }}">{{ holding.symbol }}</option>
+            <option value="{{ symbol.symbol }}">{{ symbol.symbol }}</option>
             {% endfor %}
 
         </select>
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" min="0" max="{{ holding.shares }}" name="shares" placeholder="Shares" type="number">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" min="0" name="shares" placeholder="Shares" type="number">
         </div>
         <button class="btn btn-primary" type="submit">Sell</button>
     </form>
