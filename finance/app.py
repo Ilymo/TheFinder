@@ -36,6 +36,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     user_stocks = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
+    
     return render_template("index.html", user_stocks=user_stocks)
 
 
@@ -70,9 +71,8 @@ def buy():
             db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                        session["user_id"], stock["symbol"], stock["price"], shares)
 
-            # Check if symbol already in holding with this user_id
+            # Check if symbol already in holding with this user_id (update if exist else insert)
             holding = db.execute("SELECT symbol FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
-            print(holding)
             if len(holding) != 0:
                 if stock["symbol"] in holding[0]["symbol"]:
                     db.execute("UPDATE holding SET shares = shares + ? WHERE user_id = ? AND symbol = ?",
@@ -83,7 +83,6 @@ def buy():
             # calcule new user cash and update users table
             newcash = user[0]["cash"] - (stock["price"] * shares)
             db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
-
         return redirect("/")
 
     else:
