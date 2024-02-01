@@ -74,7 +74,7 @@ def buy():
             holding = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
             print(holding)
             if stock["symbol"] in holding["symbol"]:
-                
+                db.execute("UPDATE holding SET shares = ? WHERE user_id = ?,)
 
             db.execute("INSERT INTO holding (user_id, symbol, shares) VALUES (?, ?, ?)",
                        session["user_id"], stock["symbol"], shares)
