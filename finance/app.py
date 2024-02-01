@@ -37,6 +37,10 @@ def index():
     """Show portfolio of stocks"""
     user_stocks = db.execute("SELECT * FROM holding WHERE user_id = ? GROUP BY symbol", session["user_id"])
     print(user_stocks)
+    for rows in user_stocks:
+        print(rows)
+        rows.append(price = "lookup(rows["symbol"]))
+
     return render_template("index.html", user_stocks=user_stocks)
 
 
