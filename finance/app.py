@@ -72,7 +72,7 @@ def buy():
         # If ok, execute purchase
         else:
             # Write purchase in purchase table
-            db.execute("INSERT INTO purchase (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
+            db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                        session["user_id"], stock["symbol"], stock["price"], shares)
             # calcule new user cash and update users table
             newcash = user[0]["cash"] - (stock["price"] * shares)
