@@ -41,7 +41,8 @@ def index():
         total = rows["shares"] * price["price"]
         rows["price"] = price["price"]
         rows["total"] = total
-
+    user_cash = db.execute("SELECT cash FROM users WHERE user_id = ?", session["user_id"])
+    print(user_cash)
     return render_template("index.html", user_stocks=user_stocks)
 
 
