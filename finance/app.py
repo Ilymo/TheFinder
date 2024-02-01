@@ -57,7 +57,7 @@ def buy():
         # Check if symbol exist
         if not request.form.get("symbol") or lookup(request.form.get("symbol")) == None:
             return apology("Invalid symbol", 403)
-        elif request.form.get("shares") <= "0":
+        elif request.form.get("shares") <= "0" or request.form.get("shares") is not int:
             return apology("Invalid number of shares", 403)
 
         # Get number of shares
