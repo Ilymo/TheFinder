@@ -243,23 +243,24 @@ def sell():
 
         # Get symbol/negative shares from input
         stock = lookup(request.form.get("symbol"))
-        shares = -abs(int(request.form.get("shares")))
+        shares = int(request.form.get("shares"))
 
         # Update history table
         db.execute("INSERT INTO history (user_id, symbol, price, shares) VALUES (?, ?, ?, ?)",
                     session["user_id"], stock["symbol"], stock["price"], shares)
 
         # Update holding table (delete if no shares remain)
-        new_shares = user_shares[0]["shares"] + shares
+        new_shares = user_shares[0]["shares"] - shares
         print(new_shares)
         if new_shares <= 0:
             db.execute("DELETE FROM holding WHERE user_id = ? AND symbol = ?", session["user_id"], stock["symbol"])
         else:
             db.execute("UPDATE holding SET shares = ? WHERE user_id = ? AND symbol = ?", new_shares, session["user_id"], stock["symbol"])
 
+        # Get user reamain cash
+        user = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
         # calcule new user cash and update users table
-        
-        newcash = user[0]["cash"] - (stock["price"] * shares)
+        newcash = user[0]["cash"] + (stock["price"] * shares)
         db.execute("UPDATE users SET cash = ? WHERE id = ?", newcash, session["user_id"])
 
 
