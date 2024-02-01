@@ -35,15 +35,18 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    total_value = 0
     user_stocks = db.execute("SELECT * FROM holding WHERE user_id = ?", session["user_id"])
     for rows in user_stocks:
         price = lookup(rows["symbol"])
         total = rows["shares"] * price["price"]
         rows["price"] = usd(price["price"])
         rows["total"] = usd(total)
+        total_value += total
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    total_value += user_cash[0]["cash"]
 
-    return render_template("index.html", user_stocks=user_stocks, user_cash=usd(user_cash[0]["cash"]),)
+    return render_template("index.html", user_stocks=user_stocks, user_cash=usd(user_cash[0]["cash"]), total_value=usd(total_value))
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -165,7 +168,7 @@ def quote():
             stock = lookup(request.form.get("symbol"))
             price = stock["price"]
             symbol = stock["symbol"]
-            return render_template("quoted.html", symbol=symbol, price=price)
+            return render_template("quoted.html", symbol=symbol, price=usd(price))
     else:
         return render_template("quote.html")
 
