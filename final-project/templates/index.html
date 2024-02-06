@@ -4,13 +4,13 @@
 <section style="text-align: center">
     <h1>Find movie</h1>
     <form action="/" method="post">
-        <input autocomplete="off" autofocus list="movie" name="movie_name" placeholder"Movie reference" type="text">
-        <button class="btn btn-primary" type="submit">Find me a movie!</button>
+        <input name="movie_name" list="movie" placeholder"Movie reference">
         <datalist id="movie">
             {% for movie in list %}
-            <option value="{{ movie.name }}"></option>
+            <option value="{{ movie.name }}">{{ movie.name }}</option>
             {% endfor %}
         </datalist>
+        <button class="btn btn-primary" type="submit">Find me a movie!</button>
     </form>
 </section>
 <section style="text-align: center">
