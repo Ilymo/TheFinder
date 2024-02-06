@@ -8,5 +8,23 @@
         <button class="btn btn-primary" type="submit">Find me a movie!</button>
     </form>
 </section>
+<section style="text-align: center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>movie name</th>
+            <th>rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for movie in list %}
+        <tr>
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.name }}</td>
+            <td>{{ movie.rate }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</section>
 
 {% endblock %}
