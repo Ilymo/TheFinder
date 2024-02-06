@@ -4,7 +4,7 @@
 <section style="text-align: center">
     <h1>Find movie</h1>
     <form action="/" method="post">
-        <input name="movie_name" list="movie" placeholder"Movie reference">
+        <input name="movie_name" list="movie" placeholder"Movie reference" type="text">
         <datalist id="movie">
             {% for movie in list %}
             <option value="{{ movie.name }}">{{ movie.name }}</option>
