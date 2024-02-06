@@ -19,4 +19,5 @@ def index():
         return render_template("index.html", list = list)
 
     else:
-        return render_template("index.html")
+        list = db.execute("SELECT * FROM movie")
+        return render_template("index.html", list = list)
