@@ -9,22 +9,24 @@
     </form>
 </section>
 <section style="text-align: center">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>movie name</th>
-            <th>rate</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for movie in list %}
-        <tr>
-            <td>{{ movie.id }}</td>
-            <td>{{ movie.name }}</td>
-            <td>{{ movie.rate }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
+    <table class="table table-striped" style="text-align: center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>movie name</th>
+                <th>rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in list %}
+            <tr>
+                <td>{{ movie.id }}</td>
+                <td>{{ movie.name }}</td>
+                <td>{{ movie.rate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </section>
 
 {% endblock %}

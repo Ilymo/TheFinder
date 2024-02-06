@@ -12,7 +12,7 @@ app = Flask(__name__)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///movie.db")
 
-@app.route("/")
+@app.route("/", methods=['POST', 'GET'])
 def index():
     if request.method == "POST":
         list = db.execute("SELECT * FROM movie")
