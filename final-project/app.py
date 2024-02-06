@@ -10,10 +10,13 @@ from werkzeug.security import check_password_hash, generate_password_hash
 app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///finance.db")
+db = SQL("sqlite:///movie.db")
 
 @app.route("/")
 def index():
-if method.request == "POST":
-    list = db.execute("SELECT * FROM movie")
-    return render_template("index.html", list = list)
+    if request.method == "POST":
+        list = db.execute("SELECT * FROM movie")
+        return render_template("index.html", list = list)
+
+    else:
+        return render_template("index.html")
