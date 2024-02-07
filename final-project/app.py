@@ -1,7 +1,7 @@
 import os
 
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template
+from flask import Flask, flash, redirect, render_template, request
 
 
 # Configure application
@@ -12,7 +12,7 @@ db = SQL("sqlite:///movie.db")
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
-    if method.request == "POST":
+    if request.method == "POST":
         movie_table = db.execute("SELECT * FROM movie")
         return render_template("index.html", movie_table = movie_table)
 
