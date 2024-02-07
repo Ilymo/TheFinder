@@ -12,7 +12,7 @@ db = SQL("sqlite:///movie.db")
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
-    if request.method == "POST":
+    if method.request == "POST":
         movie_table = db.execute("SELECT * FROM movie")
         return render_template("index.html", movie_table = movie_table)
 
