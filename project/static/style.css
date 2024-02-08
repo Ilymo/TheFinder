@@ -4,4 +4,7 @@
 --outer-space: #46494cff;
 --paynes-gray: #4c5c68ff;
 --blue-munsell: #1985a1ff;
+body {
+    background-color: blue;
+  }
 
