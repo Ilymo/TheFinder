@@ -8,7 +8,7 @@ from flask import Flask, flash, redirect, render_template, request
 app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///movie.db")
+#db = SQL("sqlite:///movie.db")
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
