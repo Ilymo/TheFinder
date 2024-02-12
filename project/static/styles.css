@@ -5,11 +5,13 @@ body
     color: #FF6363
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
 
