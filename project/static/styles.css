@@ -5,6 +5,13 @@ body
     color: #FF6363
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
 
 button {
     align-items: center;
