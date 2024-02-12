@@ -1,14 +1,14 @@
 
 body
 {
-    background-image: url("/static/gettyimages-521011652-612x612.jpg");
-    background-size: 70%;
+    background-image: url("/static/istockphoto-904278188-612x612.jpg");
+    background-size: auto;
     background-color: rgb(5, 6, 45) ;
     color: #FF6363
 }
 
   .center {
-    margin: 0;
+    margin: 10;
     position: absolute;
     top: 30%;
     left: 50%;
