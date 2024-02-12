@@ -10,15 +10,16 @@ body
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  border: 2px solid red;
   justify-content: center;
 }
+
 .left {
   position: relative;
   text-align: center;
   grid-column: 1;
   grid-row: 2 / 5;
 }
+
 .right {
   position: relative;
   text-align: center;
@@ -26,9 +27,7 @@ body
   grid-row: 2 / 5;
 }
 
-/*test*/
-  .center {
-    border: 2px solid green;
+.center {
     margin: 0;
     position: absolute;
     top: 50%;
