@@ -19,7 +19,7 @@ body
 }
 .right {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 2 / 5;
   border: 2px solid green;
 }
 
