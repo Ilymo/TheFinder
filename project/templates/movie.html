@@ -13,12 +13,25 @@
 </section>
 
 
-<div class="wrapper">
+<div class="center">
+    <p> <== Find a movie with up to 2 tags.</p>
+    <p> Search a movie reference and find a similare one ==></p>
+</div>
 
+
+
+<div class="wrapper">
     <!-- form for tag search -->
     <div class="left" >
         <form action="/result.html">
-            <select class="round">
+            <h3>Select up to 2 tags</h3>
+            <select class="round" id="tag1">
+                <option>CSS SELECT arrow (round)</option>
+                <option>No external background image</option>
+                <option>No wrapper</option>
+            </select>
+        <br>
+            <select class="round" id="tag2">
                 <option>CSS SELECT arrow (round)</option>
                 <option>No external background image</option>
                 <option>No wrapper</option>
@@ -33,18 +46,13 @@
     <!-- form for reference search -->
     <div class="right">
         <form action="/result.html">
-            <select class="round">
-                <option>CSS SELECT arrow (round)</option>
-                <option>No external background image</option>
-                <option>No wrapper</option>
-            </select>
+
         <br>
             <button style="position: relative; top: 50px; left: 170px">
                 <span class="text">Give me Movies !</span>
             </button>
         </form>
     </div>
-
 </div>
 
 {% endblock %}
