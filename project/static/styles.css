@@ -5,7 +5,7 @@ body
     color: #dcdcddff;
 }
 
-.waves-effect.waves-red{
+.waves-effect.btn-large{
 
   background: rgba( 255, 0, 0, 0.45 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
