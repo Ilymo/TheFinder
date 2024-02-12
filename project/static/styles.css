@@ -11,6 +11,7 @@ body
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   border: 2px solid red;
+  justify-content: center;
 }
 .left {
   grid-column: 1;
