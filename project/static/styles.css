@@ -18,14 +18,12 @@ body
   text-align: center;
   grid-column: 1;
   grid-row: 2 / 5;
-  border: 2px solid blue;
 }
 .right {
   position: relative;
   text-align: center;
   grid-column: 3;
   grid-row: 2 / 5;
-  border: 2px solid green;
 }
 
 /*test*/
