@@ -13,7 +13,7 @@ body
 /* CSS */
 .button-63 {
   align-items: center;
-  background-image: linear-gradient(144deg,#c5c3c6ff,  #4c5c68ff 50%,#46494cff);
+  background-image: linear-gradient(144deg,rgba(255, 0, 0, 0.45),  #4c5c68ff 50%,rgba(255, 0, 0, 0.45));
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(255, 0, 0, 0.45) 0 15px 30px -5px;
