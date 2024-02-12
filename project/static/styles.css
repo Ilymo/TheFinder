@@ -5,6 +5,13 @@ body
     color: #FF6363;
     font-family: Courier;
 }
+
+h1{
+  border: 2px solid #FF6363;
+  
+}
+
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
