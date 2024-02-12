@@ -5,6 +5,11 @@ body
     color: #dcdcddff;
 }
 
+.waves-effect.waves-red{
+
+     background-color: red;
+   }
+
 --platinum: #dcdcddff;
 --french-gray: #c5c3c6ff;
 --outer-space: #46494cff;
