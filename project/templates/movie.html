@@ -1,10 +1,6 @@
 {% extends "layout.html" %}
 
 {% block body %}
-$("input:checkbox").click(function() {
-    var bol = $("input:checkbox:checked").length >= 2;
-    $("input:checkbox").not(":checked").attr("disabled",bol);
-    });
 
 
 <section style="text-align: center">
@@ -16,23 +12,17 @@ $("input:checkbox").click(function() {
     </form>
 </section>
 <div class="center">
+    Max 3 Tag !
     <form action="/result.html">
         <label class="cyberpunk-checkbox-label">
             <input type="checkbox" class="cyberpunk-checkbox">
-            Check me</label>
-            <label class="cyberpunk-checkbox-label">
+            Check me
+        </label>
+        <label class="cyberpunk-checkbox-label">
                 <input type="checkbox" class="cyberpunk-checkbox">
-                Check me</label>
+                Check me
+        </label>
     <br>
-
-    <input type="checkbox" class="check" name="check1" id="check1" >
-<label class="layout" for="check1"></label>
-
-<input type="checkbox" class="check" name="check2" id="check2" >
-<label class="layout" for="check2"></label>
-
-<input type="checkbox" class="check" name="check3" id="check3" >
-<label class="layout" for="check3"></label>
         <button>
             <span class="text">Give me Movies !</span>
         </button>
