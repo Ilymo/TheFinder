@@ -21,3 +21,7 @@ def movie():
 @app.route("/anime.html")
 def anime():
         return render_template("anime.html")
+
+@app.route("/result.html")
+def result():
+        return render_template("result.html")
