@@ -46,7 +46,7 @@ button {
     box-shadow: rgba(255, 154, 118, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
     color: #FFFFFF;
-    display: flex;
+    display: grid;
     font-family: Phantomsans, sans-serif;
     font-size: 18px;
     justify-content: center;
