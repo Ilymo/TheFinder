@@ -49,7 +49,7 @@ body
 
   .cyberpunk-checkbox-label {
     font-size: 18px;
-    color: #FF6363;
+    color: white;
     cursor: pointer;
     user-select: none;
     display: flex;
