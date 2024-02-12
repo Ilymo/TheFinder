@@ -7,6 +7,7 @@ body
 }
 
   .center {
+    border: 2px solid green;
     margin: 0;
     position: absolute;
     top: 50%;
