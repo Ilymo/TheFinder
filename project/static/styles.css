@@ -2,7 +2,7 @@
 body
 {
     background-color: rgb(5, 6, 45) ;
-    color: #dcdcddff;
+    color: #FF6363
 }
 button {
     align-items: center;
@@ -50,9 +50,3 @@ button {
   button:active {
     transform: scale(0.9);
   }
-
---platinum: #dcdcddff;
---french-gray: #c5c3c6ff;
---outer-space: #46494cff;
---paynes-gray: #4c5c68ff;
---blue-munsell: #1985a1ff;
