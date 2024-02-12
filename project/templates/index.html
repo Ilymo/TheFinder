@@ -1,37 +1,9 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<section style="text-align: center; background-color: #dcdcddff">
+<section style="text-align: center; background-color: #4c5c68ff">
     <h1>Find movie</h1>
-    <form action="/" method="post">
-        <input name="movie_name" list="movie" placeholder"Movie reference" type="text">
-        <datalist id="movie">
-            {% for movie in list %}
-            <option value="{{ movie.name }}">{{ movie.name }}</option>
-            {% endfor %}
-        </datalist>
-        <button class="btn btn-primary" type="submit">Find me a movie!</button>
-    </form>
-</section>
-<section style="text-align: center">
-    <table align="center">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>movie name</th>
-                <th>rate</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for movie in movie_table %}
-            <tr>
-                <td>{{ movie.id }}</td>
-                <td>{{ movie.name }}</td>
-                <td>{{ movie.rate }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    
 </section>
 
 {% endblock %}
