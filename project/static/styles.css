@@ -5,7 +5,24 @@ body
     color: #FF6363;
     font-family: Courier;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.left {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  border: 2px solid green;
+}
+.right {
+  grid-column: 3;
+  grid-row: 2  / 5;
+  border: 2px solid green;
+}
 
+/*test*/
   .center {
     border: 2px solid green;
     margin: 0;
@@ -16,25 +33,6 @@ body
     transform: translate(-50%, -50%);
   }
 
-  .left {
-    border: 2px solid green;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-  .right {
-    border: 2px solid green;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
 
   /* button */
 
