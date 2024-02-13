@@ -17,6 +17,8 @@ https://codepen.io/lucasyem/pen/ZEEYKdj
 https://codepen.io/bertdida/pen/xyPKRX
 https://codepen.io/daniandl/pen/boqyYE +1 mais voir pug
 https://codepen.io/rikschennink/pen/rpNGyy +1 mais scss
+https://codepen.io/atunnecliffe/pen/gpKzQw pas mal
+https://codepen.io/rikschennink/pen/rpNGyy bien mais maybe scss
 
 db movie:
 https://www.kaggle.com/datasets/utkarshvishwakarmaco/tmdb-10000-movies-dataset
