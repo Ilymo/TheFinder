@@ -38,6 +38,14 @@ h1{
   border: 1px solid blue
 }
 
+.middle {
+  position: relative;
+  text-align: center;
+  grid-column: 2;
+  grid-row: 2 / 5;
+  border: 1px solid purple
+}
+
 .center {
     margin: 0;
     position: absolute;
