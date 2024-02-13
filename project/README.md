@@ -23,6 +23,7 @@ https://codepen.io/ruben-vardanyan/pen/NWNGaNe maybe
 
 https://codepen.io/rikschennink/pen/rpNGyy ça pars la dessus => finalement non car scss
 
+
 db movie:
 https://www.kaggle.com/datasets/utkarshvishwakarmaco/tmdb-10000-movies-dataset
 poste link: https://image.tmdb.org/t/p/w300_and_h450_bestv2/ + link db
