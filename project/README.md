@@ -21,7 +21,7 @@ https://codepen.io/atunnecliffe/pen/gpKzQw pas mal
 https://codepen.io/rikschennink/pen/rpNGyy bien mais maybe scss
 https://codepen.io/ruben-vardanyan/pen/NWNGaNe maybe
 
-https://codepen.io/rikschennink/pen/rpNGyy ça pars la dessus
+https://codepen.io/rikschennink/pen/rpNGyy ça pars la dessus => finalement non car scss
 
 db movie:
 https://www.kaggle.com/datasets/utkarshvishwakarmaco/tmdb-10000-movies-dataset
