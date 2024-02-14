@@ -14,9 +14,9 @@ h1{
 
 
 .box {
-  display: grid;
+  display:
 
-  border: 3px solid green;
+  border: 3px solid green
 }
 
 .left {
