@@ -13,8 +13,8 @@ h1{
 }
 
 
-.wrapper {
-  display: flex;
+.box {
+  display: relative;
   align-items: center;
   justify-content: center;
   border: 5px solid green
