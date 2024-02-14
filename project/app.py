@@ -8,7 +8,7 @@ from flask import Flask, flash, redirect, render_template, request
 app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
-#db = SQL("sqlite:///movie.db")
+db = SQL("sqlite:///media.db")
 
 @app.route("/", methods=['POST', 'GET'])
 def index():
@@ -24,6 +24,8 @@ def anime():
 
 @app.route("/result.html")
 def result():
+        if request.args.get("tag1") and request.args.get("tag2") and request.args.get("year") and request.args.get("rate")
+        movie = db.execute("SELECT name FROM movies WHERE )
         # if by tag: tag1, tag2, year, rate
         tag1 = request.args.get("tag1")
         tag2 = request.args.get("tag2")
