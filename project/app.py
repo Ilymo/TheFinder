@@ -25,5 +25,6 @@ def anime():
 @app.route("/result.html")
 def result():
         # if by tag: tag1, tag2, year, rate
-        test = request.form.get("tag1", "tag2",)
+        test = request.form.get("tag1", "tag2","year","rate")
+        print(test)
         return render_template("result.html")
