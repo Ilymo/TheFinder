@@ -232,10 +232,12 @@ select.round:focus {
 /*text field */
 
 .form {
-  width: 30%;
+  width: 50%;
   position: relative;
   height: 60px;
   overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .form input {
