@@ -24,12 +24,15 @@ def anime():
 
 @app.route("/result.html")
 def result():
-        if request.args.get("tag1") and request.args.get("tag2") and request.args.get("year") and request.args.get("rate")
-        movie = db.execute("SELECT name FROM movies WHERE )
+        if request.args.get("tag1") and request.args.get("tag2") and request.args.get("year") and request.args.get("rate"):
+
         # if by tag: tag1, tag2, year, rate
-        tag1 = request.args.get("tag1")
-        tag2 = request.args.get("tag2")
-        year = request.args.get("year")
-        rate = request.args.get("rate")
-        print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
+                tag1 = request.args.get("tag1")
+                tag2 = request.args.get("tag2")
+                year = request.args.get("year")
+                rate = request.args.get("rate")
+                movie = db.execute("SELECT name FROM movies WHERE released_at >= ? LIMIT 10", year)
+                print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
+                return render_template("result.html", movie = movie)
+
         return render_template("result.html")
