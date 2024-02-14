@@ -15,7 +15,9 @@ h1{
 
 .box {
   display: absolute;
-
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .left {
