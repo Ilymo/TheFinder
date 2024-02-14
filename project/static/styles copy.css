@@ -22,18 +22,19 @@ h1{
 
 .left {
   justify-content: flex-start;
+  border: 5px solid blue
 }
 
 .right {
   justify-content: flex-end;
+  border: 5px solid yellow
 }
 
-.middle {
-  position: relative;
-  text-align: center;
-  grid-column: 2;
-  grid-row: 1 / 5;
+.middle{
+  justify-content: center;
+  border: 5px solid red
 }
+
 
 .center {
     margin: 0;
