@@ -19,7 +19,6 @@ h1{
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   justify-content: center;
-  border: 1px solid red
 }
 
 .left {
@@ -27,7 +26,6 @@ h1{
   text-align: center;
   grid-column: 1;
   grid-row: 1 / 5;
-  border: 1px solid green
 }
 
 .right {
@@ -35,7 +33,6 @@ h1{
   text-align: center;
   grid-column: 3;
   grid-row: 1 / 5;
-  border: 1px solid blue
 }
 
 .middle {
@@ -43,7 +40,6 @@ h1{
   text-align: center;
   grid-column: 2;
   grid-row: 1 / 5;
-  border: 1px solid purple
 }
 
 .center {
@@ -53,7 +49,6 @@ h1{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 1px solid yellow
   }
 
 
