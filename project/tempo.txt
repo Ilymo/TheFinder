@@ -9,8 +9,6 @@ html:
 </p>
 
 
-
-
 css:
 .input {
 	// needs to be relative so the :focus span is positioned correctly
