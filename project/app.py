@@ -31,7 +31,7 @@ def result():
                 tag2 = request.args.get("tag2")
                 year = request.args.get("year")
                 rate = request.args.get("rate")
-                movie = db.execute("SELECT * FROM movies WHERE released_at >= ? AND average_rating > ? LIMIT 10", year, rate)
+                movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? LIMIT 10", year, rate)
                 print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
                 return render_template("result.html", movie = movie)
 
