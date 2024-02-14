@@ -1,4 +1,5 @@
 {
     "gitdoc.enabled": true,
-    "files.defaultLanguage": ""
+    "files.defaultLanguage": "",
+    "emmet.optimizeStylesheetParsing": true
 }
