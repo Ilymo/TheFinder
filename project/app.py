@@ -25,9 +25,9 @@ def anime():
 @app.route("/result.html")
 def result():
         # if by tag: tag1, tag2, year, rate
-        radio1 = request.form.get("radio1")
-        tag2 = request.form.get("tag2")
-        year = request.form.get("year")
-        rate = request.form.get("rate")
-        print("radio1:",radio1,"tag2:",tag2,"year:",year,"rate:",rate)
+        tag1 = request.args.get("tag1")
+        tag2 = request.args.get("tag2")
+        year = request.args.get("radio-group1")
+        rate = request.args.get("radio-group2")
+        print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
         return render_template("result.html")
