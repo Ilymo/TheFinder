@@ -173,14 +173,13 @@ select.round:focus {
   display: inline-block;
   align-items: center;
   gap: 24px;
-  border: 1px solid white
 }
 
 .radio-button {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  border: 1px solid white
+  padding-left: 15px;
 }
 
 .radio-button__input {
