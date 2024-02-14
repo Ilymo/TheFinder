@@ -83,10 +83,10 @@ button {
 
   button span {
     background-color: rgb(5, 6, 45);
-    display: inline
-    line-height: 1;
+    display: 
     padding: 16px 24px;
     border-radius: 6px;
+    min-height: 50px;
     min-width: 190px;
     transition: 300ms;
   }
