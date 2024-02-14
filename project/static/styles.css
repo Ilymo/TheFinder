@@ -60,9 +60,9 @@ button {
     border: 1px solid green;
     border-radius: 8px;
     box-shadow: rgba(255, 154, 118, 0.2) 0 15px 30px -5px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     color: #FFFFFF;
-    display: grid;
+    display: flex;
     font-family: Phantomsans, sans-serif;
     font-size: 18px;
     justify-content: center;
