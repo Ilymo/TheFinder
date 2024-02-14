@@ -22,7 +22,7 @@ def movie():
 def anime():
         return render_template("anime.html")
 
-@app.route("/result.html")
+@app.route("/result.html", methods=['POST', 'GET'])
 def result():
         # if by tag: tag1, tag2, year, rate
         tag1 = request.form.get("tag1")
