@@ -170,7 +170,7 @@ select.round:focus {
 
 /*radio*/
 .radio-button-container {
-  display: flex;
+  display: inline-block;
   align-items: center;
   gap: 24px;
   border: 1px solid white
