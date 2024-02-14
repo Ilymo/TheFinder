@@ -24,4 +24,5 @@ def anime():
 
 @app.route("/result.html")
 def result():
+        # if by tag: tag1, tag2
         return render_template("result.html")
