@@ -14,7 +14,9 @@ idée Text field:
 https://codepen.io/webcrafterscz/pen/WLxzyQ used
 
 db movie:
+too old:
 https://www.kaggle.com/datasets/utkarshvishwakarmaco/tmdb-10000-movies-dataset
 poster link: https://image.tmdb.org/t/p/w300_and_h450_bestv2/ + link db
 
-
+new one:
+https://www.kaggle.com/datasets/disham993/9000-movies-dataset
