@@ -22,11 +22,15 @@ h1{
 
 .left {
   justify-content: center;
+  align-items: center;
+  text-align: center;
   border: 5px solid blue
 }
 
 .right {
   justify-content: flex-end;
+  align-items: center;
+  text-align: center;
   border: 5px solid yellow
 }
 
