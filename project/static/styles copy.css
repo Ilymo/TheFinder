@@ -15,8 +15,9 @@ h1{
 
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  border: 5px solid green
 }
 
 .left {
