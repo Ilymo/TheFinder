@@ -27,7 +27,7 @@ def result():
         # if by tag: tag1, tag2, year, rate
         tag1 = request.args.get("tag1")
         tag2 = request.args.get("tag2")
-        year = request.args.get("radio-group1")
-        rate = request.args.get("radio-group2")
+        year = request.args.get("year")
+        rate = request.args.get("rate")
         print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
         return render_template("result.html")
