@@ -21,7 +21,7 @@ h1{
 }
 
 .left {
-  justify-content: flex-start;
+  justify-content: center;
   border: 5px solid blue
 }
 
