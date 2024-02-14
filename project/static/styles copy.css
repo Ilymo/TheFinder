@@ -14,10 +14,8 @@ h1{
 
 
 .box {
-  display: relative;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid green
+  display: absolute;
+
 }
 
 .left {
