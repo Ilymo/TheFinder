@@ -21,17 +21,11 @@ h1{
 }
 
 .left {
-  position: relative;
-  text-align: center;
-  grid-column: 1;
-  grid-row: 1 / 5;
+  justify-content: flex-start;
 }
 
 .right {
-  position: relative;
-  text-align: center;
-  grid-column: 3;
-  grid-row: 1 / 5;
+  justify-content: flex-end;
 }
 
 .middle {
