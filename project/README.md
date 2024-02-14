@@ -22,7 +22,7 @@ https://codepen.io/rikschennink/pen/rpNGyy bien mais maybe scss
 https://codepen.io/ruben-vardanyan/pen/NWNGaNe maybe
 
 https://codepen.io/rikschennink/pen/rpNGyy ça pars la dessus => finalement non car scss
-
+https://codepen.io/webcrafterscz/pen/WLxzyQ maybe
 
 db movie:
 https://www.kaggle.com/datasets/utkarshvishwakarmaco/tmdb-10000-movies-dataset
