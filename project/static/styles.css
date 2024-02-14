@@ -23,7 +23,7 @@ h1{
 }
 
 .box {
-  display: flex;
+  display: absolute;
   justify-content: center;
   align-content: center;
   border: 1px solid yellow;
