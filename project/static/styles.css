@@ -22,6 +22,13 @@ h1{
   border: 1px solid red
 }
 
+.box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid yellow;
+}
+
 .left {
   position: relative;
   text-align: center;
