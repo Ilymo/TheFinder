@@ -1,5 +1,6 @@
 {
     "gitdoc.enabled": true,
     "files.defaultLanguage": "",
-    "emmet.optimizeStylesheetParsing": true
+    "emmet.optimizeStylesheetParsing": true,
+    "editor.linkedEditing": true
 }
