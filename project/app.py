@@ -66,12 +66,7 @@ def result():
         print("genre:", tags, "year:", year, "rate:", rate)
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
-        unique_tag = str.split(tags)
-        test = []
-        for tag in unique_tag:
-            test.append(tag.replace(",", ""))
-        print("before:",unique_tag)
-        print("after;",test)
+        unique_tag = str.split(tags.replace(",", ""))
 
         #tag1 = unique_tag[0].replace(",","")
         #tag2 = unique_tag[1].replace(",","")
