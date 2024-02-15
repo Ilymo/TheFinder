@@ -69,21 +69,25 @@ def result():
         unique_tag = str.split(tags.replace(",", ""))
         tag_nb = len(unique_tag)
         print("tag_nb:", tag_nb)
-        for i in range(tag_nb):
-            exec(f'tag{i} = unique_tag[i]')
-            print(f'tag{i}')
-        print(tag0, tag1, tag2)
 
-        #tag1 = unique_tag[0].replace(",","")
-        #tag2 = unique_tag[1].replace(",","")
-        #tag3 = unique_tag[2].replace(",","")
+        if tag_nb >= 3:
+            tag1 = unique_tag[0].replace(",","")
+            tag2 = unique_tag[1].replace(",","")
+            tag3 = unique_tag[2].replace(",","")
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
+                           ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
 
-        #print("tag1:", tag1, "tag2:", tag2, "tag3:", tag3)
+        elif tag_nb == 2:
+            tag1 = unique_tag[0].replace(",","")
+            tag2 = unique_tag[1].replace(",","")
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
+                           ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%'))
 
 
-        #movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
-                           #,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
-
+        elif tag_nb == 1:
+            tag1 = unique_tag[0].replace(",","")
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
+                           ,reference ,year ,rate ,(f'%{tag1}%'))
 
 
         if not movie:
