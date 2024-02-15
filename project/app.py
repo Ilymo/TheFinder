@@ -19,8 +19,8 @@ def index():
 
 @app.route("/movie.html")
 def movie():
-    
-    return render_template("movie.html", tags=TAGS)
+    title = db.execute("SELECT Title FROM movies")
+    return render_template("movie.html", tags=TAGS, title=title)
 
 
 @app.route("/anime.html")

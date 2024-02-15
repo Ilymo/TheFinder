@@ -151,8 +151,9 @@
                 </label>
                 <datalist id="movie">
                     <!-- add value from movie db-->
-                    <option value="shrek">
-                    <option value="marvel">
+                    {% for title in title %}
+                    <option value="{{title.Title}}">
+                    {% endfor %}
                 </datalist>
             </div>
 
