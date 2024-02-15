@@ -42,71 +42,75 @@ def result():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+        movie = db.execute("SELECT * FROM movies
+                           WHERE Release_Date >= ?
+                           AND Vote_Average > ?
+                           AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ?
+                           ORDER BY RANDOM() LIMIT 10",
                            year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
-        print("tag1:", tag1, "tag2:", tag2, "year:", year, "rate:", rate)
-        print("movie:", movie)
+
         # if no result:
         if not movie:
             return render_template("noresult.html")
         # if result
         return render_template("result.html", movie=movie)
 
-     # For reference research:
-
+    # For reference research:
     elif request.args.get("reference"):
+
+        # Get reference
         reference = request.args.get("reference")
-        print(reference)
+        # Get data from reference
         movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
-        print(movie)
-        # get tags, year, rate
+
+        # get tags from reference movie, year and rate from input
         tags = movie[0]["Genre"]
         year = request.args.get("year")
         rate = request.args.get("rate")
-        print("genre:", tags, "year:", year, "rate:", rate)
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
         unique_tag = str.split(tags.replace(",", ""))
+
+        # count nb of tags
         tag_nb = len(unique_tag)
 
         if tag_nb >= 3:
-            tag1 = unique_tag[0].replace(",","")
-            tag2 = unique_tag[1].replace(",","")
-            tag3 = unique_tag[2].replace(",","")
+            tag1 = unique_tag[0].replace(",", "")
+            tag2 = unique_tag[1].replace(",", "")
+            tag3 = unique_tag[2].replace(",", "")
             movie = db.execute("SELECT * FROM movies
                                WHERE Title != ?
                                AND Release_Date >= ?
                                AND Vote_Average >= ?
                                AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10"
-                               ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
+                               ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
         elif tag_nb == 2:
-            tag1 = unique_tag[0].replace(",","")
-            tag2 = unique_tag[1].replace(",","")
+            tag1 = unique_tag[0].replace(",", "")
+            tag2 = unique_tag[1].replace(",", "")
             movie = db.execute("SELECT * FROM movies
                                WHERE Title != ?
                                AND Release_Date >= ?
                                AND Vote_Average >= ?
                                AND Genre LIKE ? AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10"
-                               ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%'))
-
+                               ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{tag1}%'), (f'%{tag2}%'))
 
         elif tag_nb == 1:
-            tag1 = unique_tag[0].replace(",","")
+            tag1 = unique_tag[0].replace(",", "")
             movie = db.execute("SELECT * FROM movies
                                WHERE Title != ?
                                AND Release_Date >= ?
                                AND Vote_Average >= ?
                                AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10"
-                               ,reference ,year ,rate ,(f'%{tag1}%'))
+                               ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{tag1}%'))
 
-
+        # if no result
         if not movie:
             return render_template("noresult.html")
-
+        # if result
         return render_template("result.html", movie=movie)
 
     # if no input
