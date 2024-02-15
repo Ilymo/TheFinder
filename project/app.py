@@ -69,6 +69,9 @@ def result():
         unique_tag = str.split(tags.replace(",", ""))
         tag_nb = len(unique_tag)
         print("tag_nb:", tag_nb)
+        for i in range(tag_nb):
+            tag[i] = unique_tag[i]
+            print(tag[i])
 
         #tag1 = unique_tag[0].replace(",","")
         #tag2 = unique_tag[1].replace(",","")
