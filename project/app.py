@@ -56,6 +56,11 @@ def result():
     elif request.args.get("reference"):
         reference = request.args.get("reference")
         print(reference)
+        movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
+        print(movie)
+        # get tags, year, rate
+        tag1 = movie.Genre
+        
     return render_template("result.html")
 
     # if no input
