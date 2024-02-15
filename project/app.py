@@ -25,7 +25,7 @@ def anime():
 
 @app.route("/result.html")
 def result():
-        if request.args.get("tag1") and request.args.get("tag2") and request.args.get("year") and request.args.get("rate"):
+        if request.args.get("tag1") and request.args.get("year") and request.args.get("rate"):
 
         # if by tag: tag1, tag2, year, rate
                 tag1 = request.args.get("tag1")
