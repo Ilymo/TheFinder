@@ -57,7 +57,7 @@ def result():
         # Get reference
         reference = request.args.get("reference")
         # Get data from reference
-        movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
+        movie = db.execute("SELECT Genre FROM movies WHERE Title = ?", reference)
         print(movie)
 
         # get tags from reference movie, year and rate from input
