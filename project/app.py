@@ -63,8 +63,8 @@ def result():
         year = movie[0]["Release_Date"]
         rate = movie[0]["Vote_Average"]
         print("genre:", tag1, "year:", year, "rate:", rate)
-        for genre in tag1:
-            print("genre:", genre)
+        unique_words = set(tag1.split())
+        print(unique_words)
     return render_template("result.html")
 
     # if no input
