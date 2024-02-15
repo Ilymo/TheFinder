@@ -59,8 +59,10 @@ def result():
         movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
         print(movie)
         # get tags, year, rate
-        tag1 = movie.Genre
-        
+        tag1 = movie[0]["Genre"]
+        year = movie[0]["Release_Date"]
+        rate = movie[0]["Vote_Average"]
+        print("genre:", tag1, "year:", year, "rate:", rate)
     return render_template("result.html")
 
     # if no input
