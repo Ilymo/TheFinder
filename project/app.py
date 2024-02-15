@@ -56,18 +56,15 @@ def result():
 
         # Get reference
         reference = request.args.get("reference")
-        # Get data from reference
-        movie = db.execute("SELECT Genre FROM movies WHERE Title = ?", reference)
-        print(movie)
+        # Get tags from reference
+        tags = db.execute("SELECT Genre FROM movies WHERE Title = ?", reference)
 
-        # get tags from reference movie, year and rate from input
-        tags = movie[0]["Genre"]
-        print(tags)
+        # get year and rate from input
         year = request.args.get("year")
         rate = request.args.get("rate")
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
-        unique_tag = str.split(movie[0]["Genre"].replace(",", ""))
+        unique_tag = str.split(tags[0]["Genre"].replace(",", ""))
         print(unique_tag)
 
         # count nb of tags
