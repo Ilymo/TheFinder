@@ -19,6 +19,7 @@ https://codepen.io/ahmadbassamemran/pen/XvdEoO
 https://codepen.io/radostik1/pen/PVvvqG
 https://codepen.io/mahmoud-nasser/pen/NBRbOR
 https://bootsnipp.com/snippets/z8PZx (pas sur)
+https://uiverse.io/eslam-hany/nasty-zebra-54 (a adapter)
 
 db movie:
 https://www.kaggle.com/datasets/disham993/9000-movies-dataset
