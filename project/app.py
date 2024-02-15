@@ -67,9 +67,10 @@ def result():
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
         unique_tag = str.split(tags)
-        for x in range(len(tags)):
-            tag[x] = unique_tag[x].replace(",","")
-            print(tag[x], unique_tag[x])
+        print("before:",unique_tag)
+        
+        new = unique_tag.replace(",", "")
+        print("after;",new)
 
         #tag1 = unique_tag[0].replace(",","")
         #tag2 = unique_tag[1].replace(",","")
