@@ -321,45 +321,6 @@ select.round:focus {
     margin: 2rem;
 }
 
-.colour{
-    position: absolute;
-    width: 100%;
-    height:15%;
-    background: rgb(255,60,14);
-background: linear-gradient(125deg, rgba(255,60,14,1) 28%, rgba(255,255,102,1) 89%);
-    right: 120px;
-    top:40px;
-    transform: rotate(-45deg) translateY(-90px);
-}
-.colour::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom:40px;
-    background-color: #FF3C0E;
-     transform: translateX(-145px);
-}
-.colour-bottom{
-     position: absolute;
-    width: 100%;
-    height: 15%;
-    background-color: rgba(97,34,28,1);
-    left: 140px;
-    top: 245px;
-     transform: rotate(-45deg) translateY(95px); ;
-}
-.colour-bottom::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom:40px;
-    background: rgb(97,34,28);
-background: linear-gradient(331deg, rgba(97,34,28,1) 40%, rgba(125,215,178,1) 66%);
-     transform: translateX(-147px);
-}
-
 .card-text {
     opacity: 0;
     position: relative;
