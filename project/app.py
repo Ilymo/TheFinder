@@ -57,17 +57,17 @@ def result():
     elif request.args.get("reference"):
         reference = request.args.get("reference")
         print(reference)
-        reference = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
-        print(reference)
+        movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
+        print(movie)
         # get tags, year, rate
-        tag1 = reference[0]["Genre"]
-        year = reference[0]["Release_Date"]
-        rate = reference[0]["Vote_Average"]
-        print("genre:", tag1, "year:", year, "rate:", rate)
-        #unique_words = set(tag1.split())
-        unique_words = str.split(tag1)
-        print("before:",unique_words[1])
-        new = unique_words[1].replace(",","")
+        tags = movie[0]["Genre"]
+        year = movie[0]["Release_Date"]
+        rate = movie[0]["Vote_Average"]
+        print("genre:", tags, "year:", year, "rate:", rate)
+
+        # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
+        unique_tag = str.split(tags)
+        new = unique_tag[1].replace(",","")
         print("after:", unique_words[1].replace(",",""))
 
 
