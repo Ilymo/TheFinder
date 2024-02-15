@@ -64,9 +64,10 @@ def result():
         year = movie[0]["Release_Date"]
         rate = movie[0]["Vote_Average"]
         print("genre:", tag1, "year:", year, "rate:", rate)
-        unique_words = set(tag1.split())
-        for word in unique_words:
-            print(word)
+        #unique_words = set(tag1.split())
+        unique_words = str.split(tag1)
+        print(unique_words[0])
+
         movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10"
                            ,reference ,year ,rate ,tag1)
         if not movie:
