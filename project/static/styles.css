@@ -315,8 +315,8 @@ select.round:focus {
     background-size: cover;
     border-radius: 50px;
     /*background: linear-gradient(145deg, #e6e6e6, #ffffff);
-   */ box-shadow:  30px 30px 40px #141313,
-                -30px -30px 40px #1c1919;
+   */ box-shadow:  10px 10px 20px #FF6363,
+                -10px -10px 20px #FF6363;
 
     margin: 2rem;
 }
@@ -330,8 +330,8 @@ select.round:focus {
 .card:hover{
     border-radius: 50px;
 background: linear-gradient(145deg, #e6e6e6, #ffffff);
-box-shadow:  30px 30px 40px #141313,
-                -30px -30px 40px #1c1919;
+box-shadow:  10px 10px 20px #FF6363,
+                -10px -10px 20px #FF6363;
     animation: large .7s ease-in-out forwards;
 }
 @keyframes large {
