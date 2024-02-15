@@ -20,6 +20,8 @@ https://codepen.io/radostik1/pen/PVvvqG
 https://codepen.io/mahmoud-nasser/pen/NBRbOR
 https://bootsnipp.com/snippets/z8PZx (pas sur)
 https://uiverse.io/eslam-hany/nasty-zebra-54 (a adapter)
+https://uiverse.io/gharsh11032000/tasty-frog-49
+https://uiverse.io/ElSombrero2/tricky-robin-67 (maybe)
 
 db movie:
 https://www.kaggle.com/datasets/disham993/9000-movies-dataset
