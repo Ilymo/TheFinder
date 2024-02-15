@@ -70,6 +70,10 @@ def result():
         # count nb of tags
         tag_nb = len(unique_tag)
 
+        print(unique_tag[0])
+        unique_tag[0].replace(",", "")
+        print(unique_tag[0])
+
         if tag_nb >= 3:
             tag1 = unique_tag[0].replace(",", "")
             tag2 = unique_tag[1].replace(",", "")
