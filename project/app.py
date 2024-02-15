@@ -30,9 +30,10 @@ def result():
         # if by tag: tag1, tag2, year, rate
                 tag1 = request.args.get("tag1")
                 tag2 = request.args.get("tag2")
+                tag3 = request.args.get("tag3")
                 year = request.args.get("year")
                 rate = request.args.get("rate")
-                movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? LIMIT 10", year, rate, (f'%{tag1}%',), (f'%{tag2}%',))
+                movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? LIMIT 10", year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
                 print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
                 return render_template("result.html", movie = movie)
 
