@@ -30,6 +30,7 @@ def anime():
 
 @app.route("/result.html")
 def result():
+    # For tag research:
     # Check if input
     if request.args.get("tag1") in TAGS and request.args.get("year") and request.args.get("rate"):
 
@@ -51,3 +52,6 @@ def result():
         return render_template("result.html", movie=movie)
     # if no input
     return render_template("noresult.html")
+
+    # For reference research:
+    if request.args.get(")
