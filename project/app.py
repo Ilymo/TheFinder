@@ -67,11 +67,12 @@ def result():
         #unique_words = set(tag1.split())
         unique_words = str.split(tag1)
         print("before:",unique_words[1])
+        new = unique_words[1].replace(",","")
         print("after:", unique_words[1].replace(",",""))
 
 
         movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10"
-                           ,reference ,year ,rate ,(f'%{unique_words[1]}%'))
+                           ,reference ,year ,rate ,(f'%{new}%'))
 
 
 
