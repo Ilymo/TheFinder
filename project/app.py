@@ -56,8 +56,10 @@ def result():
 
         # Get reference
         reference = request.args.get("reference")
+        print(reference)
         # Get tags from reference
-        tags = db.execute("SELECT Genre FROM movies WHERE Title = ?", reference)
+        tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
+        print(tags)
 
         # get year and rate from input
         year = request.args.get("year")
