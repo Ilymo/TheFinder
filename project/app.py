@@ -31,11 +31,11 @@ def anime():
 
 @app.route("/result.html")
 def result():
-    # For tag research:
+##### For tag research:
     # Check if input
     if request.args.get("tag1") in TAGS and request.args.get("year") and request.args.get("rate"):
 
-        # Get tag from input
+        # Get tag, year and rate from input
         tag1 = request.args.get("tag1")
         tag2 = request.args.get("tag2")
         tag3 = request.args.get("tag3")
@@ -51,7 +51,7 @@ def result():
         # if result
         return render_template("result.html", movie=movie)
 
-    # For reference research:
+##### For reference research:
     elif request.args.get("reference"):
 
         # Get reference
@@ -63,13 +63,13 @@ def result():
         year = request.args.get("year")
         rate = request.args.get("rate")
 
-        # split tags and remove ","
+        # split tags into list and remove ","
         unique_tag = str.split(tags[0]["Genre"].replace(",", ""))
-        print(unique_tag)
 
         # count nb of tags
         tag_nb = len(unique_tag)
 
+        # sqlite query depending on tag_nb
         if tag_nb >= 3:
             movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
