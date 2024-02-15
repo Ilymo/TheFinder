@@ -343,25 +343,6 @@ box-shadow:  10px 10px 20px #FF6363,
     opacity: 1;
 }
 .card:hover .colour{
-    animation: move .7s ease-in-out forwards;
-}
-@keyframes move {
-    0%{
-        transform: rotate(-45deg) translateY(-85px);
-    }
-    100% {
-         transform: rotate(-45deg) translateY(0px);
-    }
-}
-.card:hover .colour-bottom{
-    animation: move1 .7s ease-in-out forwards;
-}
-@keyframes move1 {
-    0%{
-        transform: rotate(-45deg) translateY(90px);
-    }
-    100% {
-         transform: rotate(-45deg) translateY(0px);
-    }
+    animation: move .7s ease-in-out;
 }
 
