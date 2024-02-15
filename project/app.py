@@ -42,7 +42,7 @@ def result():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? LIMIT 10",
+        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                            year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
         print("tag1:", tag1, "tag2:", tag2, "year:", year, "rate:", rate)
         print("movie:", movie)
@@ -73,7 +73,7 @@ def result():
         print("tag1:", tag1, "tag2:", tag2, "tag3:", tag3)
 
 
-        movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? LIMIT 10"
+        movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
                            ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
 
 
