@@ -3,7 +3,8 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request
 
-TAGS = ["Action", "Adventure", "Animation","Comedy","Crime","Documentary","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Science","TV","Thriller","War", "Western",]
+TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
+        "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
 # Configure application
 app = Flask(__name__)
@@ -67,9 +68,6 @@ def result():
         print(unique_words)
         movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10",
                            year, rate, tag1)
-    return render_template("result.html", movie=movie)
-
+        return render_template("result.html", movie=movie)
     # if no input
     return render_template("noresult.html")
-
-
