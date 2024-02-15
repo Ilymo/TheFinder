@@ -67,7 +67,7 @@ def result():
         print(unique_words)
         movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10",
                            year, rate, tag1)
-    return render_template("result.html")
+    return render_template("result.html", movie=movie)
 
     # if no input
     return render_template("noresult.html")
