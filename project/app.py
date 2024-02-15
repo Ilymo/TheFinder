@@ -50,12 +50,15 @@ def result():
             return render_template("noresult.html")
         # if result
         return render_template("result.html", movie=movie)
-    # if no input
-    return render_template("noresult.html")
 
-    # For reference research:
+     # For reference research:
 
-    if request.args.get("reference"):
+    elif request.args.get("reference"):
         reference = request.args.get("reference")
         print(reference)
     return render_template("result.html")
+
+    # if no input
+    return render_template("noresult.html")
+
+
