@@ -66,8 +66,12 @@ def result():
         print("genre:", tag1, "year:", year, "rate:", rate)
         unique_words = set(tag1.split())
         print(unique_words)
-        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10",
-                           year, rate, tag1)
+        movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? LIMIT 10"
+                           ,reference ,year ,rate ,tag1)
+        if not movie:
+            return render_template("noresult.html")
+
         return render_template("result.html", movie=movie)
+    
     # if no input
     return render_template("noresult.html")
