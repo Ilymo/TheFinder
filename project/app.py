@@ -19,6 +19,7 @@ def index():
 
 @app.route("/movie.html")
 def movie():
+    
     return render_template("movie.html", tags=TAGS)
 
 
