@@ -342,7 +342,4 @@ box-shadow:  10px 10px 20px #FF6363,
 .card:hover .card-text{
     opacity: 1;
 }
-.card:hover .colour{
-    animation: move .7s ease-in-out;
-}
 
