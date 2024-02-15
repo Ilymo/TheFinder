@@ -62,9 +62,11 @@ def result():
         reference = request.args.get("reference")
         # Get data from reference
         movie = db.execute("SELECT * FROM movies WHERE Title = ?", reference)
+        print(movie)
 
         # get tags from reference movie, year and rate from input
         tags = movie[0]["Genre"]
+        print(tags)
         year = request.args.get("year")
         rate = request.args.get("rate")
 
