@@ -67,7 +67,8 @@ def result():
         rate = request.args.get("rate")
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
-        unique_tag = str.split(tags.replace(",", ""))
+        unique_tag = str.split(movie[0]["Genre"].replace(",", ""))
+        print(unique_tag)
 
         # count nb of tags
         tag_nb = len(unique_tag)
