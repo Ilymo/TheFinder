@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<section style="text-align: center">
+    <h1>Finder Result</h1>
+    <form action="/">
+        <button style="min-width: 140px">
+            <span class="text">Home</span>
+        </button>
+    </form>
+        <button onclick="history.back()" style="min-width: 140px">
+            <span class="text">Back</span>
+        </button>
+</section>
+<br>
+<br>
+<section>
+    {% for movie in movie %}
+    <p>{{movie.Title}} / {{movie.Genre}} / {{movie.Vote_Average}} / {{movie.Release_Date}}</p>
+    {% endfor %}
+</section>
+
+{% endblock %}

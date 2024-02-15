@@ -35,6 +35,8 @@ def result():
                 rate = request.args.get("rate")
                 movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? LIMIT 10", year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
                 print("tag1:",tag1,"tag2:",tag2,"year:",year,"rate:",rate)
+                if movie == EMPTY:
+                        return render_template("noresult.html")
                 return render_template("result.html", movie = movie)
 
-        return render_template("result.html")
+        return render_template("noresult.html")
