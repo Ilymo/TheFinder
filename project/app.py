@@ -61,33 +61,47 @@ def result():
         print(movie)
         # get tags, year, rate
         tags = movie[0]["Genre"]
-        year = movie[0]["Release_Date"]
-        rate = movie[0]["Vote_Average"]
+        year = request.args.get("year")
+        rate = request.args.get("rate")
         print("genre:", tags, "year:", year, "rate:", rate)
 
         # split tags, remove ",", get 3 first tags into tag1, tag2, tag3
         unique_tag = str.split(tags.replace(",", ""))
         tag_nb = len(unique_tag)
-        print("tag_nb:", tag_nb)
 
         if tag_nb >= 3:
             tag1 = unique_tag[0].replace(",","")
             tag2 = unique_tag[1].replace(",","")
             tag3 = unique_tag[2].replace(",","")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
-                           ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
+            movie = db.execute("SELECT * FROM movies
+                               WHERE Title != ?
+                               AND Release_Date >= ?
+                               AND Vote_Average >= ?
+                               AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ?
+                               ORDER BY RANDOM() LIMIT 10"
+                               ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%') ,(f'%{tag3}%'))
 
         elif tag_nb == 2:
             tag1 = unique_tag[0].replace(",","")
             tag2 = unique_tag[1].replace(",","")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
-                           ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%'))
+            movie = db.execute("SELECT * FROM movies
+                               WHERE Title != ?
+                               AND Release_Date >= ?
+                               AND Vote_Average >= ?
+                               AND Genre LIKE ? AND Genre LIKE ?
+                               ORDER BY RANDOM() LIMIT 10"
+                               ,reference ,year ,rate ,(f'%{tag1}%') ,(f'%{tag2}%'))
 
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",","")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10"
-                           ,reference ,year ,rate ,(f'%{tag1}%'))
+            movie = db.execute("SELECT * FROM movies
+                               WHERE Title != ?
+                               AND Release_Date >= ?
+                               AND Vote_Average >= ?
+                               AND Genre LIKE ?
+                               ORDER BY RANDOM() LIMIT 10"
+                               ,reference ,year ,rate ,(f'%{tag1}%'))
 
 
         if not movie:
