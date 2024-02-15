@@ -16,6 +16,7 @@ https://codepen.io/webcrafterscz/pen/WLxzyQ (used)
 
 card movie idea:
 https://codepen.io/ahmadbassamemran/pen/XvdEoO
+https://codepen.io/radostik1/pen/PVvvqG
 
 db movie:
 https://www.kaggle.com/datasets/disham993/9000-movies-dataset
