@@ -69,7 +69,7 @@ def result():
         unique_tag = str.split(tags)
         test = []
         for tag in unique_tag:
-            test.append(tag)
+            test.append(tag.replace(",", ""))
         print("before:",unique_tag)
         print("after;",test)
 
