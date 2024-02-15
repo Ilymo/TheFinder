@@ -3,7 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request
 
-
+TAGS = ["Drama", "Action", "Comedy", "cornichonducul"]
 
 # Configure application
 app = Flask(__name__)
@@ -17,7 +17,7 @@ def index():
 
 @app.route("/movie.html")
 def movie():
-        return render_template("movie.html")
+        return render_template("movie.html", tags=TAGS)
 
 @app.route("/anime.html")
 def anime():

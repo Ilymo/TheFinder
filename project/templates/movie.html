@@ -25,27 +25,27 @@
     <div class="left">
         <form action="/result.html">
             <!-- Choice tag -->
-            <h3>Select up to 2 tags</h3>
+            <h3>Select up to 3 tags</h3>
             <select class="round" name="tag1" required>
                 <!-- add value from tag list-->
                 <option disabled selected value="">Tag 1</option>
-                <option value="Action">Action</option>
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
             </select>
             <select class="round" name="tag2">
                 <!-- add value from tag list-->
                 <option selected value="">Tag 2</option>
-                <option value="Action">Action</option>
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
             </select>
             <select class="round" name="tag3" >
                 <!-- add value from tag list-->
                 <option selected value="">Tag 3</option>
-                <option value="Action">Action</option>
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
             </select>
 
 
