@@ -76,33 +76,18 @@ def result():
             tag1 = unique_tag[0].replace(",", "")
             tag2 = unique_tag[1].replace(",", "")
             tag3 = unique_tag[2].replace(",", "")
-            movie = db.execute("SELECT * FROM movies
-                               WHERE Title != ?
-                               AND Release_Date >= ?
-                               AND Vote_Average >= ?
-                               AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10",
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
         elif tag_nb == 2:
             tag1 = unique_tag[0].replace(",", "")
             tag2 = unique_tag[1].replace(",", "")
-            movie = db.execute("SELECT * FROM movies
-                               WHERE Title != ?
-                               AND Release_Date >= ?
-                               AND Vote_Average >= ?
-                               AND Genre LIKE ? AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10",
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{tag1}%'), (f'%{tag2}%'))
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
-            movie = db.execute("SELECT * FROM movies
-                               WHERE Title != ?
-                               AND Release_Date >= ?
-                               AND Vote_Average >= ?
-                               AND Genre LIKE ?
-                               ORDER BY RANDOM() LIMIT 10",
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{tag1}%'))
 
         # if no result
