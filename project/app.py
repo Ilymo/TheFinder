@@ -72,6 +72,6 @@ def result():
             return render_template("noresult.html")
 
         return render_template("result.html", movie=movie)
-    
+
     # if no input
     return render_template("noresult.html")
