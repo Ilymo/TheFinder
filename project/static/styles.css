@@ -359,46 +359,7 @@ background: linear-gradient(125deg, rgba(255,60,14,1) 28%, rgba(255,255,102,1) 8
 background: linear-gradient(331deg, rgba(97,34,28,1) 40%, rgba(125,215,178,1) 66%);
      transform: translateX(-147px);
 }
-.nezuko {
-    background-image: url("https://namratapdrjs.netlify.app/scrolling-animations/assets-card/nezuko.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.nezuko .colour {
-    background: rgb(227,121,130);
-    background: linear-gradient(125deg, rgba(227,121,130,1) 28%, rgba(172,24,69,1) 89%);
-}
-.nezuko .colour::before{
-    background: rgba(172,24,69,1);
-}
-.nezuko .colour-bottom{
-    background: rgba(128,23,34,1);
-}
-.nezuko .colour-bottom::before{
-    background: rgb(128,23,34);
-background: linear-gradient(125deg, rgba(128,23,34,1) 40%, rgba(60,29,40,1) 66%);
-}
-.zenitsu {
-     background-image: url("https://namratapdrjs.netlify.app/scrolling-animations/assets-card/zenitsu.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.zenitsu .colour {
-    background: rgb(254,241,163);
-background: linear-gradient(125deg, rgba(254,241,163,1) 40%, rgba(254,233,88,1) 59%);
-}
-.zenitsu .colour::before{
-    background: rgba(254,233,88,1);
-}
-.zenitsu .colour-bottom{
-    background: rgb(224,153,45);
-}
-.zenitsu .colour-bottom::before{
-  background: rgb(224,153,45);
-background: linear-gradient(125deg, rgba(224,153,45,1) 40%, rgba(176,123,0,1) 60%);
-}
+
 .card-text {
     opacity: 0;
     position: relative;
@@ -442,15 +403,4 @@ box-shadow:  30px 30px 40px #141313,
          transform: rotate(-45deg) translateY(0px);
     }
 }
-footer {
-    width: 80%;
-    height:100px;
-    color: white;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-}
-a {
-    text-decoration: none;
-    color: rgba(224,153,45,1);
-}
+
