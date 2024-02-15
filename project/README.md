@@ -24,6 +24,7 @@ https://uiverse.io/gharsh11032000/tasty-frog-49
 https://uiverse.io/ElSombrero2/tricky-robin-67 (maybe)
 https://codepen.io/diyifang/pen/MOyvXw (why not)
 https://codepen.io/veronicadev/pen/WJyOwG
+https://codepen.io/lamchang/pen/PQGQyR (cool mais compliqué)
 
 db movie:
 https://www.kaggle.com/datasets/disham993/9000-movies-dataset
