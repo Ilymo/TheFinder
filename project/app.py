@@ -70,6 +70,7 @@ def result():
         tag_nb = len(unique_tag)
         print("tag_nb:", tag_nb)
         for i in range(tag_nb):
+            tag = "tag" + str(i)
             tag[i] = unique_tag[i]
             print(tag[i])
 
