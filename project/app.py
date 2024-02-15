@@ -54,7 +54,8 @@ def result():
     return render_template("noresult.html")
 
     # For reference research:
+
     if request.args.get("reference"):
         reference = request.args.get("reference")
-        
+        print(reference)
     return render_template("result.html")
