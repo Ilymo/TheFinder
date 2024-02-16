@@ -406,7 +406,7 @@ select.round:focus {
 .card:hover{
   border-radius: 50px;
 
-  animation: tilt-shaking .7s ease-in-out forwards;
+  animation:tilt .4s ease-in-out forwards;
 
 }
 
@@ -419,11 +419,12 @@ select.round:focus {
   }
 }
 
-@keyframes tilt-shaking {
+@keyframes tilt {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(2deg); }
   50% { transform: rotate(0eg); }
   75% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg)
+          transform: scale(1.1); }
 }
 
