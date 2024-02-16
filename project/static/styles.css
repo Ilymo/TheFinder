@@ -340,6 +340,16 @@ select.round:focus {
   color: white;
 }
 
+.card-tags{
+  border: 1px solid purple;
+  grid-column: 3 / 6;
+  grid-row: 2;
+  justify-content: center;
+  align-self: center;
+  font-size: 130%;
+  color: white;
+}
+
 
 
 
