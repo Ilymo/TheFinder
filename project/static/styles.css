@@ -312,7 +312,7 @@ select.round:focus {
   grid-auto-rows: minmax(100px, auto);
   justify-content: center;
   width: 620px;
-  height: 440px;
+  height: 400px;
   border-radius: 50px;
   margin: 2rem;
   box-shadow:  5px 5px 10px #FF6363,
