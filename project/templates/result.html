@@ -8,15 +8,15 @@
             <span class="text">Home</span>
         </button>
     </form>
-        <button onclick="history.back()" style="min-width: 140px">
-            <span class="text">Back</span>
-        </button>
+    <button onclick="history.back()" style="min-width: 140px">
+        <span class="text">Back</span>
+    </button>
 </section>
 
 <!--test-->
-<div class="wrapper">
-    {% for movie in movie %}
+<div class="container">
     <div class="cards">
+        {% for movie in movie %}
         <div class="card" style="background-image: url({{movie.Poster_Url}});">
             <div class="colour"></div>
             <div class="card-text">
@@ -25,8 +25,8 @@
             </div>
             <div class="colour-bottom"></div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 
 
 

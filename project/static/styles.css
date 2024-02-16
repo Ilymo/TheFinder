@@ -301,15 +301,15 @@ select.round:focus {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .card {
     overflow: hidden;
     text-align: center;
     position: relative;
-    width: 284px;
-    height: 427px;
+    width: 220px;
+    height: 440px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -333,9 +333,10 @@ select.round:focus {
 }
 @keyframes large {
     100% {
-        transform: scale(.9);
+        transform: scale(1.2);
         box-shadow:  10px 10px 20px #FF6363,
                 -10px -10px 20px #FF6363;
+        backdrop-filter: blur(10px);
     }
 }
 .card:hover .card-text{
