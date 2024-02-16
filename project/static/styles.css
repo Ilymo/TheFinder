@@ -316,20 +316,19 @@ select.round:focus {
               -5px -5px 10px #FF6363;
   border: 1px solid yellow;
 }
-.card-poster{
-  justify-content: flex-start;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-radius: 50px;
-  border: 1px solid red;
+.card:hover{
+  border-radius: 50px;
+
+  animation: large .7s ease-in-out forwards;
 }
-.card-text {
-    opacity: 1;
-    position: relative;
-    text-align: flex-end;
-    top: 80px;
-    font-size: 120%;
-    color: white;
+@keyframes large {
+  100% {
+      transform: scale(1.1);
+      box-shadow:  2px 2px 4px #FF6363,
+              -2px -2px 4px #FF6363;
+      -webkit-filter: blur(1px);
+
+  }
 }
 
 
