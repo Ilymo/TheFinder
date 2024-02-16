@@ -2,7 +2,6 @@
 body
 {
     background-color: rgb(5, 6, 45) ;
-
     font-family: Courier;
 
 }
@@ -11,6 +10,10 @@ h1{
   border: 1px solid #FF6363;
   font-size: 3em;
   color: #FF6363;
+}
+
+h3 {
+  color: #FF6363
 }
 
 
