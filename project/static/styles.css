@@ -308,7 +308,7 @@ select.round:focus {
   text-align: center;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(100px, auto);
   justify-content: center;
   width: 620px;
@@ -322,7 +322,7 @@ select.round:focus {
 
 .card-poster{
   border: 1px solid red;
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
   grid-row: 1;
 }
 
