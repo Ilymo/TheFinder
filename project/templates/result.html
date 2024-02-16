@@ -22,7 +22,7 @@
         {% for movie in movie %}
         <div class="card">
             <div class="card-poster" style="background-image:url({{movie.Poster_Url}})"></div>
-            <div class="card-layer"></div>
+            <div class="card-layer"><b>{{movie.Title}}</b></div>
             <div class="card-title"><b>{{movie.Title}}</b></div>
             <div class="card-tags"><b><u>Genre</u>:</b><i>{{movie.Genre}}</i></div>
             <div class="card-rate"><b><u>Rate</u>:</b>{{movie.Vote_Average}}/10</div>

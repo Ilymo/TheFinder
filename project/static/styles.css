@@ -383,12 +383,16 @@ select.round:focus {
 }
 
 .card-layer{
-  border: 1px solid green;
   grid-column: 3 / 6;
   grid-row: 1 / 8;
-  front-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(5, 6, 45);
+  font-site: 130%;
+  color: white;
   opacity: 1;
-
+  z-index: 1;
 }
 
 .card:hover .card-layer{
