@@ -322,7 +322,7 @@ select.round:focus {
 
 .card-poster{
   border: 1px solid red;
-  grid-column: 1;
+  grid-column: 1 / 2;
   grid-row: 1;
 }
 
