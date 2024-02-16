@@ -301,25 +301,27 @@ select.round:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 }
 .card {
   overflow: hidden;
   text-align: center;
   position: relative;
+  display: flex;
   width: 620px;
   height: 440px;
   border-radius: 50px;
+  margin: 2rem;
+  box-shadow:  5px 5px 10px #FF6363,
+              -5px -5px 10px #FF6363;
+  border: 1px solid yellow;
 }
 .card-poster{
-  background-position: flex-start;
+  justify-content: flex-start;
   background-repeat: no-repeat;
   background-size: contain;
   background-radius: 50px;
-  border-radius: 50px;
-  box-shadow:  5px 5px 10px #FF6363,
-              -5px -5px 10px #FF6363;
-
-  margin: 2rem;
+  border: 1px solid red;
 }
 .card-text {
     opacity: 1;
@@ -327,6 +329,7 @@ select.round:focus {
     text-align: flex-end;
     top: 80px;
     font-size: 120%;
+    color: white;
 }
 
 
