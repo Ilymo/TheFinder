@@ -305,9 +305,12 @@ select.round:focus {
 .card {
   overflow: hidden;
   text-align: center;
-  position: grid;
+  position: relative;
   width: 620px;
   height: 440px;
+  border-radius: 50px;
+}
+.card-poster{
   background-position: flex-start;
   background-repeat: no-repeat;
   background-size: contain;
