@@ -307,7 +307,10 @@ select.round:focus {
   overflow: hidden;
   text-align: center;
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  justify-content: center;
   width: 620px;
   height: 440px;
   border-radius: 50px;
@@ -318,7 +321,9 @@ select.round:focus {
 }
 
 .card-poster{
-  
+  border: 1px solid red;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 
