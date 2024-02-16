@@ -332,7 +332,6 @@ select.round:focus {
   grid-column: 3 / 6;
   grid-row: 1 / 8;
   padding: 10px;
-  border: 5px solid green;
 }
 
 .card-title{
@@ -363,7 +362,7 @@ select.round:focus {
   color: white;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: end;
 }
 
 
