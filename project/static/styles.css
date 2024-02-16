@@ -301,7 +301,6 @@ select.round:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
 }
 .card {
   overflow: hidden;
@@ -361,16 +360,26 @@ select.round:focus {
   padding: 5px;
 }
 
-.card-overview{
+.card-date{
   grid-column: 3 / 6;
-  grid-row: 3 / 8;
+  grid-row: 2;
   font-size: 80%;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: end;
   padding: 5px;
-  border: 1px solid red;
+}
+
+.card-overview{
+  grid-column: 3 / 6;
+  grid-row: 4 / 8;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 5px;
 }
 
 
