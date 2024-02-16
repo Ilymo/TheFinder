@@ -336,7 +336,8 @@ select.round:focus {
         transform: scale(1.2);
         box-shadow:  2px 2px 4px #FF6363,
                 -2px -2px 4px #FF6363;
-        
+        -webkit-filter: blur(1px);
+
     }
 }
 .card:hover .card-text{
