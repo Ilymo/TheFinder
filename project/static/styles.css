@@ -287,13 +287,50 @@ select.round:focus {
   transform: translateX(0%);
 }
 
+/* card perso test*/
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  overflow: hidden;
+  text-align: center;
+  position: grid;
+  width: 620px;
+  height: 440px;
+  background-position: flex-start;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-radius: 50px;
+  border-radius: 50px;
+  box-shadow:  5px 5px 10px #FF6363,
+              -5px -5px 10px #FF6363;
 
+  margin: 2rem;
+}
+.card-text {
+    opacity: 1;
+    position: relative;
+    text-align: flex-end;
+    top: 80px;
+    font-size: 120%;
+}
 
 
 
 
 /*test*/
-.container{
+/*.container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -311,11 +348,12 @@ select.round:focus {
     overflow: hidden;
     text-align: center;
     position: relative;
-    width: 600px;
+    width: 620px;
     height: 440px;
-    background-position: center;
+    background-position: flex-start;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-radius: 50px;
     border-radius: 50px;
     box-shadow:  5px 5px 10px #FF6363,
                 -5px -5px 10px #FF6363;
@@ -336,7 +374,7 @@ select.round:focus {
 }
 @keyframes large {
     100% {
-        transform: scale(1.2);
+        transform: scale(1.1);
         box-shadow:  2px 2px 4px #FF6363,
                 -2px -2px 4px #FF6363;
         -webkit-filter: blur(1px);
