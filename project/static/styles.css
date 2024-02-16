@@ -406,7 +406,7 @@ select.round:focus {
 .card:hover{
   border-radius: 50px;
 
-  animation:tilt .4s ease-in-out forwards;
+  animation:tilt .2s, large 0.3s ease-out forwards;
 
 }
 
