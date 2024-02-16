@@ -328,12 +328,6 @@ select.round:focus {
   border-radius: 50px;
 }
 
-.card-info{
-  grid-column: 3 / 6;
-  grid-row: 1 / 8;
-  padding: 10px;
-}
-
 .card-title{
   grid-column: 3 / 6;
   grid-row: 1;
@@ -351,8 +345,9 @@ select.round:focus {
   font-size: 80%;
   color: white;
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: start;
+  padding: 5px;
 }
 
 .card-rate{
@@ -363,6 +358,7 @@ select.round:focus {
   display: flex;
   justify-content: flex-start;
   align-items: end;
+  padding: 5px;
 }
 
 
