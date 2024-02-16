@@ -407,13 +407,14 @@ select.round:focus {
 
   animation: large .7s ease-in-out forwards;
 }
+
+
 @keyframes large {
   100% {
       transform: scale(1.1);
       box-shadow:  2px 2px 4px #FF6363,
               -2px -2px 4px #FF6363;
-              transform: rotate(45deg)
-      /*-webkit-filter: blur(1px);
+      transform: rotate(deg);
 
   }
 }
