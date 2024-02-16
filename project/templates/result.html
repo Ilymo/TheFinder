@@ -18,7 +18,8 @@
     <div class="cards">
         {% for movie in movie %}
         <div class="card">
-            <div class="card-poster" style="background-image:{{movie.Poster_Url}}"></div>
+            <div class="card-poster" style="background-image:url({{movie.Poster_Url}})"></div>
+            <div class="card-title">{{movie.Title}}</div>
         </div>
         {% endfor %}
     </div>
