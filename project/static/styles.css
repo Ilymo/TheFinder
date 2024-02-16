@@ -334,9 +334,9 @@ select.round:focus {
 @keyframes large {
     100% {
         transform: scale(1.2);
-        box-shadow:  10px 10px 20px #FF6363,
-                -10px -10px 20px #FF6363;
-        backdrop-filter: blur(10px);
+        box-shadow:  2px 2px 4px #FF6363,
+                -2px -2px 4px #FF6363;
+        
     }
 }
 .card:hover .card-text{
