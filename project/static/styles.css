@@ -294,6 +294,7 @@ select.round:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white
 }
 .cards {
   width: 100%;
@@ -301,6 +302,7 @@ select.round:focus {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  border: 1px solid yellow
 }
 .card {
   overflow: hidden;
