@@ -2,6 +2,7 @@
 body
 {
     background-color: rgb(5, 6, 45) ;
+    color: #FF6363;
     font-family: Courier;
 
 }
@@ -9,11 +10,6 @@ body
 h1{
   border: 1px solid #FF6363;
   font-size: 3em;
-  color: #FF6363;
-}
-
-h3 {
-  color: #FF6363
 }
 
 
@@ -293,6 +289,9 @@ select.round:focus {
 
 
 
+
+
+
 /*test*/
 .container{
     width: 100%;
@@ -312,7 +311,7 @@ select.round:focus {
     overflow: hidden;
     text-align: center;
     position: relative;
-    width: 220px;
+    width: 600px;
     height: 440px;
     background-position: center;
     background-repeat: no-repeat;
@@ -329,15 +328,6 @@ select.round:focus {
     position: relative;
     top: 80px;
     font-size: 120%;
-    font-color: white;
-}
-
-.card-title {
-  opacity: 1;
-  position: relative;
-  top: 10px;
-  font-size: 140%;
-  font-color: #FFF;
 }
 .card:hover{
     border-radius: 50px;
