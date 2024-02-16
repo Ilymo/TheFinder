@@ -11,13 +11,14 @@
     <button onclick="history.back()" style="min-width: 140px">
         <span class="text">Back</span>
     </button>
-    <button onClick="history.go(0);" style="position: relative; justify-content: center">
-        <span class="text">Give me 10 other !</span>
-    </button>
 </section>
+
 
 <!--test-->
 <div class="container">
+    <button onClick="history.go(0);" style="position: relative">
+        <span class="text">Give me 10 other !</span>
+    </button>
     <div class="cards">
         {% for movie in movie %}
         <div class="card">
