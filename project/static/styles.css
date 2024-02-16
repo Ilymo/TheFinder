@@ -20,7 +20,6 @@ h1{
   grid-auto-rows: minmax(100px, auto);
   justify-content: center;
   padding-top: 20px;
-  border: 1px solid white;
 }
 
 .left {
@@ -42,7 +41,6 @@ h1{
   text-align: center;
   grid-column: 2;
   grid-row: 1 / 5;
-  border: 1px solid red;
 }
 
 .center {
@@ -52,16 +50,14 @@ h1{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 1px solid green;
   }
 
 .bottom{
   position: relative;
   width: 280px;
   left: 50%;
-
-    transform: translate(-50%, -50%);
-  border: 1px solid yellow;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
 }
 
 
