@@ -386,7 +386,7 @@ select.round:focus {
   border: 1px solid green;
   grid-column: 3 / 6;
   grid-row: 1 / 8;
-  background-color: white;
+  background-color: black;
   opacity: 1;
 
 }
