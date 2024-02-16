@@ -17,18 +17,20 @@
 <div class="container">
     <div class="cards">
         {% for movie in movie %}
-        <div class="card" style="background-image: url({{movie.Poster_Url}});">
-            <div class="card-title" style="font-color: white">
+        <div class="card">
+            <div class="poster"  style="background-image: url({{movie.Poster_Url}});">
+                <div class="card-title" style="font-color: white">
                 <h4>{{movie.Title}}</h4>
+                </div>
             </div>
             <div class="card-text">
                 <h3>Tanjiro</h3>
                 <p>{{movie.Overview}}</p>
             </div>
-            <div class="colour-bottom"></div>
         </div>
-        {% endfor %}
     </div>
+        {% endfor %}
+</div>
 
 
 
