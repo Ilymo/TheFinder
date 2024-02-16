@@ -345,7 +345,7 @@ select.round:focus {
   font-size: 80%;
   color: white;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: start;
   padding: 5px;
 }
@@ -359,6 +359,18 @@ select.round:focus {
   justify-content: flex-start;
   align-items: end;
   padding: 5px;
+}
+
+.card-overview{
+  grid-column: 3 / 6;
+  grid-row: 3 / 8;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid red;
 }
 
 
