@@ -317,7 +317,6 @@ select.round:focus {
   margin: 2rem;
   box-shadow:  5px 5px 10px #FF6363,
               -5px -5px 10px #FF6363;
-  border: 1px solid yellow;
 }
 
 .card-poster{
@@ -329,10 +328,18 @@ select.round:focus {
   border-radius: 50px;
 }
 
+.card-info{
+  grid-column: 3 / 6;
+  grid-row: 1 / 8;
+  padding: 10px;
+  border: 5px solid green;
+}
+
 .card-title{
   grid-column: 3 / 6;
   grid-row: 1;
   font-size: 130%;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
