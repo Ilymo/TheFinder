@@ -384,7 +384,14 @@ select.round:focus {
 
 .card-layer{
   border: 1px solid green;
-  
+  grid-column: 3 / 6;
+  grid-row: 1 / 8;
+  background-color: white;
+  opacity: 1;
+}
+
+.card:hover .card-layer{
+  opacity: 0;
 }
 
 
