@@ -15,10 +15,12 @@
 
 
 <!--test-->
-<div class="container">
-    <button onClick="history.go(0);" style="position: relative; align-items: start">
+<div style="display flex; justify-content: center; align-items: start; border: 1px solid red">
+    <button onClick="history.go(0);">
         <span class="text">Give me 10 other !</span>
     </button>
+</div>
+<div class="container">
     <div class="cards">
         {% for movie in movie %}
         <div class="card">
