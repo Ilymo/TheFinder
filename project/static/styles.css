@@ -315,12 +315,14 @@ select.round:focus {
   box-shadow:  5px 5px 10px #FF6363,
               -5px -5px 10px #FF6363;
   border: 1px solid yellow;
-  transition: all 0.7s ease-in-out;
 }
 .card:hover{
   border-radius: 50px;
 
   animation: large .7s ease-in-out forwards;
+}
+.card:hover:after {
+  animation: .7s ease-in-out forwards;
 }
 @keyframes large {
   100% {
