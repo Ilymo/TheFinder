@@ -287,22 +287,14 @@ select.round:focus {
   transform: translateX(0%);
 }
 
-/* card perso test*/
-.container{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white
-}
+/* card perso*/
 .cards {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow
 }
 .card {
   overflow: hidden;

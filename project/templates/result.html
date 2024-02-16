@@ -18,24 +18,22 @@
     </button>
 </div>
 
-
-<!--test-->
-
-<div class="container">
-    <div class="cards">
-        {% for movie in movie %}
-        <div class="card">
-            <div class="card-poster" style="background-image:url({{movie.Poster_Url}})"></div>
-            <div class="card-layer" style="font-size: 200%"><b>{{movie.Title}}</b></div>
-            <div class="card-title"><b>{{movie.Title}}</b></div>
-            <div class="card-tags"><b><u>Genre</u>:</b><i>{{movie.Genre}}</i></div>
-            <div class="card-rate"><b><u>Rate</u>:</b>{{movie.Vote_Average}}/10</div>
-            <div class="card-date"><b><u>Date</u>:</b>{{movie.Release_Date}}/10</div>
-            <div class="card-overview"><b><u>Overview</u>:</b>{{movie.Overview}}</div>
-        </div>
-        {% endfor %}
+<div class="cards">
+    {% for movie in movie %}
+    <div class="card">
+        <div class="card-poster" style="background-image:url({{movie.Poster_Url}})"></div>
+        <div class="card-layer" style="font-size: 200%"><b>{{movie.Title}}</b></div>
+        <div class="card-title"><b>{{movie.Title}}</b></div>
+        <div class="card-tags"><b><u>Genre</u>:</b><i>{{movie.Genre}}</i></div>
+        <div class="card-rate"><b><u>Rate</u>:</b>{{movie.Vote_Average}}/10</div>
+        <div class="card-date"><b><u>Date</u>:</b>{{movie.Release_Date}}/10</div>
+        <div class="card-overview"><b><u>Overview</u>:</b>{{movie.Overview}}</div>
     </div>
+    {% endfor %}
 </div>
-
-
+<div class="center" style="top: 50%">
+    <button onClick="history.go(0);">
+        <span class="text">Give me 10 other !</span>
+    </button>
+</div>
 {% endblock %}
