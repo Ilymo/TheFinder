@@ -326,7 +326,7 @@ select.round:focus {
   grid-row: 1;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 268px;
+  background-size: 250px;
   border-radius: 10px;
 }
 
@@ -352,7 +352,7 @@ select.round:focus {
       transform: scale(1.1);
       box-shadow:  2px 2px 4px #FF6363,
               -2px -2px 4px #FF6363;
-      -webkit-filter: blur(1px);
+      /*-webkit-filter: blur(1px);
 
   }
 }
