@@ -406,6 +406,7 @@ select.round:focus {
   border-radius: 50px;
 
   animation: large .7s ease-in-out forwards;
+  animation: tilt-shaking 0.3s ease-in-out forwards;
 }
 
 
@@ -414,10 +415,16 @@ select.round:focus {
       transform: scale(1.1);
       box-shadow:  2px 2px 4px #FF6363,
               -2px -2px 4px #FF6363;
-      transform: rotate(deg);
+
 
   }
 }
 
-
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
 
