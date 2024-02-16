@@ -335,6 +335,9 @@ select.round:focus {
   grid-column: 3 / 6;
   grid-row: 1;
   font-size: 130%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
@@ -342,9 +345,11 @@ select.round:focus {
   border: 1px solid purple;
   grid-column: 3 / 6;
   grid-row: 2;
-
   font-size: 80%;
   color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
 }
 
 
