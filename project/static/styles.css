@@ -326,7 +326,7 @@ select.round:focus {
   grid-row: 1;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 268px;
   border-radius: 10px;
 }
 
