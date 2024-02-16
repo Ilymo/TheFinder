@@ -325,6 +325,15 @@ select.round:focus {
     position: relative;
     top: 80px;
     font-size: 120%;
+    font-color: white;
+}
+
+.card-title {
+  opacity: 1;
+  position: relative;
+  top: 10px;
+  font-size: 140%;
+  font-color: #FFF;
 }
 .card:hover{
     border-radius: 50px;
