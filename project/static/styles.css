@@ -382,6 +382,7 @@ select.round:focus {
   justify-content: flex-start;
   align-items: start;
   padding: 5px;
+  flex-wrap: wrap;
 }
 
 .card-layer{
@@ -405,8 +406,8 @@ select.round:focus {
 .card:hover{
   border-radius: 50px;
 
-  animation: large .7s ease-in-out forwards;
-  animation: tilt-shaking 0.3s ease-in-out forwards;
+  animation: tilt-shaking .7s ease-in-out forwards;
+
 }
 
 
@@ -415,8 +416,6 @@ select.round:focus {
       transform: scale(1.1);
       box-shadow:  2px 2px 4px #FF6363,
               -2px -2px 4px #FF6363;
-
-
   }
 }
 
