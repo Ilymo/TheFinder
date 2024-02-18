@@ -313,8 +313,8 @@ select.round:focus {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
-  width: 310px;
-  height: 200px;
+  width: 620px;
+  height: 400px;
   border-radius: 50px;
   margin: 2rem;
   box-shadow:  5px 5px 30px #FF6363,
@@ -427,7 +427,7 @@ select.round:focus {
 
 @keyframes large {
   100% {
-      transform: scale(2.5);
+      transform: scale(1.5);
       box-shadow:  2px 2px 4px #FF6363,
               -2px -2px 4px #FF6363;
       z-index: 2;
@@ -439,7 +439,6 @@ select.round:focus {
   25% { transform: rotate(2deg); }
   50% { transform: rotate(0eg); }
   75% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg)
-          transform: scale(1.1); }
+  100% { transform: rotate(0deg)}
 }
 
