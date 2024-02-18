@@ -395,11 +395,13 @@ select.round:focus {
   color: white;
   opacity: 1;
   z-index: 1;
+  visibility: show;
 }
 
 .card:hover .card-layer{
   opacity: 0;
   transition: opacity 0.2s ease-in;
+  visibility: hidden;
 }
 
 
