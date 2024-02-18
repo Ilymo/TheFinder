@@ -376,7 +376,7 @@ select.round:focus {
 .card-overview{
   grid-column: 3 / 6;
   grid-row: 4 / 8;
-  font-size: clamp(6px, 4vw, 12px);
+  font-size: 80%;
   color: white;
   display: flex;
   justify-content: flex-start;
