@@ -362,6 +362,17 @@ select.round:focus {
   padding: 5px;
 }
 
+.card-pop{
+  grid-column: 3 / 6;
+  grid-row: 3;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 5px;
+}
+
 .card-date{
   grid-column: 3 / 6;
   grid-row: 2;
