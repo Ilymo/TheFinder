@@ -316,8 +316,8 @@ select.round:focus {
   height: 400px;
   border-radius: 50px;
   margin: 2rem;
-  box-shadow:  5px 5px 20px #cd406a,
-              -2px -2px 5px #FF6363;
+  box-shadow:  5px 5px 30px #FF6363,
+              -2px -2px 5px #cd406a;
 }
 
 .card-poster{
