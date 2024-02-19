@@ -7,7 +7,7 @@ MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentar
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
 ANIME_TAGS = ["Action", "Adventure", "Avant Garde", "Award Winning", "Boys Love", "Comedy", "Drama", "Ecchi", "Fantasy",
-              "Girls Love", "Gourmet", "Horror", "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Suspense"]
+              "Girls Love", "Gourmet", "Horror", "Hentai", "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Suspense"]
 
 # Configure application
 app = Flask(__name__)
@@ -112,7 +112,7 @@ def animeresult():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        anime = db.execute("SELECT * FROM anime WHERE Premiered LIKE ? AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? AND Rating != 'Rx - Hentai' ORDER BY RANDOM() LIMIT 10",
+        anime = db.execute("SELECT * FROM anime WHERE Premiered LIKE ? AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                            (f'%{year}%'), rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
         # if no result:
