@@ -114,7 +114,7 @@ def result():
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
         anime = db.execute("SELECT * FROM anime WHERE Premiered >= ? AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
-                           ((f'%{year}%'), rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
+                           ((f'%{year}%'), rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%')))
 
         # if no result:
         if not movie:
