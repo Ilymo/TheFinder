@@ -23,7 +23,8 @@ Girls Love,
 Sports,
 Suspense,
 Gourmet,
-Slice of Life,]
+Slice of Life,
+Ecchi]
 
 # Configure application
 app = Flask(__name__)
