@@ -22,12 +22,14 @@ def index():
 def movie():
     title = conn.execute("SELECT Title FROM movies")
     return render_template("movie.html", tags=MOVIE_TAGS, title=title)
+conn.close()
 
 
 @app.route("/anime.html")
 def anime():
     name = conn.execute("SELECT Name FROM anime")
     return render_template("anime.html", tags=ANIME_TAGS, name=name)
+conn.close()
 
 
 @app.route("/movieresult.html")
