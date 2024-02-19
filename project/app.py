@@ -7,7 +7,7 @@ MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentar
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
 ANIME_TAGS = ["Action", "Adventure", "Avant Garde", "Award Winning", "Boys Love", "Comedy", "Drama", "Ecchi", "Fantasy",
-              "Girls Love", "Gourmet", "Horror", "Hentai", "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Suspense"]
+              "Girls Love", "Gourmet", "Horror", "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Suspense"]
 
 # Configure application
 app = Flask(__name__)
