@@ -6,12 +6,9 @@ from flask import Flask, flash, redirect, render_template, request
 MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
-ANIME_TAGS = [Action,
-Adventure,
-Comedy,
-Drama,
-Avant Garde,
-Award Winning,
+ANIME_TAGS = ["Action", "Adventure", "Avant Garde", "Award Winning", "Comedy", "Drama",
+,
+
 Mystery,
 Horror,
 Boys Love,
