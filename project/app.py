@@ -29,14 +29,82 @@ def movie():
 
 @app.route("/anime.html")
 def anime():
-    return render_template("anime.html")
+    title = db.execute("SELECT Title FROM anime")
+    return render_template("anime.html", tags=ANIME_TAGS, title=title)
 
 
 @app.route("/result.html")
 def result():
+###### MOVIE SEARCH
 ##### For tag research:
     # Check if input
     if request.args.get("tag1") in MOVIE_TAGS and request.args.get("year") and request.args.get("rate"):
+
+        # Get tag, year and rate from input
+        tag1 = request.args.get("tag1")
+        tag2 = request.args.get("tag2")
+        tag3 = request.args.get("tag3")
+        year = request.args.get("year")
+        rate = request.args.get("rate")
+        # Sqlite query with tag1, tag2, tag3, year, rate
+        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                           year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
+
+        # if no result:
+        if not movie:
+            return render_template("noresult.html")
+        # if result
+        return render_template("result.html", movie=movie)
+
+##### For reference research:
+    elif request.args.get("reference"):
+
+        # Get reference
+        reference = request.args.get("reference")
+        print(reference)
+        # Get tags from reference
+        tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
+        print(tags)
+
+        # get year and rate from input
+        year = request.args.get("year")
+        rate = request.args.get("rate")
+
+        # split tags into list and remove ","
+        unique_tag = str.split(tags[0]["Genre"].replace(",", ""))
+
+        # count nb of tags
+        tag_nb = len(unique_tag)
+
+        # sqlite query depending on tag_nb
+        if tag_nb >= 3:
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
+
+        elif tag_nb == 2:
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
+
+        elif tag_nb == 1:
+            tag1 = unique_tag[0].replace(",", "")
+            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%'))
+
+        # if no result
+        if not movie:
+            return render_template("noresult.html")
+        # if result
+        return render_template("result.html", movie=movie)
+
+    # if no input
+    return render_template("noresult.html")
+
+
+
+#### ANIME SEARCH
+##### For tag research:
+    # Check if input
+    if request.args.get("tag1") in ANIME_TAGS and request.args.get("year") and request.args.get("rate"):
 
         # Get tag, year and rate from input
         tag1 = request.args.get("tag1")
