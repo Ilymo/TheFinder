@@ -34,7 +34,7 @@ def anime():
 
 
 @app.route("/movieresult.html")
-def result():
+def movieresult():
 ###### MOVIE SEARCH
 ##### For tag research:
     # Check if input
@@ -101,7 +101,7 @@ def result():
 
 
 @app.route("/animeresult.html")
-def result():
+def animeresult():
 #### ANIME SEARCH
 ##### For tag research:
     # Check if input
