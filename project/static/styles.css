@@ -397,7 +397,7 @@ select.round:focus {
   padding: 5px;
 }
 
-.card-periode{
+.card-status{
   grid-column: 3 / 6;
   grid-row: 3;
   font-size: 80%;
@@ -408,6 +408,16 @@ select.round:focus {
   padding: 5px;
 }
 
+.card-period{
+  grid-column: 3 / 6;
+  grid-row: 3;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  padding: 5px;
+}
 
 .card-overview{
   grid-column: 3 / 6;
