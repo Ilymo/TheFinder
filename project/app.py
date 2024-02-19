@@ -126,40 +126,38 @@ def animeresult():
 
         # Get reference
         reference = request.args.get("reference")
-        print(reference)
         # Get tags from reference
         tags = db.execute("SELECT Genres FROM anime WHERE Name LIKE ?", reference)
-        print(tags)
 
         # get year and rate from input
         year = request.args.get("year")
         rate = request.args.get("rate")
 
         # split tags into list and remove ","
-        unique_tag = str.split(tags[0]["Genre"].replace(",", ""))
+        unique_tag = str.split(tags[0]["Genres"].replace(",", ""))
 
         # count nb of tags
         tag_nb = len(unique_tag)
 
         # sqlite query depending on tag_nb
         if tag_nb >= 3:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
+            anime = db.execute("SELECT * FROM anime WHERE Name != ? AND Premiered LIKE ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, (f'%{year}%'), rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
 
         elif tag_nb == 2:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
+            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Premiered LIKE ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, (f'%{year}%'), rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'))
+            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Premiered LIKE ? AND Score >= ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, (f'%{year}%'), rate, (f'%{unique_tag[0]}%'))
 
         # if no result
-        if not movie:
+        if not anime:
             return render_template("noresult.html")
         # if result
-        return render_template("result.html", movie=movie)
+        return render_template("result.html", anime=anime)
 
     # if no input
     return render_template("noresult.html")
