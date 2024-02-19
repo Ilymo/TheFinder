@@ -353,6 +353,17 @@ select.round:focus {
   padding: 5px;
 }
 
+.card-studio{
+  grid-column: 3 / 6;
+  grid-row: 2;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: middle;
+  padding: 5px;
+}
+
 .card-rate{
   grid-column: 3 / 6;
   grid-row: 2;
