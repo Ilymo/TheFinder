@@ -10,20 +10,20 @@ ANIME_TAGS = [Action,
 Adventure,
 Comedy,
 Drama,
-Avant
-Award
+Avant Garde,
+Award Winning,
 Mystery,
 Horror,
-Boys
+Boys Love,
 Fantasy,
-Slice
 Sci-Fi,
 Romance,
 Supernatural,
-Girls
+Girls Love,
 Sports,
 Suspense,
-Gourmet,]
+Gourmet,
+Slice of Life,]
 
 # Configure application
 app = Flask(__name__)
