@@ -3,7 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request
 
-TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
+movie_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
 # Configure application
@@ -33,7 +33,7 @@ def anime():
 def result():
 ##### For tag research:
     # Check if input
-    if request.args.get("tag1") in TAGS and request.args.get("year") and request.args.get("rate"):
+    if request.args.get("tag1") in movie_TAGS and request.args.get("year") and request.args.get("rate"):
 
         # Get tag, year and rate from input
         tag1 = request.args.get("tag1")

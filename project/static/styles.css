@@ -185,7 +185,6 @@ select.round:focus {
   position: relative;
   cursor: pointer;
   padding-left: 15px;
-
 }
 
 .radio-button__input {
@@ -216,7 +215,6 @@ select.round:focus {
   border-radius: 50%;
   border: 2px solid #FF6363;
   transition: all 0.3s ease;
-
 }
 
 .radio-button__input:checked + .radio-button__label .radio-button__custom {
