@@ -3,7 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request
 
-movie_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
+MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
 
 # Configure application
@@ -21,7 +21,7 @@ def index():
 @app.route("/movie.html")
 def movie():
     title = db.execute("SELECT Title FROM movies")
-    return render_template("movie.html", tags=TAGS, title=title)
+    return render_template("movie.html", tags=MOVIE_TAGS, title=title)
 
 
 @app.route("/anime.html")
@@ -33,7 +33,7 @@ def anime():
 def result():
 ##### For tag research:
     # Check if input
-    if request.args.get("tag1") in movie_TAGS and request.args.get("year") and request.args.get("rate"):
+    if request.args.get("tag1") in MOVIE_TAGS and request.args.get("year") and request.args.get("rate"):
 
         # Get tag, year and rate from input
         tag1 = request.args.get("tag1")
