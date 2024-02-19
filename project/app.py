@@ -24,7 +24,8 @@ Sports,
 Suspense,
 Gourmet,
 Slice of Life,
-Ecchi]
+Ecchi
+Hentai]
 
 # Configure application
 app = Flask(__name__)
