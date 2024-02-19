@@ -375,7 +375,7 @@ select.round:focus {
   padding: 5px;
 }
 
-.card-type{
+.card-status{
   grid-column: 3 / 6;
   grid-row: 3;
   font-size: 80%;
