@@ -29,3 +29,6 @@ https://codepen.io/namratapdr/pen/JjXoGxJ (en test)
 
 db movie:
 https://www.kaggle.com/datasets/disham993/9000-movies-dataset
+
+db anime:
+https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset
