@@ -360,7 +360,7 @@ select.round:focus {
   color: white;
   display: flex;
   justify-content: flex-start;
-  align-items: middle;
+  align-items: center;
   padding: 5px;
 }
 
@@ -371,6 +371,17 @@ select.round:focus {
   color: white;
   display: flex;
   justify-content: flex-start;
+  align-items: end;
+  padding: 5px;
+}
+
+.card-date{
+  grid-column: 3 / 6;
+  grid-row: 2;
+  font-size: 80%;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
   align-items: end;
   padding: 5px;
 }
@@ -397,16 +408,6 @@ select.round:focus {
   padding: 5px;
 }
 
-.card-date{
-  grid-column: 3 / 6;
-  grid-row: 2;
-  font-size: 80%;
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-  align-items: end;
-  padding: 5px;
-}
 
 .card-overview{
   grid-column: 3 / 6;
