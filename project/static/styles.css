@@ -403,8 +403,8 @@ select.round:focus {
   font-size: 80%;
   color: white;
   display: flex;
-  justify-content: flex-end;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 5px;
 }
 
