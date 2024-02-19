@@ -111,7 +111,7 @@ def animeresult():
         tag3 = request.args.get("tag3")
         year = request.args.get("year")
         rate = request.args.get("rate")
-        # Sqlite query with tag1, tag2, tag3, year, rate (remove Hentai)
+        # Sqlite query with tag1, tag2, tag3, year, rate
         anime = db.execute("SELECT * FROM anime WHERE Premiered LIKE ? AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? AND Rating != 'Rx - Hentai' ORDER BY RANDOM() LIMIT 10",
                            (f'%{year}%'), rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
