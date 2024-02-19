@@ -9,12 +9,237 @@
         </button>
     </form>
 </section>
-<div class="center">
-    <form action="/result.html">
-        <button>
-            <span class="text">Give me Anime !</span>
-        </button>
-    </form>
+
+
+<div class="wrapper">
+    <div class="middle" style="font-size:180%; text-align:center; color: #FF6363">
+        <p><== Find an Anime with up to 3 tags.</p>
+        <hr>
+        <p> Search an Anime reference and find a similare one. ==></p>
+    </div>
+
+    <!-- form for tag search -->
+    <div class="left">
+        <form action="/result.html">
+            <!-- Choice tag -->
+            <h3>Select up to 3 tags</h3>
+            <select class="round" name="tag1" required>
+                <!-- add value from tag list-->
+                <option disabled selected value="">Tag 1</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
+            </select>
+            <select class="round" name="tag2">
+                <!-- add value from tag list-->
+                <option selected value="">Tag 2</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <select class="round" name="tag3" >
+                <!-- add value from tag list-->
+                <option selected value="">Tag 3</option>
+                {% for tag in tags%}
+                <option value="{{tag}}">{{tag}}</option>
+                {% endfor %}
+            </select>
+
+
+
+            <!-- Choice year-->
+            <h3 style="text-align: center">Periode since :</h3>
+            <div class="radio-button-container" name="year">
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio1" name="year" value="1990" required checked >
+                    <label class="radio-button__label" for="radio1">
+                        <span class="radio-button__custom" ></span>
+                        1990+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio2" name="year" value="2000">
+                    <label class="radio-button__label" for="radio2">
+                        <span class="radio-button__custom" ></span>
+                        2000+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio3" name="year" value="2010">
+                    <label class="radio-button__label" for="radio3">
+                        <span class="radio-button__custom"></span>
+                        2010+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio4" name="year" value="2020">
+                    <label class="radio-button__label" for="radio4">
+                        <span class="radio-button__custom"></span>
+                        2020+
+                    </label>
+                </div>
+            </div>
+
+
+            <!-- Choice rating-->
+
+            <h3 style="text-align: center">Rating :</h3>
+            <div class="radio-button-container" id="rate">
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio5" name="rate" value="0" required checked>
+                    <label class="radio-button__label" for="radio5">
+                        <span class="radio-button__custom"></span>
+                        0+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio6" name="rate" value="2">
+                    <label class="radio-button__label" for="radio6">
+                        <span class="radio-button__custom"></span>
+                        2+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio7" name="rate" value="4">
+                    <label class="radio-button__label" for="radio7">
+                        <span class="radio-button__custom"></span>
+                        4+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio8" name="rate" value="6">
+                    <label class="radio-button__label" for="radio8">
+                        <span class="radio-button__custom"></span>
+                        6+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio9" name="rate" value="8">
+                    <label class="radio-button__label" for="radio9">
+                        <span class="radio-button__custom"></span>
+                        8+
+                    </label>
+                </div>
+            </div>
+
+            <div class="center" style="top: 90%">
+                <button>
+                    <span class="text">Give me Movies !</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <!-- form for reference search -->
+    <div class="right" style="padding-top: 20px">
+        <form action="/result.html">
+
+            <div class="form">
+                <input list="movie" type="text" name="reference" autocomplete="off" required/>
+                <label for="reference" class="label-name" style="color: #FF6363">
+                    <span class="content-name">
+                        Movie reference :
+                    </span>
+                </label>
+                <datalist id="movie">
+                    <!-- add value from movie db-->
+                    {% for title in title %}
+                    <option value="{{title.Title}}">
+                    {% endfor %}
+                </datalist>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <!-- Choice year-->
+            <h3 style="text-align: center">Periode since :</h3>
+            <div class="radio-button-container" name="year">
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio10" name="year" value="1990" required
+                        checked>
+                    <label class="radio-button__label" for="radio10">
+                        <span class="radio-button__custom"></span>
+                        1990+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio11" name="year" value="2000">
+                    <label class="radio-button__label" for="radio11">
+                        <span class="radio-button__custom"></span>
+                        2000+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio12" name="year" value="2010">
+                    <label class="radio-button__label" for="radio12">
+                        <span class="radio-button__custom"></span>
+                        2010+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio13" name="year" value="2020" >
+                    <label class="radio-button__label" for="radio13" >
+                        <span class="radio-button__custom"></span>
+                        2020+
+                    </label>
+                </div>
+            </div>
+
+            <!-- Choice rating-->
+
+            <h3 style="text-align: center">Rating :</h3>
+            <div class="radio-button-container" id="rate">
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio14" name="rate" value="0" required checked>
+                    <label class="radio-button__label" for="radio14">
+                        <span class="radio-button__custom"></span>
+                        0+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio15" name="rate" value="2">
+                    <label class="radio-button__label" for="radio15">
+                        <span class="radio-button__custom"></span>
+                        2+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio16" name="rate" value="4">
+                    <label class="radio-button__label" for="radio16">
+                        <span class="radio-button__custom"></span>
+                        4+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio17" name="rate" value="6">
+                    <label class="radio-button__label" for="radio17">
+                        <span class="radio-button__custom"></span>
+                        6+
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" class="radio-button__input" id="radio18" name="rate" value="8">
+                    <label class="radio-button__label" for="radio18">
+                        <span class="radio-button__custom"></span>
+                        8+
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="center" style="top: 90%">
+                <button>
+                    <span class="text">Give me Movies !</span>
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
+
 
 {% endblock %}
