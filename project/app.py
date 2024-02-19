@@ -33,7 +33,7 @@ def anime():
     return render_template("anime.html", tags=ANIME_TAGS, name=name)
 
 
-@app.route("/result.html")
+@app.route("/movieresult.html")
 def result():
 ###### MOVIE SEARCH
 ##### For tag research:
@@ -100,7 +100,8 @@ def result():
     return render_template("noresult.html")
 
 
-
+@app.route("/animeresult.html")
+def result():
 #### ANIME SEARCH
 ##### For tag research:
     # Check if input
