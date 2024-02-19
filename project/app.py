@@ -61,10 +61,8 @@ def movieresult():
 
         # Get reference
         reference = request.args.get("reference")
-        print(reference)
         # Get tags from reference
         tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
-        print(tags)
 
         # get year and rate from input
         year = request.args.get("year")
@@ -130,7 +128,7 @@ def animeresult():
         reference = request.args.get("reference")
         print(reference)
         # Get tags from reference
-        tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
+        tags = db.execute("SELECT Genres FROM anime WHERE Title LIKE ?", reference)
         print(tags)
 
         # get year and rate from input
