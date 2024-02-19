@@ -1,5 +1,4 @@
-
-from cs50 import SQL
+import sqlite3
 from flask import Flask, flash, redirect, render_template, request
 
 MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
@@ -12,8 +11,7 @@ ANIME_TAGS = ["Action", "Adventure", "Avant Garde", "Award Winning", "Boys Love"
 app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///media.db")
-
+conn = sqlite3.connect('media.db')
 
 @app.route("/")
 def index():
@@ -22,13 +20,13 @@ def index():
 
 @app.route("/movie.html")
 def movie():
-    title = db.execute("SELECT Title FROM movies")
+    title = conn.execute("SELECT Title FROM movies")
     return render_template("movie.html", tags=MOVIE_TAGS, title=title)
 
 
 @app.route("/anime.html")
 def anime():
-    name = db.execute("SELECT Name FROM anime")
+    name = conn.execute("SELECT Name FROM anime")
     return render_template("anime.html", tags=ANIME_TAGS, name=name)
 
 
@@ -46,7 +44,7 @@ def movieresult():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+        movie = conn.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                            year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
         # if no result:
@@ -61,7 +59,7 @@ def movieresult():
         # Get reference
         reference = request.args.get("reference")
         # Get tags from reference
-        tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
+        tags = conn.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
 
         # get year and rate from input
         year = request.args.get("year")
@@ -75,16 +73,16 @@ def movieresult():
 
         # sqlite query depending on tag_nb
         if tag_nb >= 3:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
 
         elif tag_nb == 2:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'))
 
         # if no result
@@ -111,7 +109,7 @@ def animeresult():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        anime = db.execute("SELECT * FROM anime WHERE Date >= ? AND Type = 'TV' AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+        anime = conn.execute("SELECT * FROM anime WHERE Date >= ? AND Type = 'TV' AND Score > ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                            year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
 
         # if no result:
@@ -126,7 +124,7 @@ def animeresult():
         # Get reference
         reference = request.args.get("reference")
         # Get tags from reference
-        tags = db.execute("SELECT Genres FROM anime WHERE Name LIKE ?", reference)
+        tags = conn.execute("SELECT Genres FROM anime WHERE Name LIKE ?", reference)
 
         # get year and rate from input
         year = request.args.get("year")
@@ -140,16 +138,16 @@ def animeresult():
 
         # sqlite query depending on tag_nb
         if tag_nb >= 3:
-            anime = db.execute("SELECT * FROM anime WHERE Name != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Name != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
 
         elif tag_nb == 2:
-            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
-            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'))
 
         # if no result
