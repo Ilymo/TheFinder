@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 # Configure CS50 Library to use SQLite database
 conn = sqlite3.connect('media.db')
+conn.close()
 
 @app.route("/")
 def index():
