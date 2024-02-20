@@ -58,8 +58,9 @@ def movieresult():
         year = request.args.get("year")
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
-        movie = db.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                           year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%'))
+        conn = get_db_connection()
+        movie = conn.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%')).fetchall()
+        conn.close()
 
         # if no result:
         if not movie:
@@ -73,7 +74,9 @@ def movieresult():
         # Get reference
         reference = request.args.get("reference")
         # Get tags from reference
-        tags = db.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference)
+        conn = get_db_connection()
+        tags = conn.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference).fetchall()
+        conn.close()
 
         # get year and rate from input
         year = request.args.get("year")
@@ -87,18 +90,24 @@ def movieresult():
 
         # sqlite query depending on tag_nb
         if tag_nb >= 3:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))
+            conn = get_db_connection()
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%')).fetchall()
+            conn.close()
 
         elif tag_nb == 2:
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
+            conn = get_db_connection()
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%')).fetchall()
+            conn.close()
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
-            movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
-                               reference, year, rate, (f'%{unique_tag[0]}%'))
-
+            conn = get_db_connection()
+            movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
+                               reference, year, rate, (f'%{unique_tag[0]}%')).fetchall()
+            conn.close()
+            
         # if no result
         if not movie:
             return render_template("noresult.html")
