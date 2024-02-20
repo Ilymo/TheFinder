@@ -23,15 +23,6 @@ def get_db_connection():
     return conn
 
 
-@app.route('/')
-def index():
-    conn = get_db_connection()
-    posts = conn.execute('SELECT * FROM posts').fetchall()
-    conn.close()
-    return render_template('index.html', posts=posts)
-
-
-
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -39,13 +30,17 @@ def index():
 
 @app.route("/movie.html")
 def movie():
-    title = db.execute("SELECT Title FROM movies")
+    conn = get_db_connection()
+    title = conn.execute('SELECT * FROM movies').fetchall()
+    conn.close()
     return render_template("movie.html", tags=MOVIE_TAGS, title=title)
 
 
 @app.route("/anime.html")
 def anime():
-    name = db.execute("SELECT Name FROM anime")
+    conn = get_db_connection()
+    name = conn.execute('SELECT * FROM anime').fetchall()
+    conn.close()
     return render_template("anime.html", tags=ANIME_TAGS, name=name)
 
 
