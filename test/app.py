@@ -59,7 +59,7 @@ def movieresult():
         rate = request.args.get("rate")
         # Sqlite query with tag1, tag2, tag3, year, rate
         conn = get_db_connection()
-        movie = conn.execute("SELECT * FROM movies WHERE Release_Date >= ? AND Vote_Average > ? AND Genre LIKE ? AND Genre LIKE ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%')).fetchall()
+        movie = conn.execute("SELECT * FROM movies WHERE Release_Date >= '?' AND Vote_Average > '?' AND Genre LIKE'?' AND Genre LIKE '?' AND Genre LIKE '?' ORDER BY RANDOM() LIMIT 10",year, rate, (f'%{tag1}%'), (f'%{tag2}%'), (f'%{tag3}%')).fetchall()
         conn.close()
 
         # if no result:
@@ -107,7 +107,7 @@ def movieresult():
             movie = conn.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%')).fetchall()
             conn.close()
-            
+
         # if no result
         if not movie:
             return render_template("noresult.html")
