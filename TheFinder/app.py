@@ -1,6 +1,5 @@
-
-from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request
+import sqlite3
+from flask import Flask, render_template
 
 MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
@@ -11,11 +10,6 @@ ANIME_TAGS = ["Action", "Adventure", "Avant Garde", "Award Winning", "Boys Love"
 # Configure application
 app = Flask(__name__)
 
-# Configure CS50 Library to use SQLite database
-import sqlite3
-from flask import Flask, render_template
-
-app = Flask(__name__)
 
 def get_db_connection():
     conn = sqlite3.connect('media_test.db')
