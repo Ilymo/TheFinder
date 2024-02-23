@@ -3,7 +3,20 @@
 #### Description:
 The Finder is a web app that suggest movie or japanese anime.
 
-On the Home page you have two choice, go to The Movie Finder or The Anime Finder
+On the home page you have two choice, go to **The Movie Finder** or **The Anime Finder**.
+Click on one of them and you'll be redirected to the appropriate page.
+
+
+Both of them have the same logic and have two ways of searching:
+
+#### First search method:
+
+On the left, there is the tag research:
+
+First, you must choice (via the select input) at least one "genre" tag, up to three.
+After that, you can choice (via the radio button input) the period of the movie/aniem release. By default, "1990+" is selected.
+Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
+
 
 
 
