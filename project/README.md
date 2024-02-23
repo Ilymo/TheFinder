@@ -55,7 +55,7 @@ The app has been writted with python into the CS50 codespace, it use the SQL mod
 
 ### index.html
 
-The home page display 2 button, which both called the respective route.
+The home page display 2 button, which both call the respective route.
 
 ### movie.html and anime.html
 
@@ -63,9 +63,9 @@ When the `movie.html` or `anime.html` route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
 - movie/anime names from the database via an SQL query
 
-Then, render `movie.html` or `anime.html`, pass in and display those informations into the **select input** and the **text field input**
+Then, render `movie.html` or `anime.html`, pass in and display those informations into the **"select input"** and the **"text field input"**
 
-When **Give me** button is press, it submit the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
+When **"Give me"** button is press, it submit the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
 
 
 ### movieresult.html and animeresult.html
@@ -73,7 +73,7 @@ When **Give me** button is press, it submit the choiced criterias via `Get` meth
 When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 **For tag research:**
-- Check if the tag1 is submited and exist in `MOVIE/ANIME_TAGS`, also check if `year` and `rate`has been submited.
+- Check if the tag1 is submited and exist in `MOVIE/ANIME_TAGS`, also check if `year` and `rate` has been submited.
 - Get the tags with `request.args.get("tag1") tag2 and tag3` and store them into `tag1, tag2, tag3` variables.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
@@ -81,12 +81,12 @@ When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
-Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
+Else, it will render `result.html`, pass in the `movie` or `anime` variable and display them into cards.
 
 **For reference research:**
-- Check if `reference`has been submited.
+- Check if `reference` has been submited, also check if `year` and `rate` has been submited.
 - Get the reference with `request.args.get("reference")` and store the value into `reference` variable.
-- Execute SQLite query with `reference`as name, get associated genre and store them into `tags`variable.
+- Execute SQLite query with `reference` as name, get associated genre and store them into `tags`variable.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
 - Separate tags and remove "," with `str.split(tags[0]["Genre"].replace(",", ""))` from `tags` variable and store them into `unique_tag` list.
