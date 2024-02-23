@@ -32,3 +32,7 @@ https://www.kaggle.com/datasets/disham993/9000-movies-dataset
 
 db anime:
 https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset
+
+
+
+
