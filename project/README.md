@@ -55,7 +55,7 @@ The app has been writted with python into the CS50 codespace, it use the SQL mod
 
 ### index.html
 
-The home page display 2 button and redirect to the appropriate page
+The home page display 2 button, which both called the respective route.
 
 ### movie.html and anime.html
 
@@ -63,7 +63,7 @@ When the `movie.html` or `anime.html` route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
 - movie/anime names from the database via an SQL query
 
-Then, it will display them into the **select input** and the **text field input**
+Then, render `movie.html` or `anime.html` and display those informations into the **select input** and the **text field input**
 
 When **Give me** button is press, it submit the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
 
