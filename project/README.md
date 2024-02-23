@@ -68,14 +68,21 @@ Then, it will display them into the **select input** and the **text field input*
 When **Give me** button is press, it submit the choiced criterias via `Get` method to the `result.html`page.
 
 
+
+
+
+
+
+
 #### CSS ressources:
 
 The [Select Input](https://codepen.io/vkjgr/pen/VYMeXp), [Button](https://uiverse.io/adamgiebl/rare-moose-45),
 [Radio Button](https://uiverse.io/gharsh11032000/moody-dog-23), [Text Field](https://codepen.io/webcrafterscz/pen/WLxzyQ)
 that I modified and used.
+Card on result page has been made by myself.
 
 #### Database:
-[db movie](https://www.kaggle.com/datasets/disham993/9000-movies-dataset), [db anime](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset)
+CSV files downloaded via:[db movie](https://www.kaggle.com/datasets/disham993/9000-movies-dataset), [db anime](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset) and inserted into media.db
 
 checkbox:
 https://uiverse.io/adamgiebl/curly-lizard-40 (ready in tempo.txt)
