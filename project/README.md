@@ -95,7 +95,7 @@ Else, it will render `result.html`, pass in the `movie` or `anime` variable and 
 
 If the `movie` or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
-Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
+Else, it will render `result.html`, pass in the `movie` or `anime` variable and display them into cards.
 
 If neither `tag1`+`year`+`rate` or `reference`+`year`+`rate` hasn't been submited, it will render `noresult.html`.
 
@@ -106,10 +106,11 @@ If neither `tag1`+`year`+`rate` or `reference`+`year`+`rate` hasn't been submite
 The [Select Input](https://codepen.io/vkjgr/pen/VYMeXp), [Button](https://uiverse.io/adamgiebl/rare-moose-45),
 [Radio Button](https://uiverse.io/gharsh11032000/moody-dog-23), [Text Field](https://codepen.io/webcrafterscz/pen/WLxzyQ)
 that I modified and used.
-Card on result page has been made by myself.
+
+Cards on result page has been made by myself.
 
 #### Database:
-CSV files downloaded via:[db movie](https://www.kaggle.com/datasets/disham993/9000-movies-dataset), [db anime](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset) and inserted into media.db
+CSV files downloaded via: [db movie](https://www.kaggle.com/datasets/disham993/9000-movies-dataset), [db anime](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset) and inserted into media.db
 
 checkbox:
 https://uiverse.io/adamgiebl/curly-lizard-40 (ready in tempo.txt)
