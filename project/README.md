@@ -59,9 +59,13 @@ The home page display 2 button and redirect to the appropriate page
 
 #### Movie and Anime .html
 
-When the `movie.html` or `anime.html` route is called, it will get, via an SQL query, all the tags from  and movie/anime names from the database and display them into the **select input** and the **text field input**
+When the `movie.html` or `anime.html` route is called, it will get:
+- all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
+- movie/anime names from the database via an SQL query
 
-When **Give me** button is press, it submit the criteria
+Then, it will display them into the **select input** and the **text field input**
+
+When **Give me** button is press, it submit the choiced criterias via `Get` method to the `result.html`page.
 
 
 #### CSS ressources:
