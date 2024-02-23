@@ -59,7 +59,7 @@ The home page display 2 button, which both called the respective route.
 
 ### movie.html and anime.html
 
-When the `movie.html` or `anime.html` route is called, it will get:
+When the **`movie.html`** or **`anime.html`** route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
 - movie/anime names from the database via an SQL query
 
