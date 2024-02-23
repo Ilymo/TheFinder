@@ -14,12 +14,22 @@ Both of them have the same logic and have two ways of searching:
 
 On the left, there is the tag research:
 
->First, you must choice (via the select input) at least one "genre" tag, up to three.
+- First, you must choice (via the select input) at least one "genre" tag, up to three.
 
->After that, you can choice (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
+- After that, you can choice (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
 
->Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
+- Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
+
+#### Second search method:
+
+On the right, there is the "reference" research:
+
+- First, you must type (via the text input) the movie/anime that you want as reference.
+
+- After that, you can choice (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
+
+- Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
 
 
