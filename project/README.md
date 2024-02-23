@@ -63,7 +63,7 @@ When the `movie.html` or `anime.html` route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
 - movie/anime names from the database via an SQL query
 
-Then, render `movie.html` or `anime.html` and display those informations into the **select input** and the **text field input**
+Then, render `movie.html` or `anime.html`, pass in and display those informations into the **select input** and the **text field input**
 
 When **Give me** button is press, it submit the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
 
@@ -80,7 +80,20 @@ When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
-Else, it will render `result.html` and pass 
+Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
+
+**For reference research:**
+- Get the reference with `request.args.get("reference")` and store the value into `reference` variable.
+- Execute SQLite query with `reference`as name, get associated genre and store them into `tags`variable.
+- Get the year with `request.args.get("year")`and store the value into `year` variable.
+- Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
+- Separate tags and remove "," with `str.split(tags[0]["Genre"].replace(",", ""))` from `tags` variable and store them into `unique_tag` list.
+- Count the number of tags with `len(unique_tag)` and store the value into `tag_nb`.
+- Then, depending on `tag_nb`, it will execute SQLite query on the database with those information, it will generate a list of 10 movie/anime and store them into `movie`or `anime`variable
+
+If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
+
+Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
 
 
 
