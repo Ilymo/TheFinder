@@ -93,7 +93,7 @@ Else, it will render `result.html`, pass in the `movie` or `anime` variable and 
 - Count the number of tags with `len(unique_tag)` and store the value into `tag_nb`.
 - Then, depending on `tag_nb`, it will execute SQLite query on the database with those information, it will generate a list of 10 movie/anime and store them into `movie`or `anime`variable
 
-If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
+If the `movie` or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
 Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
 
