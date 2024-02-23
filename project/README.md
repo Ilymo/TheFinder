@@ -7,7 +7,7 @@ The Finder is a web app that suggests movie or Japanese anime.
 
 On the **"Home"** page, you have two choice, **"The Movie Finder"** or **"The Anime Finder"**.
 
-Click on one of them and you'll be redirected to the appropriate page.
+Click on one of them, and you'll be redirected to the appropriate page.
 
 
 Both of them have the same logic and have two ways of searching:
@@ -16,11 +16,11 @@ Both of them have the same logic and have two ways of searching:
 
 On the left, there is the tag research:
 
-- First, you must choice (via the select input) at least one "genre" tag, up to three.
+- First, you must choose (via the select input) at least one "genre" tag, up to three.
 
-- After that, you can choice (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
+- After that, you can choose (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
 
-- Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
+- Last, you can choose the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
 ### Second search method:
 
@@ -28,30 +28,30 @@ On the right, there is the "reference" research:
 
 - First, you must type (via the text input) the movie/anime that you want as reference.
 
-- After that, you can choice (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
+- After that, you can choose (via the radio button input) the period of the movie/anime release. By default, "1990+" is selected.
 
-- Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
+- Last, you can choose the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
 ### Result:
 
-When you're done with one of those search methods, press **"Give me"** button and you'll be redirected to the **"Result"** page where the search results will be display into cards.
+When you're done with one of those search methods, press **"Give me"** button, and you'll be redirected to the **"Result"** page where the search results will be display into cards.
 
-You can then press the **"Give me 10 others"** button on top or bottom of the page and the app will suggest 10 other movie/anime with those same criterias (if there is more than 10 movie/anime that respect those criterias).
+You can then press the **"Give me 10 others"** button on top or bottom of the page and the app will suggest 10 other movie/anime with those same criteria (if there is more than 10 movie/anime that respect those criteria).
 
 On top and bottom of the result page you can also:
 
 - Press **"Back"** button to go back on the previous search page.
 
-- Press **"Home"** button and you'll be redirected to the Home page.
+- Press **"Home"** button, and you'll be redirected to the Home page.
 
 
 
 
 ## Explanation
 
-### Environnement
+### Environment
 
-The app has been writted with python into the CS50 codespace, it use the SQL module from cs50 library and flask.
+The app has been written with python into the CS50 codespace, it uses the SQL module from cs50 library and flask.
 
 ### index.html
 
