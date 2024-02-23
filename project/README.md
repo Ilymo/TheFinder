@@ -44,6 +44,20 @@ You can press **Back** button to go back on the previous search page.
 
 You can also press **Home** button and you'll be redirected to the Home page.
 
+
+
+
+### Explanation
+
+#### Index
+
+The home page display 2 button and redirect to the appropriate page
+
+#### Movie and Anime .html
+
+
+
+
 #### CSS ressources:
 
 The [Select Input](https://codepen.io/vkjgr/pen/VYMeXp), [Button](https://uiverse.io/adamgiebl/rare-moose-45),
