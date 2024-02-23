@@ -38,7 +38,7 @@ When you're done with one of those search methods, press **"Give me"** button, a
 
 You can then press the **"Give me 10 others"** button at the top or bottom of the page, and the app will suggest 10 other movie/anime with those same criteria (if there are more than 10 movies/anime that respect those criteria).
 
-At the top and bottom of the result page you can also:
+At the top and bottom of the result page, you can also:
 
 - Press **"Back"** button to go back to the previous search page.
 
