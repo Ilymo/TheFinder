@@ -1,3 +1,16 @@
+# The Finder
+#### Video Demo:  <URL HERE>
+#### Description:
+The Finder is a movie and japanese anime recomendator 
+
+
+
+
+
+
+
+
+
 select input:
 https://codepen.io/vkjgr/pen/VYMeXp (used)
 
