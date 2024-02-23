@@ -3,14 +3,14 @@
 #### Description:
 The Finder is a web app that suggest movie or japanese anime.
 
-On the **home** page you have two choice, go to **The Movie Finder** or **The Anime Finder**.
+On the **Home** page you have two choice, go to **The Movie Finder** or **The Anime Finder**.
 
 Click on one of them and you'll be redirected to the appropriate page.
 
 
 Both of them have the same logic and have two ways of searching:
 
-#### First search method:
+### First search method:
 
 On the left, there is the tag research:
 
@@ -20,8 +20,7 @@ On the left, there is the tag research:
 
 - Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
-
-#### Second search method:
+### Second search method:
 
 On the right, there is the "reference" research:
 
@@ -31,8 +30,7 @@ On the right, there is the "reference" research:
 
 - Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
-
-
+When you're done with one of those search methods, press **Give me** button and you'll be redirected to the **Result** page where the search result will be display into card.
 
 #### CSS ressources:
 
