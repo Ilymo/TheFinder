@@ -5,7 +5,7 @@
 ## Summary
 The Finder is a web app that suggest movie or japanese anime.
 
-On the **Home** page you have two choice, **The Movie Finder** or **The Anime Finder**.
+On the **"Home"** page you have two choice, **"The Movie Finder"** or **"The Anime Finder"**.
 
 Click on one of them and you'll be redirected to the appropriate page.
 
@@ -34,15 +34,15 @@ On the right, there is the "reference" research:
 
 ### Result:
 
-When you're done with one of those search methods, press **Give me** button and you'll be redirected to the **Result** page where the search result will be display into card.
+When you're done with one of those search methods, press **"Give me"** button and you'll be redirected to the **"Result"** page where the search results will be display into cards.
 
-You can then press the **Give me 10 others** button on top or bottom of the page and the app will suggest 10 other movie/anime with those same criterias (if there is more than 10 movie/anime that respect those criterias).
+You can then press the **"Give me 10 others"** button on top or bottom of the page and the app will suggest 10 other movie/anime with those same criterias (if there is more than 10 movie/anime that respect those criterias).
 
 On top and bottom of the result page you can also:
 
-- Press **Back** button to go back on the previous search page.
+- Press **"Back"** button to go back on the previous search page.
 
-- Press **Home** button and you'll be redirected to the Home page.
+- Press **"Home"** button and you'll be redirected to the Home page.
 
 
 
