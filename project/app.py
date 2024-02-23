@@ -56,7 +56,7 @@ def movieresult():
         return render_template("result.html", movie=movie)
 
 ##### For reference research:
-    elif request.args.get("reference"):
+    elif request.args.get("reference") and request.args.get("year") and request.args.get("rate"):
 
         # Get reference
         reference = request.args.get("reference")

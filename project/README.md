@@ -97,7 +97,7 @@ If the `movie`or `anime`variable is empty, it will render `noresult.html` and di
 
 Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
 
-If neither `reference`or `tag1`+
+If neither `tag1`+`year`+`rate` or `reference`+`year`+`rate` hasn't been submited, it will render `noresult.html`.
 
 
 
