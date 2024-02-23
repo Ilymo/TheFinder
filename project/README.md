@@ -55,17 +55,17 @@ The app has been written with python into the CS50 codespace, it uses the SQL mo
 
 ### index.html
 
-The home page display 2 button, which both call the respective route.
+The home page display 2 buttons, which both call the respective route.
 
 ### movie.html and anime.html
 
 When the `movie.html` or `anime.html` route is called, it will get:
-- all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
-- movie/anime names from the database via an SQL query
+- All the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
+- Movie/anime names from the database via an SQL query
 
-Then, render `movie.html` or `anime.html`, pass in and display those informations into the **"select input"** and the **"text field input"**
+Then, render `movie.html` or `anime.html`, pass in and display those information into the **"select input"** and the **"text field input"**
 
-When **"Give me"** button is press, it submit the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
+When **"Give me"** button is press, it submits the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
 
 
 ### movieresult.html and animeresult.html
