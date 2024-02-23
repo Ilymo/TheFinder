@@ -59,7 +59,7 @@ The home page display 2 button, which both called the respective route.
 
 ### movie.html and anime.html
 
-When the **`movie.html`** or **`anime.html`** route is called, it will get:
+When the `movie.html` or `anime.html` route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
 - movie/anime names from the database via an SQL query
 
@@ -73,6 +73,7 @@ When **Give me** button is press, it submit the choiced criterias via `Get` meth
 When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 **For tag research:**
+- Check if the tag1 is submited and exist in `MOVIE/ANIME_TAGS`, also check if `year` and `rate`has been submited.
 - Get the tags with `request.args.get("tag1") tag2 and tag3` and store them into `tag1, tag2, tag3` variables.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
