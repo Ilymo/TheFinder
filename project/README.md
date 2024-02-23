@@ -49,13 +49,19 @@ You can also press **Home** button and you'll be redirected to the Home page.
 
 ### Explanation
 
+#### Environnement
+
+The app has been writted with python into the CS50 codespace, it use the SQL module from cs50 library and flask.
+
 #### Index
 
 The home page display 2 button and redirect to the appropriate page
 
 #### Movie and Anime .html
 
+When the `movie.html` or `anime.html` route is called, it will get, via an SQL query, all the tags from  and movie/anime names from the database and display them into the **select input** and the **text field input**
 
+When **Give me** button is press, it submit the criteria
 
 
 #### CSS ressources:
