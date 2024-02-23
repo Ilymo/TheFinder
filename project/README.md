@@ -3,6 +3,8 @@
 #### Description:
 The Finder is a web app that suggest movie or japanese anime.
 
+On the Home page you have two choice, go to The Movie Finder or The Anime Finder
+
 
 
 
