@@ -80,6 +80,8 @@ When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
+Else, it will render `result.html` and pass 
+
 
 
 
