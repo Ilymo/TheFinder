@@ -83,7 +83,6 @@ def movieresult():
                                reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))
 
         elif tag_nb == 1:
-            tag1 = unique_tag[0].replace(",", "")
             movie = db.execute("SELECT * FROM movies WHERE Title != ? AND Release_Date >= ? AND Vote_Average >= ? AND Genre LIKE ? ORDER BY RANDOM() LIMIT 10",
                                reference, year, rate, (f'%{unique_tag[0]}%'))
 
