@@ -2,7 +2,7 @@
 #### Video Demo:  <URL HERE>
 #### Description:
 
-### Summary
+## Summary
 The Finder is a web app that suggest movie or japanese anime.
 
 On the **Home** page you have two choice, **The Movie Finder** or **The Anime Finder**.
@@ -12,7 +12,7 @@ Click on one of them and you'll be redirected to the appropriate page.
 
 Both of them have the same logic and have two ways of searching:
 
-#### First search method:
+### First search method:
 
 On the left, there is the tag research:
 
@@ -22,7 +22,7 @@ On the left, there is the tag research:
 
 - Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
-#### Second search method:
+### Second search method:
 
 On the right, there is the "reference" research:
 
@@ -32,7 +32,7 @@ On the right, there is the "reference" research:
 
 - Last, you can choice the "rate" (via another radio button input) of the movie/anime you're looking for. By default, "0+" is selected.
 
-#### Result:
+### Result:
 
 When you're done with one of those search methods, press **Give me** button and you'll be redirected to the **Result** page where the search result will be display into card.
 
@@ -47,17 +47,17 @@ On top and bottom of the result page you can also:
 
 
 
-### Explanation
+## Explanation
 
-#### Environnement
+### Environnement
 
 The app has been writted with python into the CS50 codespace, it use the SQL module from cs50 library and flask.
 
-#### Index
+### index.html
 
 The home page display 2 button and redirect to the appropriate page
 
-#### Movie and Anime .html
+### movie.html and anime.html
 
 When the `movie.html` or `anime.html` route is called, it will get:
 - all the tags from a list of tags `MOVIE_TAGS` or `ANIME_TAGS`.
