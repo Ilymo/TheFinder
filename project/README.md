@@ -65,7 +65,7 @@ When the `movie.html` or `anime.html` route is called, it will get:
 
 Then, render `movie.html` or `anime.html`, pass in and display those information into the **"select input"** and the **"text field input"**
 
-When **"Give me"** button is press, it submits the choiced criterias via `Get` method to the `movieresult.html` or `animeresult.html`route.
+When **"Give me"** button is press, it submits the choosen criteria via `Get` method to the `movieresult.html` or `animeresult.html` route.
 
 
 ### movieresult.html and animeresult.html
@@ -73,7 +73,7 @@ When **"Give me"** button is press, it submits the choiced criterias via `Get` m
 When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 **For tag research:**
-- Check if the tag1 is submited and exist in `MOVIE/ANIME_TAGS`, also check if `year` and `rate` has been submited.
+- Check if the tag1 is submitted and exist in `MOVIE/ANIME_TAGS`, also check if `year` and `rate` has been submitted.
 - Get the tags with `request.args.get("tag1") tag2 and tag3` and store them into `tag1, tag2, tag3` variables.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
