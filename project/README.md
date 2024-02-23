@@ -65,7 +65,7 @@ When the `movie.html` or `anime.html` route is called, it will get:
 
 Then, render `movie.html` or `anime.html`, pass in and display those information into the **"select input"** and the **"text field input"**
 
-When **"Give me"** button is press, it submits the choosen criteria via `Get` method to the `movieresult.html` or `animeresult.html` route.
+When **"Give me"** button is press, it submits the chosen criteria via `Get` method to the `movieresult.html` or `animeresult.html` route.
 
 
 ### movieresult.html and animeresult.html
@@ -77,7 +77,7 @@ When the `movieresult.html` or `animeresult.html` route is called, it will:
 - Get the tags with `request.args.get("tag1") tag2 and tag3` and store them into `tag1, tag2, tag3` variables.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
-- Then execute SQLite query on the database with those informations, it will generate a list of 10 movie/anime and store them into `movie` or `anime` variable
+- Then execute SQLite query on the database with those information, it will generate a list of 10 movie/anime and store them into `movie` or `anime` variable
 
 If the `movie`or `anime`variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
@@ -91,7 +91,7 @@ Else, it will render `result.html`, pass in the `movie` or `anime` variable and 
 - Get the rate with `request.args.get("rate")`and store the value into `rate` variable.
 - Separate tags and remove "," with `str.split(tags[0]["Genre"].replace(",", ""))` from `tags` variable and store them into `unique_tag` list.
 - Count the number of tags with `len(unique_tag)` and store the value into `tag_nb`.
-- Then, depending on `tag_nb`, it will execute SQLite query on the database with those informations, it will generate a list of 10 movie/anime and store them into `movie` or `anime` variable
+- Then, depending on `tag_nb`, it will execute SQLite query on the database with those information, it will generate a list of 10 movie/anime and store them into `movie` or `anime` variable
 
 If the `movie` or `anime` variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
