@@ -84,6 +84,7 @@ If the `movie`or `anime`variable is empty, it will render `noresult.html` and di
 Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
 
 **For reference research:**
+- Check if `reference`has been submited.
 - Get the reference with `request.args.get("reference")` and store the value into `reference` variable.
 - Execute SQLite query with `reference`as name, get associated genre and store them into `tags`variable.
 - Get the year with `request.args.get("year")`and store the value into `year` variable.
@@ -96,7 +97,7 @@ If the `movie`or `anime`variable is empty, it will render `noresult.html` and di
 
 Else, it will render `result.html`, pass in the `movie`or `anime` variable and display them into cards.
 
-
+If neither `reference`or `tag1`+
 
 
 
