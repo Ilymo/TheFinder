@@ -1,8 +1,7 @@
 # The Finder
 #### Video Demo:  <URL HERE>
 #### Description:
-The Finder is a movie and japanese anime recomendator 
-
+The Finder is a web app that suggest movie or japanese anime.
 
 
 
