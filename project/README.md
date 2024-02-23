@@ -81,7 +81,7 @@ When the `movieresult.html` or `animeresult.html` route is called, it will:
 
 If the `movie` or `anime` variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
-Otherwise, it will render `result.html`, pass in the `movie` or `anime` variable and display them on cards.
+Otherwise, it will render `result.html`, pass in the `movie` or `anime` variable, and display them on cards.
 
 **For reference research:**
 - Check if `reference` is submitted, also check if `year` and `rate` have been submitted.
@@ -95,7 +95,7 @@ Otherwise, it will render `result.html`, pass in the `movie` or `anime` variable
 
 If the `movie` or `anime` variable is empty, it will render `noresult.html` and display the message **"Sorry but there is no result :("**
 
-Otherwise, it will render `result.html`, pass in the `movie` or `anime` variable and display them on cards.
+Otherwise, it will render `result.html`, pass in the `movie` or `anime` variable, and display them on cards.
 
 If neither `tag1`+`year`+`rate` nor `reference`+`year`+`rate` have been submitted, it will render `noresult.html`.
 
