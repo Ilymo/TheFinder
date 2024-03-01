@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 def get_db_connection():
-    conn = sqlite3.connect('media_test.db')
+    conn = sqlite3.connect('media.db')
     conn.row_factory = sqlite3.Row
     return conn
 
