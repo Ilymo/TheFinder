@@ -1,5 +1,4 @@
 cs50
-Flask
-requests
-csv
+flask
 python
+sqlite3
