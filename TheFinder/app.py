@@ -1,5 +1,5 @@
 import sqlite3
-from flask import Flask, render_template
+from flask import Flask, flash, redirect, render_template, request
 
 MOVIE_TAGS = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy",
         "History", "Horror", "Music", "Mystery", "Romance", "Science", "TV", "Thriller", "War", "Western",]
