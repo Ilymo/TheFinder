@@ -1,2 +1,0 @@
-1: by taking the average of energy, valence and danceabilty of this top 100 songs
-2: don't really know what to say
