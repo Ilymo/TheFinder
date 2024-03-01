@@ -112,8 +112,6 @@ Cards on result page were been made by myself.
 #### Database:
 CSV files downloaded via: [db movie](https://www.kaggle.com/datasets/disham993/9000-movies-dataset), [db anime](https://www.kaggle.com/datasets/dbdmobile/myanimelist-dataset) and inserted into media.db
 
-checkbox:
-https://uiverse.io/adamgiebl/curly-lizard-40 (ready in tempo.txt)
 
 
 
