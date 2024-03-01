@@ -1,4 +1,0 @@
-cs50
-flask
-python
-sqlite3
