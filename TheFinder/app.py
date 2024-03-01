@@ -70,7 +70,7 @@ def movieresult():
         reference = request.args.get("reference")
         # Get tags from reference
         conn = get_db_connection()
-        tags = conn.execute("SELECT Genre FROM movies WHERE Title LIKE ?", reference).fetchall()
+        tags = conn.execute("SELECT Genre FROM movies WHERE Title LIKE (?)", (reference,)).fetchall()
         conn.close()
 
         # get year and rate from input
@@ -145,7 +145,7 @@ def animeresult():
         reference = request.args.get("reference")
         # Get tags from reference
         conn = get_db_connection()
-        tags = db.execute("SELECT Genres FROM anime WHERE Name LIKE ?", reference).fetchall()
+        tags = conn.execute("SELECT Genres FROM anime WHERE Name LIKE (?)", (reference,)).fetchall()
         conn.close()
 
         # get year and rate from input
@@ -161,20 +161,20 @@ def animeresult():
         # sqlite query depending on tag_nb
         if tag_nb >= 3:
             conn = get_db_connection()
-            anime = db.execute("SELECT * FROM anime WHERE Name != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Name != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                (reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'), (f'%{unique_tag[2]}%'))).fetchall()
             conn.close()
 
         elif tag_nb == 2:
             conn = get_db_connection()
-            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                (reference, year, rate, (f'%{unique_tag[0]}%'), (f'%{unique_tag[1]}%'))).fetchall()
             conn.close()
 
         elif tag_nb == 1:
             tag1 = unique_tag[0].replace(",", "")
             conn = get_db_connection()
-            anime = db.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
+            anime = conn.execute("SELECT * FROM anime WHERE Title != ? AND Type = 'TV' AND Date >= ? AND Score >= ? AND Genres LIKE ? ORDER BY RANDOM() LIMIT 10",
                                (reference, year, rate, (f'%{unique_tag[0]}%'))).fetchall()
             conn.close()
 
